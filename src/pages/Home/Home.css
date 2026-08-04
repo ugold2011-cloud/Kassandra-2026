@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f8f8;
+}
+
+.home {
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #23435c;
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.mapPanel {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.mainMap {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+
+  object-fit: cover;
+  object-position: left center;
+
+  border-radius: 24px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.daysPanel {
+  width: 290px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dayCard {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 22px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dayCard:hover {
+  transform: translateY(-2px);
+}
+
+.activeCard {
+  border-right: 6px solid #2f84d5;
+}
+
+.dayText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dayNumber {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1d2f43;
+}
+
+.dayTitle {
+  font-size: 22px;
+  color: #2d485d;
+}
+
+.dayDate {
+  font-size: 16px;
+  color: #788895;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .daysPanel {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .mainMap {
+    height: auto;
+  }
+}
+
+.daysPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-left: 20px;
+  padding-right: 20px;
+  width: 110px;
+align-items: center;
+margin-top: 10px;
+position: absolute;
+right: 20px;
+top: 78%;
+transform: translateY(-50%);
+}
+ 
+
+
+.daysPanel button {
+  width: 80px;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: #23345c;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+  transition: 0.25s;
+}
+
+.daysPanel button:hover {
+  transform: scale(1.08);
+}
+
+
+
+
+.daysPanel button:hover {
+  transform: scale(1.08);
+}
