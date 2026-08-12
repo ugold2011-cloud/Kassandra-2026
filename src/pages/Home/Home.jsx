@@ -1,7 +1,10 @@
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 import kassandraMap from "../../assets/maps/reference/kassandra-master-map-v1.png.png";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="home">
       <h1>קסנדרה – כמו מקומי</h1>
@@ -16,13 +19,17 @@ export default function Home() {
         </div>
 
         <div className="daysPanel">
-          <button onClick={() => (window.location.href = "/day1")}>
+          <button onClick={() => navigate("/day1")}>
             יום 1
           </button>
 
-          <button>יום 2</button>
+          <button onClick={() => navigate("/day2")}>
+            יום 2
+          </button>
 
-          <button>יום 3</button>
+          <button onClick={() => navigate("/day3")}>
+            יום 3
+          </button>
 
           <button>יום 4</button>
 

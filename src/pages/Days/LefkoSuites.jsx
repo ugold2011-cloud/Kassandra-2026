@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import "./Day.css";
 
 import lefkoMain from "../../assets/images/lefko/lefko-evening.jpg";
 import lefkoRoom from "../../assets/images/lefko/lefko-room.jpg";
@@ -7,6 +8,9 @@ import lefkoEvening from "../../assets/images/lefko/lefko-main.jpg";
 
 function LefkoSuites() {
   const galleryImages = [lefkoRoom, lefkoBalcony, lefkoEvening];
+  const location = useLocation();
+
+  const fromDay2 = location.state?.fromDay === 2;
 
   return (
     <main className="lefko-page">
@@ -126,87 +130,82 @@ function LefkoSuites() {
           transform: scale(1.06);
         }
 
-        .lefko-details {
-          display: grid;
-          grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
-          gap: 20px;
-          padding: clamp(20px, 4vw, 34px);
-          border: 1px solid rgba(112, 196, 236, 0.34);
-          border-radius: 28px;
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 249, 255, 0.88));
-          box-shadow: 0 18px 45px rgba(14, 57, 80, 0.1);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-        }
-
-        .faros-section-heading {
-          margin: 0 0 16px;
-          color: var(--lefko-deep);
-          font-size: clamp(1.25rem, 2.4vw, 1.55rem);
-          line-height: 1.25;
-        }
-
-        .faros-menu-list, .faros-info-list {
-          display: grid;
-          gap: 11px;
-          margin: 0;
-          padding: 0;
-          list-style: none;
-        }
-
-        .faros-menu-list li, .faros-info-list li {
+        .lefko-content {
           display: flex;
-          align-items: flex-start;
-          gap: 10px;
-          padding: 12px 14px;
-          border-radius: 14px;
-          background: rgba(255, 255, 255, 0.67);
-          line-height: 1.55;
+          flex-direction: column;
+          gap: 18px;
         }
 
-        .faros-menu-list li {
-          font-weight: 650;
+        .lefko-heading {
+          margin: 0;
+          font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+          font-weight: 800;
+          color: var(--lefko-deep);
+          text-align: center;
+          letter-spacing: -0.03em;
         }
 
-        .faros-info {
-          padding: 4px 0 4px 20px;
-          border-left: 1px solid rgba(58, 142, 183, 0.22);
-          text-align: right;
+        .lefko-address {
+          text-align: center;
+          font-size: 0.95rem;
+          color: var(--lefko-ink);
+          opacity: 0.85;
         }
 
-        .faros-info-list li {
-          font-size: 0.94rem;
+        .lefko-info-row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 18px;
+          flex-wrap: wrap;
         }
 
-        .faros-info-list span,
-        .faros-info-list a {
-          overflow-wrap: anywhere;
+        .lefko-info-link {
+          color: #4f46e5;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 0.95rem;
         }
 
-        .lefko-ltr {
-          direction: ltr;
-          unicode-bidi: bidi-override;
-          display: inline-block;
+        .lefko-info-link:hover {
+          text-decoration: underline;
         }
 
-        .lefko-link {
+        .lefko-parking {
+          text-align: center;
+          font-size: 0.9rem;
+          color: var(--lefko-ink);
+          opacity: 0.8;
+        }
+
+        .lefko-waze {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 44px;
-          padding: 0 16px;
-          border-radius: 999px;
+          width: 100%;
+          padding: 0 22px;
+          min-height: 52px;
+          border-radius: 16px;
+          border: 1px solid transparent;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           text-decoration: none;
           font-weight: 800;
+          font-size: 0.96rem;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
           transition: transform 220ms ease, box-shadow 220ms ease;
         }
 
-        .lefko-link:hover {
+        .lefko-waze:hover {
           transform: translateY(-3px);
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
+        .lefko-masoutis {
+          text-align: center;
+          font-size: 0.95rem;
+          color: var(--lefko-ink);
+          padding: 10px 0;
         }
 
         .lefko-actions {
@@ -255,6 +254,18 @@ function LefkoSuites() {
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
+        .lefko-music {
+          background: #fff;
+          color: #4f46e5;
+          border-color: #c8e5f2;
+          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          gap: 10px;
+        }
+
+        .lefko-music:hover {
+          background: #f5f7ff;
+        }
+
         @media (max-width: 900px) {
           .lefko-gallery {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -291,17 +302,6 @@ function LefkoSuites() {
             border-radius: 17px;
           }
 
-          .lefko-details {
-            grid-template-columns: 1fr;
-            border-radius: 22px;
-          }
-
-          .lefko-info {
-            padding: 20px 0 0;
-            border-top: 1px solid rgba(58, 142, 183, 0.22);
-            border-left: 0;
-          }
-
           .lefko-actions {
             flex-direction: column-reverse;
           }
@@ -309,74 +309,140 @@ function LefkoSuites() {
           .lefko-button {
             width: 100%;
           }
+
+          .lefko-info-row {
+            flex-direction: column;
+            gap: 10px;
+          }
         }
       `}</style>
 
       <section className="lefko-hero">
         <img src={lefkoMain} alt="Lefko Suites" />
+
         <div className="lefko-hero-content">
           <div>
             <p className="lefko-kicker">🏨 Hanioti, Greece</p>
             <h1 className="lefko-title">Lefko Suites</h1>
-            <p>TEST-12345</p>
           </div>
+
           <p className="lefko-award">🥇 BEST OF THE BEST</p>
         </div>
       </section>
 
-      <section className="lefko-gallery" aria-label="Lefko Suites highlights">
+      <section
+        className="lefko-gallery"
+        aria-label="Lefko Suites highlights"
+      >
         {galleryImages.map((image, index) => (
-          <div className="lefko-gallery-item" key={`${image}-${index}`}>
+          <div
+            className="lefko-gallery-item"
+            key={`${image}-${index}`}
+          >
             <img src={image} alt={`Lefko ${index + 1}`} />
           </div>
         ))}
       </section>
 
-      <section className="lefko-details">
-        <div>
-          <h2 className="faros-section-heading">🗺️ האזור סביב Lefko Suites</h2>
-          <ul className="faros-menu-list" dir="rtl">
-            <li>🏨 Lefko Suites</li>
-            <li>🌊 חוף הים • 286 מ׳</li>
-            <li>🛒 Masoutis • 362 מ׳</li>
-            <li>🍽️ Faros • 385 מ׳</li>
-            <li>🍦 Amorato • 409 מ׳</li>
-            <li>🚶 מרכז חניוטי • אזור Amorato ו־Faros</li>
-          </ul>
+      <section className="lefko-content">
+        <h2 className="lefko-heading">Lefko Suites</h2>
+
+        <p className="lefko-address">
+          📍 Hanioti, Chalkidiki 63085, Greece
+        </p>
+
+        <div className="lefko-info-row">
+          <a
+            className="lefko-info-link"
+            href="https://lefkosuites.gr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            🌐 אתר
+          </a>
+
+          <a
+            className="lefko-info-link lefko-ltr"
+            href="tel:+302374053515"
+          >
+            📞 +30 23740 53515
+          </a>
         </div>
 
-        <div className="faros-info" dir="rtl">
-          <h2 className="faros-section-heading">פרטים שימושיים</h2>
-          <ul className="faros-info-list">
-            <li>
-              <span>📍 כתובת: Hanioti, Chalkidiki 63085, Greece</span>
-            </li>
-            <li>
-              <span>🅿️ חניה: חניה פרטית לאורחי המלון</span>
-            </li>
-            <li>
-              <span>🌐 אתר: <a href="https://lefkosuites.gr" target="_blank" rel="noreferrer">lefkosuites.gr</a></span>
-            </li>
-            <li>
-              <span>📞 טלפון: <a className="lefko-ltr" href="tel:+302374053515">+30 23740 53515</a></span>
-            </li>
-            <li>
-              <a className="lefko-link" href="https://waze.com/ul?ll=39.999130,23.578625&navigate=yes" target="_blank" rel="noreferrer">🚗 פתח ב־Waze</a>
-            </li>
-            <li>
-              <span>💡 מיקום מצוין: כמה דקות מהחוף, מהטיילת ומהמרכז של חניוטי.</span>
-            </li>
-          </ul>
-        </div>
+        <p className="lefko-parking">
+          🅿️ חניה פרטית לאורחי המלון
+        </p>
+
+        <a
+          className="lefko-waze"
+          href="https://waze.com/ul?ll=39.999130,23.578625&navigate=yes"
+          target="_blank"
+          rel="noreferrer"
+        >
+          🚗 פתח ב־Waze
+        </a>
+
+        <p className="lefko-masoutis">
+          🛒 Masoutis — חנות מזון קרובה
+        </p>
       </section>
 
-      <nav className="lefko-actions" aria-label="Lefko Suites navigation">
-        <Link className="lefko-button lefko-button-back" to="/day1">
-          ⬅️ חזרה ליום 1
-        </Link>
-        <Link className="lefko-button lefko-button-next" to="/faros">
-          ➡️ המשך ל-Faros
-        </Link>
+      <nav
+        className="lefko-actions"
+        aria-label="Lefko Suites navigation"
+      >
+        {fromDay2 ? (
+          <>
+            <Link
+              className="lefko-button lefko-button-back"
+              to="/"
+              style={{ marginLeft: "16px" }}
+            >
+              🏠 ראשי
+            </Link>
+
+            <Link
+              className="lefko-button lefko-button-back"
+              to="/"
+            >
+              🏠 ראשי
+            </Link>
+
+            <Link
+              className="lefko-button lefko-button-next"
+              to="/day2"
+            >
+              ➡️ המשך ליום 2
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link
+              className="lefko-button lefko-button-back"
+              to="/day1"
+            >
+              ⬅️ חזרה ליום 1
+            </Link>
+
+            <Link
+              className="lefko-button lefko-button-back"
+              to="/"
+            >
+              🏠 ראשי
+            </Link>
+
+            <Link
+              className="lefko-button lefko-button-next"
+              to="/faros"
+            >
+              🐟 המשך ל-Faros
+              <br />
+              <span style={{ fontSize: "0.78rem", opacity: 0.9 }}>
+                מסעדת דגים
+              </span>
+            </Link>
+          </>
+        )}
       </nav>
     </main>
   );

@@ -1,26 +1,28 @@
 import { Link } from "react-router-dom";
 
-import amoratoMain from "../../assets/images/amorato/amorato-main.jpg";
-import amoratoIcecream from "../../assets/images/amorato/amorato-icecream.jpg";
-import amoratoNight from "../../assets/images/amorato/amorato-night.jpg";
+import sipSpotMain from "../../assets/images/SipSpot/SipSpot-main.webp";
+import sipSpotBreakfast from "../../assets/images/SipSpot/SipSpot-breakfast.webp";
+import sipSpotFood from "../../assets/images/SipSpot/SipSpot-food.webp";
 
-function Amorato() {
+function SipSpot() {
+  const galleryImages = [sipSpotBreakfast, sipSpotFood];
+
   return (
-    <main className="amorato-page">
+    <main className="sipspot-page">
       <style>{`
-        .amorato-page {
-          --amorato-ink: #153247;
-          --amorato-deep: #0c2738;
-          --amorato-sky: #63c7ff;
-          --amorato-soft: #eef9ff;
+        .sipspot-page {
+          --sipspot-ink: #153247;
+          --sipspot-deep: #0c2738;
+          --sipspot-sky: #63c7ff;
+          --sipspot-soft: #eef9ff;
           max-width: 1080px;
           margin: 0 auto;
           padding: clamp(16px, 3vw, 36px) clamp(16px, 4vw, 42px) 48px;
-          color: var(--amorato-ink);
+          color: var(--sipspot-ink);
           font-family: inherit;
         }
 
-        .amorato-hero {
+        .sipspot-hero {
           position: relative;
           min-height: clamp(360px, 55vw, 520px);
           overflow: hidden;
@@ -29,15 +31,19 @@ function Amorato() {
           box-shadow: 0 24px 60px rgba(13, 54, 77, 0.2);
         }
 
-        .amorato-hero::after {
+        .sipspot-hero::after {
           content: "";
           position: absolute;
           inset: 0;
           z-index: 1;
-          background: linear-gradient(180deg, rgba(5, 28, 42, 0.06) 22%, rgba(5, 28, 42, 0.8) 100%);
+          background: linear-gradient(
+            180deg,
+            rgba(5, 28, 42, 0.06) 22%,
+            rgba(5, 28, 42, 0.8) 100%
+          );
         }
 
-        .amorato-hero img {
+        .sipspot-hero img {
           width: 100%;
           height: 100%;
           position: absolute;
@@ -46,11 +52,11 @@ function Amorato() {
           transition: transform 700ms ease;
         }
 
-        .amorato-hero:hover img {
+        .sipspot-hero:hover img {
           transform: scale(1.04);
         }
 
-        .amorato-hero-content {
+        .sipspot-hero-content {
           position: absolute;
           z-index: 2;
           inset: auto clamp(22px, 5vw, 48px) clamp(24px, 5vw, 42px);
@@ -62,7 +68,7 @@ function Amorato() {
           text-align: left;
         }
 
-        .amorato-kicker {
+        .sipspot-kicker {
           display: inline-flex;
           align-items: center;
           gap: 8px;
@@ -74,7 +80,7 @@ function Amorato() {
           color: #d8f3ff;
         }
 
-        .amorato-title {
+        .sipspot-title {
           margin: 0;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
@@ -82,7 +88,7 @@ function Amorato() {
           font-weight: 800;
         }
 
-        .amorato-award {
+        .sipspot-award {
           margin: 0;
           padding: 10px 14px;
           border: 1px solid rgba(255, 255, 255, 0.35);
@@ -96,21 +102,21 @@ function Amorato() {
           white-space: nowrap;
         }
 
-        .amorato-gallery {
+        .sipspot-gallery {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 18px;
           margin: 26px 0;
         }
 
-        .amorato-gallery-item {
+        .sipspot-gallery-item {
           overflow: hidden;
-          height: 230px;
+          height: 260px;
           border-radius: 22px;
           box-shadow: 0 12px 28px rgba(14, 51, 73, 0.12);
         }
 
-        .amorato-gallery-item img {
+        .sipspot-gallery-item img {
           display: block;
           width: 100%;
           height: 100%;
@@ -118,36 +124,36 @@ function Amorato() {
           transition: transform 500ms ease;
         }
 
-        .amorato-gallery-item:hover img {
+        .sipspot-gallery-item:hover img {
           transform: scale(1.06);
         }
 
-        .amorato-details {
+        .sipspot-details {
           display: grid;
           grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
           gap: 20px;
           padding: clamp(20px, 4vw, 34px);
           border: 1px solid rgba(112, 196, 236, 0.34);
           border-radius: 28px;
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 249, 255, 0.88));
+          background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.94),
+            rgba(238, 249, 255, 0.88)
+          );
           box-shadow: 0 18px 45px rgba(14, 57, 80, 0.1);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
         }
 
-        .amorato-card {
-          padding: 4px 0;
-        }
-
-        .amorato-section-heading {
+        .sipspot-section-heading {
           margin: 0 0 16px;
-          color: var(--amorato-deep);
+          color: var(--sipspot-deep);
           font-size: clamp(1.25rem, 2.4vw, 1.55rem);
           line-height: 1.25;
         }
 
-        .amorato-list,
-        .amorato-info-list {
+        .sipspot-menu-list,
+        .sipspot-info-list {
           display: grid;
           gap: 11px;
           margin: 0;
@@ -155,8 +161,8 @@ function Amorato() {
           list-style: none;
         }
 
-        .amorato-list li,
-        .amorato-info-list li {
+        .sipspot-menu-list li,
+        .sipspot-info-list li {
           display: flex;
           align-items: flex-start;
           gap: 10px;
@@ -166,32 +172,26 @@ function Amorato() {
           line-height: 1.55;
         }
 
-        .amorato-list li {
+        .sipspot-menu-list li {
           font-weight: 650;
         }
 
-        .amorato-info {
+        .sipspot-info {
           padding: 4px 0 4px 20px;
           border-left: 1px solid rgba(58, 142, 183, 0.22);
           text-align: right;
         }
 
-        .amorato-info-list li {
+        .sipspot-info-list li {
           font-size: 0.94rem;
         }
 
-        .amorato-info-list span,
-        .amorato-info-list a {
+        .sipspot-info-list span,
+        .sipspot-info-list a {
           overflow-wrap: anywhere;
         }
 
-        .amorato-ltr {
-          direction: ltr;
-          unicode-bidi: bidi-override;
-          display: inline-block;
-        }
-
-        .amorato-link {
+        .sipspot-link {
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -206,19 +206,19 @@ function Amorato() {
           transition: transform 220ms ease, box-shadow 220ms ease;
         }
 
-        .amorato-link:hover {
+        .sipspot-link:hover {
           transform: translateY(-3px);
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
-        .amorato-actions {
+        .sipspot-actions {
           display: flex;
           justify-content: space-between;
           gap: 14px;
           margin-top: 28px;
         }
 
-        .amorato-button {
+        .sipspot-button {
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -229,156 +229,187 @@ function Amorato() {
           text-decoration: none;
           font-size: 0.96rem;
           font-weight: 800;
-          transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+          transition:
+            transform 220ms ease,
+            box-shadow 220ms ease,
+            background 220ms ease;
         }
 
-        .amorato-button:hover {
+        .sipspot-button:hover {
           transform: translateY(-3px);
         }
 
-        .amorato-button:active {
-          transform: translateY(-1px);
-        }
-
-        .amorato-button-back {
+        .sipspot-button-back {
           border-color: #c8e5f2;
           background: #fff;
-          color: var(--amorato-ink);
+          color: var(--sipspot-ink);
           box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
         }
 
-        .amorato-button-next {
+        .sipspot-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
-        .amorato-button-next:hover {
-          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
-        }
-
         @media (max-width: 760px) {
-          .amorato-page {
+          .sipspot-page {
             padding-bottom: 32px;
           }
 
-          .amorato-hero {
+          .sipspot-hero {
             min-height: 410px;
             border-radius: 25px;
           }
 
-          .amorato-hero-content {
+          .sipspot-hero-content {
             align-items: flex-start;
             flex-direction: column;
           }
 
-          .amorato-award {
+          .sipspot-award {
             white-space: normal;
           }
 
-          .amorato-gallery {
+          .sipspot-gallery {
+            grid-template-columns: 1fr;
             gap: 12px;
             margin: 18px 0;
           }
 
-          .amorato-gallery-item {
-            height: 160px;
+          .sipspot-gallery-item {
+            height: 210px;
             border-radius: 17px;
           }
 
-          .amorato-details {
+          .sipspot-details {
             grid-template-columns: 1fr;
             border-radius: 22px;
           }
 
-          .amorato-info {
+          .sipspot-info {
             padding: 20px 0 0;
             border-top: 1px solid rgba(58, 142, 183, 0.22);
             border-left: 0;
           }
 
-          .amorato-actions {
+          .sipspot-actions {
             flex-direction: column-reverse;
           }
 
-          .amorato-button {
+          .sipspot-button {
             width: 100%;
           }
         }
       `}</style>
 
-      <section className="amorato-hero">
-        <img src={amoratoMain} alt="Amorato" />
-        <div className="amorato-hero-content">
+      <section className="sipspot-hero">
+        <img
+          src={sipSpotMain}
+          alt="The Sip Spot Coffee And More"
+        />
+
+        <div className="sipspot-hero-content">
           <div>
-            <p className="amorato-kicker">🍦 Hanioti, Greece</p>
-            <h1 className="amorato-title">Amorato</h1>
+            <p className="sipspot-kicker">
+              🍳 Pefkochori, Greece
+            </p>
+
+            <h1 className="sipspot-title">
+              The Sip Spot
+            </h1>
           </div>
-          <p className="amorato-award">🥇 BEST ICE CREAM</p>
+
+          <p className="sipspot-award">
+            🥇 BEST OF THE BEST
+          </p>
         </div>
       </section>
 
-      <section className="amorato-gallery" aria-label="Amorato highlights">
-        <div className="amorato-gallery-item">
-          <img src={amoratoIcecream} alt="Ice Cream" />
-        </div>
-        <div className="amorato-gallery-item">
-          <img src={amoratoNight} alt="Amorato Night" />
-        </div>
+      <section
+        className="sipspot-gallery"
+        aria-label="The Sip Spot food"
+      >
+        {galleryImages.map((image, index) => (
+          <div
+            className="sipspot-gallery-item"
+            key={`${image}-${index}`}
+          >
+            <img
+              src={image}
+              alt={`The Sip Spot ${index + 1}`}
+            />
+          </div>
+        ))}
       </section>
 
-      <section className="amorato-details">
-        <div className="amorato-card">
-          <h2 className="amorato-section-heading">🍨 טעמים מומלצים</h2>
-          <ul className="amorato-list" dir="rtl">
-            <li>🍦 גלידת פיסטוק.</li>
-            <li>🍫 גלידת שוקולד.</li>
-            <li>🍓 גלידת תות.</li>
+      <section className="sipspot-details">
+        <div>
+          <h2 className="sipspot-section-heading">
+            🍳 ארוחת בוקר ובראנץ׳ מתוכננת
+          </h2>
+
+          <ul className="sipspot-menu-list" dir="rtl">
+            <li>🍳 אומלט / מנות ביצים</li>
+            <li>🥗 סלט רענן</li>
+            <li>☕ קפה איכותי</li>
+            <li>🧃 מיץ טבעי</li>
+            <li>🥐 מנות בוקר ובראנץ׳ נוספות</li>
           </ul>
         </div>
 
-        <div className="amorato-card amorato-info" dir="rtl">
-          <h2 className="amorato-section-heading">פרטים שימושיים</h2>
-          <ul className="amorato-info-list">
+        <div className="sipspot-info" dir="rtl">
+          <h2 className="sipspot-section-heading">
+            פרטים שימושיים
+          </h2>
+
+          <ul className="sipspot-info-list">
             <li>
-              <span>📍 כתובת: Hanioti, Chalkidiki, Greece</span>
+              <span>
+                📍 מיקום: פפקוחורי (Pefkochori), חלקידיקי, יוון
+              </span>
             </li>
+
             <li>
-              <span>🕒 שעות פעילות: <span className="amorato-ltr">11:00–01:00</span></span>
+              <span>
+                ☕ סוג מקום: ארוחת בוקר / בראנץ׳ / קפה
+              </span>
             </li>
-            <li>
-              <span>📞 טלפון: <span className="amorato-ltr">+30 23744 01080</span></span>
-            </li>
+
             <li>
               <a
-                className="amorato-link"
-                href="https://waze.com/ul"
+                className="sipspot-link"
+                href="https://waze.com/ul?ll=39.988826,23.612629&navigate=yes"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 🚗 פתח ב־Waze
               </a>
             </li>
-            <li>
-              <span>💡 מומלץ לקינוח אחרי ארוחת הערב.</span>
-            </li>
           </ul>
         </div>
       </section>
 
-      <nav className="amorato-actions" aria-label="Amorato navigation">
-        <Link className="amorato-button amorato-button-back" to="/faros">
-          ⬅️ חזרה ל־Faros
-        </Link>
+      <nav
+        className="sipspot-actions"
+        aria-label="The Sip Spot navigation"
+      >
         <Link
-          className="amorato-button amorato-button-next"
-          to="/hanioti-promenade"
+          className="sipspot-button sipspot-button-back"
+          to="/day2"
         >
-          🚶 המשך לטיילת חניוטי
+          ⬅️ חזרה ליום 2
+        </Link>
+
+        <Link
+          className="sipspot-button sipspot-button-next"
+          to="/day2"
+        >
+          ➡️ המשך לשופינג פפקוחורי
         </Link>
       </nav>
     </main>
   );
 }
 
-export default Amorato;
+export default SipSpot;

@@ -4,7 +4,7 @@ import "./Day.css";
 import heroImage from "../../assets/images/kallithea-beach-2.jpg";
 import MusicModal from "../../components/MusicModal";
 
-function Day1() {
+function Day2() {
   const [showMusicModal, setShowMusicModal] = useState(false);
   const navigate = useNavigate();
 
@@ -13,49 +13,68 @@ function Day1() {
       <div className="day-image">
         <img
           src={heroImage}
-          alt="חוף קליתאה"
+          alt="פפקוחורי"
           className="day-hero-image"
         />
       </div>
 
       <div className="day-location-box">
         <h2 className="day-location">
-          חניוטי
+          פפקוחורי
         </h2>
 
         <p className="day-location-en">
-          HANIOTI
+          PEFKOCHORI
         </p>
       </div>
 
       <div className="day-icons">
         <span
-          title="Lefko Suites"
-          onClick={() => navigate("/lefko")}
+          title="The Sip Spot Coffee And More — Breakfast"
+          onClick={() => navigate("/sip-spot")}
           style={{ cursor: "pointer" }}
         >
-          🏨
+          🍳
         </span>
+
         <span
-          title="Faros Fish Restaurant"
-          onClick={() => navigate("/faros")}
+          title="Shopping / Browsing — Pefkochori"
+          onClick={() => navigate("/pefkochori-shopping")}
           style={{ cursor: "pointer" }}
         >
-          🐟
+          👗
         </span>
+
         <span
-          title="טיילת ושקיעה"
-          onClick={() => navigate("/hanioti-promenade")}
+          title="Glarokavos Beach (Sea Side)"
+          onClick={() => navigate("/glarokavos-beach")}
           style={{ cursor: "pointer" }}
         >
-          🌅
+          🏖️
         </span>
+
         <span
-          title="גלידה"
-          onClick={() => navigate("/amorato")}
+          title="Kassandreia Tuesday Market — Optional"
+          onClick={() => navigate("/kassandreia-market")}
           style={{ cursor: "pointer" }}
         >
-          🍨
+          🛍️
+        </span>
+
+        <span
+          title="Metoxi Restaurant — Meat Dinner"
+          onClick={() => navigate("/metoxi")}
+          style={{ cursor: "pointer" }}
+        >
+          🥩
+        </span>
+
+        <span
+          title="Givizinis Pastry Cafe — Dessert"
+          onClick={() => navigate("/givizinis")}
+          style={{ cursor: "pointer" }}
+        >
+          🍰
         </span>
       </div>
 
@@ -112,6 +131,27 @@ function Day1() {
 
       <nav style={{ display: "flex", justifyContent: "space-between", gap: "14px", marginTop: "28px" }}>
         <Link
+          to="/day1"
+          style={{
+            textDecoration: "none",
+            color: "#153247",
+            background: "#fff",
+            padding: "0 22px",
+            minHeight: "54px",
+            border: "1px solid #c8e5f2",
+            borderRadius: "16px",
+            boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+            fontWeight: 800,
+            fontSize: "0.96rem",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          ← יום 1
+        </Link>
+
+        <Link
           to="/"
           style={{
             textDecoration: "none",
@@ -133,7 +173,7 @@ function Day1() {
         </Link>
 
         <Link
-          to="/day2"
+          to="/day3"
           style={{
             textDecoration: "none",
             color: "#fff",
@@ -150,11 +190,11 @@ function Day1() {
             justifyContent: "center",
           }}
         >
-          יום 2 →
+          יום 3 →
         </Link>
       </nav>
     </div>
   );
 }
 
-export default Day1;
+export default Day2;

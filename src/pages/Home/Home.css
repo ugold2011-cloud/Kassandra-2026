@@ -21,7 +21,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 28px;
+  gap: 12px;
 }
 
 .mapPanel {
@@ -118,12 +118,8 @@ h1 {
   margin-left: 20px;
   padding-right: 20px;
   width: 110px;
-align-items: center;
-margin-top: 10px;
-position: absolute;
-right: 20px;
-top: 78%;
-transform: translateY(-50%);
+  align-items: center;
+  margin-top: 10px;
 }
  
 
