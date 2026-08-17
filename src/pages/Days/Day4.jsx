@@ -1,81 +1,56 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Day.css";
 import heroImage from "../../assets/images/kallithea-beach-2.jpg";
 import MusicModal from "../../components/MusicModal";
 
-function Day1() {
+function Day4() {
   const [showMusicModal, setShowMusicModal] = useState(false);
   const navigate = useNavigate();
-
-  const [iconRowWidth, setIconRowWidth] = useState(null);
-  const iconsRowRef = useRef(null);
-
-  useEffect(() => {
-    const measureRow = () => {
-      if (iconsRowRef.current) {
-        setIconRowWidth(iconsRowRef.current.getBoundingClientRect().width);
-      }
-    };
-
-    measureRow();
-
-    const observer = new ResizeObserver(measureRow);
-    if (iconsRowRef.current) {
-      observer.observe(iconsRowRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="day-page">
       <div className="day-image">
         <img
           src={heroImage}
-          alt="חוף קליתאה"
+          alt="קסנדרה"
           className="day-hero-image"
         />
       </div>
 
       <div className="day-location-box">
         <h2 className="day-location">
-          חניוטי
+          קסנדרה
         </h2>
 
         <p className="day-location-en">
-          HANIOTI
+          KASSANDRA
         </p>
       </div>
 
-      <div className="day-icons" ref={iconsRowRef}>
+      <div className="day-icons">
         <span
-          title="Lefko Suites"
-          onClick={() => navigate("/lefko")}
+          title="Dramis Bakery - Cafe Patisserie — Hanioti"
+          onClick={() => navigate("/dramis")}
           style={{ cursor: "pointer" }}
         >
-          🏨
+          🥐
         </span>
+
         <span
-          title="Faros Fish Restaurant"
-          onClick={() => navigate("/faros")}
+          title="Encore Beach Bar — Aigaiopelagitika / Possidi"
+          onClick={() => navigate("/encore-beach-bar")}
           style={{ cursor: "pointer" }}
         >
-          🐟
+          🏖️
         </span>
+
         <span
-          title="טיילת ושקיעה"
-          onClick={() => navigate("/hanioti-promenade")}
+          title="Apagio — Nea Skioni"
+          onClick={() => navigate("/apagio")}
           style={{ cursor: "pointer" }}
         >
-          🌅
-        </span>
-        <span
-          title="גלידה"
-          onClick={() => navigate("/amorato")}
-          style={{ cursor: "pointer" }}
-        >
-          🍨
+          🍽️
         </span>
       </div>
 
@@ -88,12 +63,20 @@ function Day1() {
           marginTop: "30px",
         }}
       >
+        <button
+          className="waze-button"
+          style={{
+            width: "260px",
+          }}
+        >
+          🚗 פתח ב־Waze
+        </button>
+
         {!showMusicModal && (
           <button
             onClick={() => setShowMusicModal(true)}
-            className="day-music-button"
             style={{
-              width: iconRowWidth ? `${iconRowWidth}px` : undefined,
+              width: "260px",
               height: "58px",
               border: "none",
               borderRadius: "18px",
@@ -107,7 +90,6 @@ function Day1() {
               alignItems: "center",
               justifyContent: "center",
               gap: "10px",
-              whiteSpace: "nowrap",
               boxShadow: "0 8px 20px rgba(79,70,229,0.35)",
             }}
           >
@@ -124,6 +106,27 @@ function Day1() {
       )}
 
       <nav style={{ display: "flex", justifyContent: "space-between", gap: "14px", marginTop: "28px" }}>
+        <Link
+          to="/day3"
+          style={{
+            textDecoration: "none",
+            color: "#153247",
+            background: "#fff",
+            padding: "0 22px",
+            minHeight: "54px",
+            border: "1px solid #c8e5f2",
+            borderRadius: "16px",
+            boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+            fontWeight: 800,
+            fontSize: "0.96rem",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          ← יום 3
+        </Link>
+
         <Link
           to="/"
           style={{
@@ -144,30 +147,9 @@ function Day1() {
         >
           🏠 ראשי
         </Link>
-
-        <Link
-          to="/day2"
-          style={{
-            textDecoration: "none",
-            color: "#fff",
-            background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
-            padding: "0 22px",
-            minHeight: "54px",
-            border: "1px solid transparent",
-            borderRadius: "16px",
-            boxShadow: "0 12px 24px rgba(79, 70, 229, 0.28)",
-            fontWeight: 800,
-            fontSize: "0.96rem",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          יום 2 →
-        </Link>
       </nav>
     </div>
   );
 }
 
-export default Day1;
+export default Day4;

@@ -6,7 +6,7 @@
 **Project:** Kassandra-2026  
 **Owner:** URA  
 **Project Manager:** ChatGPT  
-**Last Updated:** 2026-08-12 00:25
+**Last Updated:** 2026-08-13
 
 ---
 
@@ -30,7 +30,7 @@ Authority order:
 **URA → ChatGPT → Kilo Code**
 
 - URA is the final approval authority.
-- ChatGPT is the Project Manager and controls task scope, sequence, validation, and approval boundaries.
+- ChatGPT is the Project Manager and controls task scope, sequence, validation, content, and approval boundaries.
 - Kilo Code executes only explicitly approved technical tasks.
 
 ---
@@ -214,13 +214,191 @@ Kilo must never independently:
 
 ---
 
-## 11. OPERATING PRINCIPLE
+## 11. CONTENT AUTHORSHIP — ABSOLUTE RULE
 
-**Maximum autonomy for safe routine execution.  
-Mandatory approval for scope, additional-file, deletion, installation, dependency, or structural changes.**
+Kilo Code is NOT a content author for Kassandra-2026.
 
-This rule is intended to prevent unnecessary approval interruptions while preserving strict control over the Kassandra-2026 project.
+All user-visible application content must be:
+1. researched / verified and prepared under ChatGPT project management;
+2. approved according to the project workflow;
+3. supplied to Kilo for technical implementation.
+
+Kilo MUST NOT independently invent, complete, expand, rewrite, paraphrase, improve, translate, or guess user-visible content.
+
+This prohibition includes, but is not limited to:
+
+- place descriptions
+- restaurant descriptions
+- food or menu items
+- recommendations
+- itinerary explanations
+- headings and labels
+- addresses
+- telephone numbers
+- opening hours
+- prices
+- reservation information
+- parking information
+- accessibility information
+- coordinates
+- Waze links
+- website links
+- factual claims
+- ratings
+- awards
+- travel advice
+- placeholder content presented as real content
+
+When ChatGPT provides exact user-visible text, Kilo MUST implement that text **VERBATIM** unless the task explicitly authorizes wording changes.
+
+Kilo must not add additional descriptive text merely to fill a template or make a page appear complete.
+
+If required user-visible content is missing, ambiguous, contradictory, or not supplied:
+
+**STOP AND REPORT THE MISSING CONTENT.**
+
+Do NOT guess.
+Do NOT fill the gap.
+Do NOT use generic placeholder facts.
+Do NOT research or generate replacement content independently.
+
+Technical text required purely for code operation may be created only when it is not presented to the end user and does not change approved UX/content.
+
+---
+
+## 12. WAZE / LOCATION DATA RULE
+
+Waze integration is a controlled project phase.
+
+Kilo MUST NOT independently:
+- generate coordinates
+- reuse coordinates from another destination
+- guess a location
+- create Waze URLs
+- copy a Waze URL from another station
+- activate a Waze button with unverified destination data
+
+Only specifically verified and approved location data supplied during the Waze phase may be implemented.
+
+If verified Waze/location data has not been supplied:
+
+**STOP AND REPORT — DO NOT INVENT IT.**
+
+---
+
+## 13. CONTENT QUALITY CONTROL
+
+Before completing any task containing user-visible content, Kilo must verify that:
+
+- only supplied/approved content was implemented
+- no additional text was invented
+- no malformed or corrupted text was introduced
+- Hebrew/English mixed text was preserved correctly
+- no unrelated content was copied from another station/page
+- no factual placeholders were presented as real information
+
+If Kilo detects suspicious, malformed, corrupted, or unclear text, it must report it rather than attempting to repair the wording independently.
+
+---
+
+## 14. OPERATING PRINCIPLE
+
+**Maximum autonomy for safe routine technical execution.  
+Zero independent authority over user-visible content.  
+Mandatory approval for scope, additional-file, deletion, installation, dependency, structural, UX, or content changes.**
+
+Kilo implements.
+
+ChatGPT manages and controls content.
+
+URA has final approval authority.
 
 ---
 
 **END OF KILO CODE AGENT RULES**
+
+# MANDATORY SAFE CHANGE GATE — 17.08.2026
+
+These rules are mandatory and override speed or convenience.
+
+1. For any multi-page, shared CSS, global, automated, or broad change:
+   SCAN → REPORT → MASTER STANDARD → USER APPROVAL → ONE TEST PAGE → REAL DEVICE TEST → PASS → SMALL BATCH → VERIFY.
+
+2. Never perform a broad fix immediately.
+
+3. Never modify files outside the explicitly approved scope.
+
+4. Never refactor, clean up, improve, or redesign unrelated code.
+
+5. Shared CSS is HIGH RISK.
+   Inspect affected pages before changing shared CSS.
+   Prefer LOCAL CHANGE before GLOBAL CHANGE.
+
+6. After modifying ONE TEST PAGE:
+   STOP.
+   Do not continue to other pages until explicit PASS is given.
+
+7. If additional files or changes become necessary:
+   STOP + REPORT.
+   Do not proceed automatically.
+
+8. During mobile testing:
+   DO NOT run npm run dev.
+   DO NOT stop or restart Vite.
+   DO NOT kill processes.
+   DO NOT touch the dev-server terminal.
+   DO NOT run npm run build unless explicitly requested.
+
+9. Keep tasks small:
+   one clear change at a time whenever possible.
+
+10. If an instruction conflicts with these safety rules:
+    STOP + REPORT before making changes.
+
+FINAL RULE:
+NO UNAPPROVED BROAD CHANGES.
+NO SILENT EXTRA CHANGES.
+NO DAMAGE.
+
+# SAFE CHANGE EXECUTION RULES
+
+Effective: 17.08.2026
+
+For any cross-page, multi-file, shared-CSS, automated, or broad change:
+
+1. SCAN / READ-ONLY first.
+2. REPORT findings before action.
+3. Define exact MASTER STANDARD.
+4. Wait for explicit user approval.
+5. Modify ONE TEST PAGE only.
+6. STOP for real-device verification.
+7. Continue only after explicit PASS.
+8. Roll out gradually in small batches.
+9. STRICT SCOPE: modify only approved files/components.
+10. If work outside scope is required: STOP + REPORT.
+11. Shared CSS is HIGH RISK. Prefer LOCAL CHANGE before GLOBAL CHANGE.
+12. During mobile testing:
+   - DO NOT run npm run dev.
+   - DO NOT stop/restart Vite.
+   - DO NOT kill processes.
+   - DO NOT use the server Terminal.
+   - DO NOT run build unless explicitly requested.
+13. No automatic refactoring, cleanup, redesign, or “improvements”.
+14. Safety overrides speed.
+15. Never execute “fix the whole project” before all safety gates are passed.
+
+Mandatory workflow:
+
+SCAN
+→ REPORT
+→ MASTER STANDARD
+→ USER APPROVAL
+→ ONE TEST PAGE
+→ REAL DEVICE TEST
+→ PASS
+→ SMALL BATCH
+→ VERIFY
+→ NEXT BATCH
+
+Any deviation:
+STOP + REPORT

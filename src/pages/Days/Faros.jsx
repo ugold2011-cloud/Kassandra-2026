@@ -200,6 +200,29 @@ function Faros() {
         .faros-button-next { background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff; box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28); }
         .faros-button-next:hover { box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38); }
 
+        .faros-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 0 22px;
+          min-height: 48px;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+        }
+
+        .faros-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
         @media (max-width: 640px) {
           .faros-page { padding-bottom: 32px; }
           .faros-hero { min-height: 410px; border-radius: 25px; }
@@ -249,7 +272,16 @@ function Faros() {
             <li><span>📍 כתובת: Unnamed Rd, Chaniotis 63085, Greece</span></li>
             <li><span>📞 טלפון: <span className="faros-ltr">+30 2374 051276</span></span></li>
             <li><span>🕕 שעות פתיחה: <span className="faros-ltr">13:00–23:30</span></span></li>
-            <li><span>🚗 Waze: יתעדכן בהמשך.</span></li>
+            <li>
+              <a
+                className="faros-waze"
+                href="waze://?ll=39.999876,23.574140&navigate=yes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🚗 פתח ב־Waze
+              </a>
+            </li>
             <li><span>💡 מומלץ להגיע בין <span className="faros-ltr">19:00–20:00</span></span></li>
           </ul>
         </div>

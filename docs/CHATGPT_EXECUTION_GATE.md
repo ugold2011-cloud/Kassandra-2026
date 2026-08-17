@@ -304,3 +304,51 @@ ChatGPT is responsible for enforcing this Execution Gate
 before issuing project-changing instructions.
 
 END OF DOCUMENT
+
+# SAFE CHANGE EXECUTION GATE — 17.08.2026
+
+This gate is mandatory for ChatGPT before issuing execution instructions to Kilo or any other coding/automation agent.
+
+For any broad, multi-page, shared CSS, global, automated, or potentially high-impact change:
+
+ChatGPT MUST enforce:
+
+SCAN
+→ REPORT
+→ MASTER STANDARD
+→ USER APPROVAL
+→ ONE TEST PAGE
+→ REAL DEVICE TEST
+→ PASS
+→ SMALL BATCH
+→ VERIFY
+
+RULES:
+
+1. ChatGPT must NOT instruct an agent to perform a broad change before completing the required gates.
+
+2. ChatGPT must prefer:
+   LOCAL CHANGE before GLOBAL CHANGE.
+
+3. Shared CSS changes are HIGH RISK and require impact inspection before modification.
+
+4. Execution instructions should be short, precise, and narrowly scoped whenever possible.
+
+5. One test page must be completed and manually verified before propagating a new design or behavior.
+
+6. During mobile testing, ChatGPT must NOT instruct Kilo to run, stop, restart, replace, or interfere with the Vite dev server unless explicitly required and approved.
+
+7. ChatGPT must NOT request npm run build during iterative mobile visual testing unless build verification is specifically required.
+
+8. If execution reveals that additional files or scope are required:
+   STOP + REPORT.
+   Do not silently expand the task.
+
+9. User approval is the final PASS gate before propagation.
+
+10. NO DAMAGE OVERRIDES SPEED.
+
+FINAL RULE:
+ChatGPT manages the change process.
+The execution agent performs only the approved scope.
+The user is the final approval authority.

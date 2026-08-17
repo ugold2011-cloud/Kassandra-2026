@@ -95,6 +95,28 @@ function HaniotiPromenade() {
         <p>🍦 גלידריות, בתי קפה וחנויות.</p>
         <p>🌊 מרחק הליכה קצר מהים.</p>
         <p>📍 Hanioti, Chalkidiki, Greece</p>
+        <a
+          href="waze://?ll=40.001556,23.575541&navigate=yes"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "12px",
+            width: "100%",
+            minHeight: "52px",
+            padding: "0 20px",
+            borderRadius: "16px",
+            background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+            color: "#fff",
+            textDecoration: "none",
+            fontWeight: 800,
+            boxShadow: "0 8px 18px rgba(79, 70, 229, 0.28)",
+          }}
+        >
+          🚗 פתח ב־Waze
+        </a>
 
         <hr style={{ margin: "20px 0" }} />
 
@@ -104,7 +126,9 @@ function HaniotiPromenade() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          width: "100%",
+          maxWidth: "100%",
           gap: "14px",
           marginTop: "30px",
           marginBottom: "40px",
@@ -113,17 +137,17 @@ function HaniotiPromenade() {
         <Link to="/amorato">
           <button
             style={{
-              width: "220px",
-              padding: "16px",
-              border: "none",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, #26c6da 0%, #0097a7 100%)",
-              color: "white",
+              width: "100%",
+              minHeight: "54px",
+              padding: "0 20px",
+              border: "1px solid #dbe2ea",
+              borderRadius: "16px",
+              background: "#ffffff",
+              color: "#1f2937",
               fontSize: "17px",
               fontWeight: "700",
               cursor: "pointer",
-              boxShadow: "0 10px 25px rgba(38, 198, 218, 0.35)",
+              boxShadow: "none",
               transition: "all 0.25s ease",
             }}
           >
@@ -134,10 +158,10 @@ function HaniotiPromenade() {
         <Link to="/day1">
           <button
             style={{
-              width: "220px",
-              padding: "16px",
-              border: "none",
-              borderRadius: "18px",
+              width: "100%",
+              minHeight: "54px",
+              padding: "0 20px",
+              borderRadius: "16px",
               background:
                 "linear-gradient(135deg, #2563eb 0%, #1e40af 100%)",
               color: "white",

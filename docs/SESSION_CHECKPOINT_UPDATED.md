@@ -4,10 +4,10 @@
 
 ## DOCUMENT CONTROL — ALWAYS CHECK FIRST
 
-**LAST UPDATED:** 12.08.2026 / 03:17 / Israel Time  
-**PROJECT STATE CAPTURED THROUGH:** 2026-08-12 03:17  
+**LAST UPDATED:** 12.08.2026 / 19:51 / Israel Time  
+**PROJECT STATE CAPTURED THROUGH:** 2026-08-12 19:51  
 **CURRENT SESSION DATE:** 2026-08-12  
-**UPDATE TYPE:** Day 3 content planning closure, Perplexity approval, Days 4–7 planning principles, and exact next implementation point.
+**UPDATE TYPE:** Day 3 station pages implementation, Lefko Suites redesign, Home page navigation fixes, Day 1 icon wiring, session verification and backup.
 
 > **AUTHORITY RULE:** When multiple copies exist, identify the authoritative working copy by the internal `LAST UPDATED` timestamp, not by filename, download date, chat history, or memory.
 
@@ -20,7 +20,7 @@
 🟡 **ACTIVE**
 
 This checkpoint records only work that was actually completed or explicitly approved.  
-Do not interpret “DEVELOPMENT COMPLETE” as “FINAL COMPLETE”.
+Do not interpret "DEVELOPMENT COMPLETE" as "FINAL COMPLETE".
 
 ---
 
@@ -224,6 +224,12 @@ Known remaining cross-project work includes:
 
 Do not redo completed Day 1 development work unless there is a concrete reason.
 
+Day 1 station icon navigation was completed during this session:
+- Lefko Suites → `/lefko`
+- Faros Fish Restaurant → `/faros`
+- Hanioti Promenade → `/hanioti-promenade`
+- Amorato → `/amorato`
+
 ---
 
 # DAY 2 — APPROVED PLAN
@@ -236,9 +242,8 @@ Approved seven-stop itinerary:
 2. Shopping / Browsing — Pefkochori
 3. Glarokavos Beach — SEA SIDE / OPEN SEA SIDE ONLY
 4. Kassandreia Tuesday Market — Optional
-5. Lefko Suites — Rest
-6. Metoxi Restaurant — Meat Dinner
-7. Givizinis Pastry Cafe — Dessert
+5. Metoxi Restaurant — Meat Dinner
+6. Givizinis Pastry Cafe — Dessert
 
 Permanent content rule:
 
@@ -498,196 +503,199 @@ This includes Day 1, Day 2, and all subsequent days.
 
 **Day 2 remains DEVELOPMENT COMPLETE — NOT FINAL COMPLETE.**
 
-**Day 3 content planning is COMPLETE and approved. Day 3 application implementation has NOT started.**
+---
 
-`Day3_Plan.md` was created under `docs/DAILY_PLANS_02/Day3_Plan.md`.
+# DAY 3 — IMPLEMENTATION STATUS
 
-Before implementation in the next session, first verify that `Day3_Plan.md` was saved correctly.
+**DATE:** 2026-08-12  
+**STATUS:** SUBSTANTIAL PROGRESS — DAY 3 STATION PAGES IMPLEMENTED
+
+Day 3 main page exists and opens.
+
+Implemented Day 3 station pages:
+- The Stolen Cup (`/the-stolen-cup`)
+- Terra Azapiko (`/terra-azapiko`)
+- Afitos Old Village (`/afitos-old-village`)
+- Afytaion Gaia (`/afytaion-gaia`)
+- Gaia Kallisti (`/gaia-kallisti`)
+- Archontiko (`/archontiko`)
+
+Day 3 station icon navigation is wired and functional.
 
 ---
 
-# DAY 3 — FINAL APPROVED CONTENT
+# DAY 3 — CONTENT CHANGE — IMPORTANT
 
-**DATE:** Wednesday, 16.09.2026  
-**CONTENT STATUS:** FINAL — APPROVED  
-**PERPLEXITY VERDICT:** APPROVE WITH MINOR REFINEMENTS
+**REPLACED STATION:**
 
-Approved route order:
+Agia Paraskevi / unverified honey search is NO LONGER the selected honey stop.
 
-1. Lefko Suites — departure
-2. The Stolen Cup — Kallithea — breakfast
-3. Terra Azapiko — local olive oil tasting/purchase
-4. Afitos Old Village — relaxed browsing/shopping
-5. Afytaion Gaia — winery / wine tasting
-6. Lefko Suites — planned rest
-7. Agia Paraskevi — village / authentic local honey
-8. Archontiko Agia Paraskevi — traditional meat-focused dinner
-9. Lefko Suites — return
+It was replaced by:
 
-Plan Day 3 by **ORDER OF STATIONS**, not artificial fixed times. Exact times are added only when operationally required.
+**Gaia Kallisti — Siviri**
 
-**Afytaion Gaia:** ADVANCE CONTACT / RESERVATION REQUIRED FOR 4 ADULTS. Confirm availability, tasting format, price, duration, parking/access and arrival time.
+Reason:
+A specific, identifiable physical store was required.
+The project owner explicitly rejected an itinerary that depended on arriving in Agia Paraskevi and asking locals where to find a beekeeper.
 
-**Agia Paraskevi honey:** do not lock the route to an unverified tourist honey shop. Prefer genuine local honey directly from a beekeeper/producer where possible.
+Gaia Kallisti purpose:
+- Greek honey
+- olive oil
+- olives
+- local products
+- tasting/browsing/purchase
 
-**Archontiko:** ADVANCE RESERVATION RECOMMENDED FOR 4 ADULTS. Confirm availability, parking/access and relevant meat specialties.
-
-The return to Lefko Suites is intentional: **PLANNED REST**, not inefficient backtracking.
+Do NOT retain Agia Paraskevi as the Day 3 honey station in the active Day 3 route.
 
 ---
 
-# NEW ITINERARY PLANNING PRINCIPLES — APPROVED
+# DAY 3 — STATION-SPECIFIC OPERATING RULES
 
-## PLANNED SPONTANEITY — ספונטניות מתוכננת היטב
+## AFYTAION GAIA
 
-Prepare excellent optional choices in advance, including parking, access, opening hours and quality, but do NOT force travelers to use every option.
+Verified operating rule:
+- winery visit and wine tasting require advance coordination
+- user-facing wording approved:
+  "ביקור ביקב וטעימות: בתיאום מראש"
+- possibility to purchase bottles on site retained
 
-Examples: evening promenade, beer, cocktail, quality pub/bar, café, gelato or a short additional stop.
+## TERRA AZAPIKO
 
-## ACCESS / PHYSICAL COMFORT
-
-Prefer close vehicle access, nearby parking, short walking distances, opportunities to sit/rest and minimal unnecessary walking in hot weather.
-
-Do NOT plan hiking, long walking routes, forest walks, adventure sports, boat trips or sailing.
-
-## BEACHES
-
-Days 4–7 should include more Best-of-the-Best beaches where appropriate, prioritizing easy vehicle access, nearby parking and minimal walking.
-
-## WATER / BASIC SUPPLIES
-
-Every daily route should provide an easy opportunity to buy bottled water, cold drinks and basic necessities without a significant detour.
-
-## MARKETS
-
-Markets are a route bonus, not a reason to redesign a day. Include them only when they operate on that actual day and naturally intersect the route or require only a small detour.
-
-## ROUTING
-
-Prefer logical forward progression and minimum unnecessary backtracking. Planned returns to Lefko Suites for rest are allowed.
-
-Avoid long night drives where possible, especially on poorer local roads. Longer-distance excursions should preferably be driven during daylight and must justify the additional travel.
+Approved distinction:
+- store visit is casual/free-entry
+- factory tour is by advance coordination
+- user-facing opening hours:
+  10:00-23:15
+- parking information was intentionally omitted because it was not sufficiently verified
 
 ---
 
-# DAYS 4–7 — CURRENT PLANNING DIRECTION
+# DAILY PAGE UX RULE — PERMANENT APPROVED
 
-Days 4–7 are NOT finalized.
+Daily pages display only destinations that the traveler has a practical reason to open.
 
-Research priorities:
-- accessible Best-of-the-Best beaches
-- exceptional Greek tavernas
-- authentic local food
-- fish/seafood where appropriate
-- meat/meze and authentic tzatziki
-- villages/fishing harbors with easy access
-- local producers/shops
-- route-compatible local markets
-- thermal spa
-- relaxed cafés
-- quality bars/pubs
-- beer/cocktail stops
-- optional evening promenades
-- accessible sunset locations
+Lefko Suites must NOT appear as a station icon merely because:
+- the day starts there
+- travelers return there
+- there is a planned rest there
 
-## Friday 18.09.2026 — Kabbalat Shabbat
-
-Mandatory planning constraint.
-
-Keep daytime reasonably relaxed. Evening requires a **respectable, high-quality dinner location for 4 adults**, with excellent food, appropriate atmosphere/service and advance reservation if appropriate.
-
-Final restaurant is NOT yet selected and requires dedicated Best-of-the-Best research.
-
-## Day 6 — strong concept candidate
-
-**Accessible beach → Myrthia Thermal Spa / Miraggio → Paliouri Village → Best-of-the-Best traditional Greek tavern**
-
-Myrthia Thermal Spa is a strong candidate. Current research indicates external/non-hotel guests require advance coordination.
-
-Final Day 6 content is NOT yet approved.
-
-## Optional evenings
-
-Research optional evening experiences near Lefko Suites, especially Chanioti, Pefkochori and Polychrono: promenade, easy parking, short walk, café, beer/cocktail, quality pub/bar and gelato.
-
-## Longer-distance candidates
-
-Petralona Cave / surrounding area remains a research candidate only if accessibility, walking requirements and overall value justify the drive. Avoid long return drives at night.
+This rule was applied to Day 2 and Day 3.
 
 ---
 
-# ADVANCE RESERVATIONS / CONTACT STRATEGY
+# HOME PAGE — CURRENT STATUS
 
-After Days 1–7 are finalized, create one consolidated document for all places requiring reservation, appointment, recommended reservation or advance verification/contact.
-
-Track: place, day/date, 4 adults, purpose, timing if required, contact method, status and confirmation details.
-
-Statuses: **PENDING / CONTACTED / CONFIRMED / NOT REQUIRED**
-
-Current Day 3 entries:
-- **Afytaion Gaia — ADVANCE RESERVATION REQUIRED**
-- **Archontiko — ADVANCE RESERVATION RECOMMENDED**
-- Honey producer — verify only if a specific authentic producer is identified
+- Day 1–Day 7 vertical day bar was moved closer to the map and is now visually approved.
+- Day 1, Day 2 and Day 3 Home buttons/entry points were manually tested and work.
+- The current decorative Kassandra map remains for now.
+- IMPORTANT FUTURE TASK:
+  After Days 1–7 are finalized, revisit the Home map and consider recreating it in the same visual style using the REAL approved routes and destination points.
+- Do NOT treat the current illustrated route lines/points as verified navigation data.
 
 ---
 
-# NEXT SESSION / NEXT DEVELOPMENT ACTION
+# DESIGN STRATEGY — MASTER DIRECTION
 
-Resume from:
+The Project Owner approved the current design direction of Days 1–3 as the basis for future days.
 
-**DAY 3 — IMPLEMENTATION PREPARATION**
+Current rule:
+- Day 1–3 are the MASTER DESIGN REFERENCE for Days 4–7.
+- Preserve the approved visual language, cards, image treatment, navigation logic, spacing, typography and interaction approach.
+- Do NOT invent a new design language for Day 4–7.
+- Content fields may vary according to station type.
 
-1. Verify `docs/DAILY_PLANS_02/Day3_Plan.md` is saved correctly.
-2. Do NOT reopen Day 3 content planning unless a concrete issue is discovered.
-3. Use `Day1.jsx` as the frozen master-template reference where applicable.
-4. Prepare Day 3 implementation.
-5. Use Kilo Code only as a technical execution agent under `docs/KILO_AGENT_RULES.md`.
-6. Preserve approved architecture, UX, design, scope and project rules.
-7. Work one controlled task at a time.
-8. Keep Waze deferred to Phase 2.
-9. Keep playlist/music integration deferred to Phase 3.
-
-Do NOT redo completed Day 2 work without a concrete reason.
+Important limitation:
+This is a design/template standard, NOT permission to modify already approved architecture or UX independently.
 
 ---
 
-# END-OF-DAY / CHECKPOINT PROCEDURE
+# LEFKO SUITES — CURRENT STATUS
 
-Permanent procedure document:
+Lefko Suites received a focused redesign during this session.
 
-`docs/END_OF_DAY_CHECKPOINT_AND_BACKUP_PROCEDURE.md`
-
-Mandatory close sequence remains:
-
-1. Stop development.
-2. Update `SESSION_CHECKPOINT.md`.
-3. Verify the checkpoint.
-4. Create a complete physical backup of the entire `Kassandra-2026` folder.
-5. Verify the physical backup.
-6. Safely eject the USB drive.
-
-A work session is not fully closed until the checkpoint and required physical backup are completed and verified.
+Approved/current principles:
+- all original Lefko images preserved
+- useful address/parking/website/phone/Waze information preserved
+- unnecessary tip removed
+- old "surrounding area" heading removed
+- unnecessary nearby-location lines removed
+- Masoutis retained as:
+  "Masoutis — חנות מזון קרובה"
+  without meter distance
+- Faros navigation retained
+- Home navigation retained
+- music button was removed from Lefko during final cleanup
+- do NOT interpret this as cancellation of project-wide playlist integration; playlist integration remains deferred to Phase 3
 
 ---
 
-# PHYSICAL BACKUP STATUS
+# DEVELOPMENT / VERIFICATION
 
-A physical KINGSTON backup was completed and verified earlier on 2026-08-11.
+Recent work repeatedly passed:
+- npm run lint
+- npm run build
 
-Since that backup, additional project work has been performed, including:
-- Kilo integration/control changes
-- updated `KILO_AGENT_RULES.md`
-- Metoxi image integration
-- Givizinis image integration
-- Day 2 development-stage completion
-- Day 3 content planning and approval
-- creation/preparation of `Day3_Plan.md`
-- Days 4–7 planning principles and research direction
-- this checkpoint update
+Do not claim a test passed unless it was actually run.
 
-**CURRENT BACKUP STATUS: 🔴 PENDING NEW BACKUP**
+Day 1, Day 2 and Day 3 were manually checked in Chrome.
+Home-page entry to Day 1, Day 2 and Day 3 works.
+Station/detail pages for the three days were manually opened and confirmed to load.
 
-Do not mark the current project state as physically backed up until a new complete backup has actually been copied and verified.
+Do NOT describe this as the final application-wide End-to-End verification.
+Waze global verification and playlists remain deferred to later project phases.
+
+---
+
+# GIT RECOVERY POINT — COMPLETED
+
+A Git recovery checkpoint was successfully created after Days 1–3 verification.
+
+Commit message:
+Stable checkpoint - Days 1-3 verified - 12.08.2026
+
+Record status:
+GIT RECOVERY POINT: COMPLETED
+
+---
+
+# PHYSICAL BACKUP — COMPLETED AND VERIFIED
+
+A new full physical backup of the entire Kassandra-2026 folder was created on KINGSTON (D:).
+
+Backup folder:
+Kassandra-2026_Backup_12.08.2026_Stable_Days1-3
+
+The copied project folder was opened and its project contents were manually verified.
+
+Record status:
+PHYSICAL BACKUP: COMPLETED AND VERIFIED
+
+Previous backups were NOT overwritten.
+
+---
+
+# NEXT ACTIVE DEVELOPMENT TARGET
+
+Before starting Day 4:
+- this checkpoint must be saved and verified
+
+After checkpoint verification:
+NEXT ACTIVE TARGET:
+DAY 4 — CONTENT PLANNING / RESEARCH
+
+Do NOT start Day 4 implementation before Day 4 content is researched and approved.
+
+---
+
+# PRESERVE EXISTING PROJECT PHASE STRATEGY
+
+Phase 1:
+Complete Day 1–Day 7 content/development
+
+Then:
+Phase 2 — application-wide Waze pass
+Phase 3 — playlist integration
+Phase 4 — final End-to-End verification
 
 ---
 
@@ -723,8 +731,150 @@ Do not mark the current project state as physically backed up until a new comple
 
 ---
 
+# END-OF-DAY / CHECKPOINT PROCEDURE
+
+Permanent procedure document:
+
+`docs/END_OF_DAY_CHECKPOINT_AND_BACKUP_PROCEDURE.md`
+
+Mandatory close sequence remains:
+
+1. Stop development.
+2. Update `SESSION_CHECKPOINT.md`.
+3. Verify the checkpoint.
+4. Create a complete physical backup of the entire `Kassandra-2026` folder.
+5. Verify the physical backup.
+6. Safely eject the USB drive.
+
+A work session is not fully closed until the checkpoint and required physical backup are completed and verified.
+
+---
+
 # READY TO CONTINUE
 
 **YES**
 
-**NEXT ACTIVE DEVELOPMENT TARGET: DAY 3 IMPLEMENTATION PREPARATION**
+**NEXT ACTIVE DEVELOPMENT TARGET: DAY 4 — CONTENT PLANNING / RESEARCH**
+
+---
+
+# CHECKPOINT — 12.08.2026 22:04
+## END OF SESSION
+
+### STATUS
+Session completed successfully.
+
+### COMPLETED TODAY
+- Day 3 implementation completed and tested in the application.
+- Navigation from the Home page to Day 3 was fixed and verified.
+- All Day 2 and Day 3 stations/pages were tested and open correctly.
+- Latest Day 1 visual/design changes remain preserved.
+- Day 1 current design must NOT be replaced by an older version.
+
+### DAILY PLAN DOCUMENTATION
+The following planning documents now exist under:
+
+`docs/DAILY_PLANS_02/`
+
+- `Day1_Plan.md`
+- `Day2_Plan.md`
+- `Day3_Plan.md`
+- `Days4-7_Approved_Baseline.md`
+
+`Day1_Plan.md` was created as documentation only.
+It does NOT replace or modify the current approved Day 1 design/code.
+
+### DAYS 4–7
+Days 4–7 skeleton has been reviewed and approved.
+
+The authoritative baseline is:
+
+`docs/DAILY_PLANS_02/Days4-7_Approved_Baseline.md`
+
+IMPORTANT:
+- Do NOT restart research for Days 4–7 from zero.
+- Do NOT redesign the approved skeleton without a real reason or explicit user request.
+- Maximum 4 actual visit stations per day.
+- Fewer than 4 stations is acceptable.
+- Minimal walking is a critical requirement.
+- Prefer very close parking and easy access.
+- No boat trips.
+- No unnecessary fixed timetable.
+- Specific times are used only when operationally critical.
+- Hotel rest/free time is not considered a visit station.
+
+### NEXT ACTIVE TASK
+DAY 4 detailed planning.
+
+Approved Day 4 skeleton:
+
+1. Dramis Bougatsa — breakfast
+2. Egeopelagitika Beach — accessible/organised section only
+3. Nea Skioni Harbour — OPTIONAL, only if close parking is available
+4. Apagio — dinner
+
+Next session:
+Start directly with detailed Day 4 content planning.
+Do NOT restart Days 4–7 research.
+
+### BACKUP
+A full end-of-session backup was initiated to:
+
+`KINGSTON (D:)/Kassandra-2026_Backup_12.08.2026_END/`
+
+IMPORTANT:
+After saving this checkpoint, update the checkpoint file inside the END backup so that the backup contains this final stopping point.
+
+### PROJECT CONTROL
+ChatGPT remains project/workflow manager.
+Technical implementation tools operate under ChatGPT supervision.
+User gives final approval.
+
+END CHECKPOINT
+---
+
+# SESSION UPDATE — 17.08.2026 / 15:34 / Israel Time
+
+## DAY 6
+- Day 6 navigation chain completed and tested.
+- Petralona integrated.
+- Day 6 working.
+
+## DAY 7
+- Day 7 tested.
+- Navigation working.
+- Day 7 working.
+
+## DAY 8 — RETURN TO BOROVETS
+- Day 8 created as the return travel day from Hanioti, Greece to Borovets, Bulgaria.
+- Day 7 links forward to Day 8.
+- Day 8 links back to Day 7.
+- Day 8 is intentionally NOT listed as a regular day on the main days list.
+- Final top-page design approved.
+- Bulgaria displayed on the LEFT with Bulgarian flag.
+- Greece displayed on the RIGHT with Greek flag.
+- Direction arrow points from Greece toward Bulgaria.
+- Real PNG flag assets are used:
+  - src/assets/images/day8/flag-bulgaria.png
+  - src/assets/images/day8/flag-greece.png
+- Clean road/mountain travel image approved and displayed.
+- Existing soundtrack selector included.
+- Day 8 route is intended as a practical driving day, not a sightseeing day.
+- Stops are for fuel, drinks, rest and stretching legs only.
+- Stops requiring meaningful deviation from the direct route are NOT allowed.
+- Target: maximum approximately 3–4 practical stops.
+- Waze buttons included for route progression/stops.
+- OFFLINE/WAZE behavior still requires final verification before trip use.
+
+## IMPORTANT PENDING
+- Verify Day 8 Waze/navigation behavior for offline use.
+- Do not change the approved Day 8 visual design unless explicitly requested.
+
+## FUTURE IDEA — NOT FOR IMPLEMENTATION NOW
+- Later consider adding a similar travel-transition page for the outbound drive from Borovets to Hanioti.
+- Do NOT implement this yet.
+
+## CURRENT STOP POINT
+Day 6, Day 7 and Day 8 work completed for this session.
+Day 8 visual design approved.
+Next technical priority: offline/navigation verification.

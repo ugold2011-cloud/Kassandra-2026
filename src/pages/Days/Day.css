@@ -112,6 +112,23 @@
   transform: scale(1.04);
 }
 
+.day-music-button {
+  height: 58px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+}
+
 /* Hanioti Promenade */
 
 .place-main-image {
@@ -197,4 +214,34 @@
   text-align: center;
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 640px) {
+  .day-page {
+    overflow-x: hidden;
+  }
+
+  .day-image {
+    height: auto;
+  }
+
+  .day-image img {
+    height: auto;
+  }
+
+  .day-icons {
+    gap: 16px;
+    font-size: 24px;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+
+  .day-icons span {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+
+  .day-music-button {
+  }
 }

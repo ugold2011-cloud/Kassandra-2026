@@ -1,26 +1,28 @@
 import { Link } from "react-router-dom";
 
-import amoratoMain from "../../assets/images/amorato/amorato-main.jpg";
-import amoratoIcecream from "../../assets/images/amorato/amorato-icecream.jpg";
-import amoratoNight from "../../assets/images/amorato/amorato-night.jpg";
+import dramisMain from "../../assets/images/Dramis/Dramis-main.jpeg";
+import dramisBougatsa from "../../assets/images/Dramis/Dramis-bougatsa.jpeg";
+import dramisFood from "../../assets/images/Dramis/Dramis-food.jpeg";
 
-function Amorato() {
+function Dramis() {
+  const galleryImages = [dramisBougatsa, dramisFood];
+
   return (
-    <main className="amorato-page">
+    <main className="dramis-page">
       <style>{`
-        .amorato-page {
-          --amorato-ink: #153247;
-          --amorato-deep: #0c2738;
-          --amorato-sky: #63c7ff;
-          --amorato-soft: #eef9ff;
+        .dramis-page {
+          --dramis-ink: #153247;
+          --dramis-deep: #0c2738;
+          --dramis-sky: #63c7ff;
+          --dramis-soft: #eef9ff;
           max-width: 1080px;
           margin: 0 auto;
           padding: clamp(16px, 3vw, 36px) clamp(16px, 4vw, 42px) 48px;
-          color: var(--amorato-ink);
+          color: var(--dramis-ink);
           font-family: inherit;
         }
 
-        .amorato-hero {
+        .dramis-hero {
           position: relative;
           min-height: clamp(360px, 55vw, 520px);
           overflow: hidden;
@@ -29,15 +31,19 @@ function Amorato() {
           box-shadow: 0 24px 60px rgba(13, 54, 77, 0.2);
         }
 
-        .amorato-hero::after {
+        .dramis-hero::after {
           content: "";
           position: absolute;
           inset: 0;
           z-index: 1;
-          background: linear-gradient(180deg, rgba(5, 28, 42, 0.06) 22%, rgba(5, 28, 42, 0.8) 100%);
+          background: linear-gradient(
+            180deg,
+            rgba(5, 28, 42, 0.06) 22%,
+            rgba(5, 28, 42, 0.8) 100%
+          );
         }
 
-        .amorato-hero img {
+        .dramis-hero img {
           width: 100%;
           height: 100%;
           position: absolute;
@@ -46,11 +52,11 @@ function Amorato() {
           transition: transform 700ms ease;
         }
 
-        .amorato-hero:hover img {
+        .dramis-hero:hover img {
           transform: scale(1.04);
         }
 
-        .amorato-hero-content {
+        .dramis-hero-content {
           position: absolute;
           z-index: 2;
           inset: auto clamp(22px, 5vw, 48px) clamp(24px, 5vw, 42px);
@@ -62,7 +68,7 @@ function Amorato() {
           text-align: left;
         }
 
-        .amorato-kicker {
+        .dramis-kicker {
           display: inline-flex;
           align-items: center;
           gap: 8px;
@@ -74,7 +80,7 @@ function Amorato() {
           color: #d8f3ff;
         }
 
-        .amorato-title {
+        .dramis-title {
           margin: 0;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
@@ -82,7 +88,7 @@ function Amorato() {
           font-weight: 800;
         }
 
-        .amorato-award {
+        .dramis-award {
           margin: 0;
           padding: 10px 14px;
           border: 1px solid rgba(255, 255, 255, 0.35);
@@ -96,21 +102,21 @@ function Amorato() {
           white-space: nowrap;
         }
 
-        .amorato-gallery {
+        .dramis-gallery {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 18px;
           margin: 26px 0;
         }
 
-        .amorato-gallery-item {
+        .dramis-gallery-item {
           overflow: hidden;
-          height: 230px;
+          height: 260px;
           border-radius: 22px;
           box-shadow: 0 12px 28px rgba(14, 51, 73, 0.12);
         }
 
-        .amorato-gallery-item img {
+        .dramis-gallery-item img {
           display: block;
           width: 100%;
           height: 100%;
@@ -118,36 +124,36 @@ function Amorato() {
           transition: transform 500ms ease;
         }
 
-        .amorato-gallery-item:hover img {
+        .dramis-gallery-item:hover img {
           transform: scale(1.06);
         }
 
-        .amorato-details {
+        .dramis-details {
           display: grid;
           grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
           gap: 20px;
           padding: clamp(20px, 4vw, 34px);
           border: 1px solid rgba(112, 196, 236, 0.34);
           border-radius: 28px;
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 249, 255, 0.88));
+          background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.94),
+            rgba(238, 249, 255, 0.88)
+          );
           box-shadow: 0 18px 45px rgba(14, 57, 80, 0.1);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
         }
 
-        .amorato-card {
-          padding: 4px 0;
-        }
-
-        .amorato-section-heading {
+        .dramis-section-heading {
           margin: 0 0 16px;
-          color: var(--amorato-deep);
+          color: var(--dramis-deep);
           font-size: clamp(1.25rem, 2.4vw, 1.55rem);
           line-height: 1.25;
         }
 
-        .amorato-list,
-        .amorato-info-list {
+        .dramis-menu-list,
+        .dramis-info-list {
           display: grid;
           gap: 11px;
           margin: 0;
@@ -155,8 +161,8 @@ function Amorato() {
           list-style: none;
         }
 
-        .amorato-list li,
-        .amorato-info-list li {
+        .dramis-menu-list li,
+        .dramis-info-list li {
           display: flex;
           align-items: flex-start;
           gap: 10px;
@@ -166,32 +172,26 @@ function Amorato() {
           line-height: 1.55;
         }
 
-        .amorato-list li {
+        .dramis-menu-list li {
           font-weight: 650;
         }
 
-        .amorato-info {
+        .dramis-info {
           padding: 4px 0 4px 20px;
           border-left: 1px solid rgba(58, 142, 183, 0.22);
           text-align: right;
         }
 
-        .amorato-info-list li {
+        .dramis-info-list li {
           font-size: 0.94rem;
         }
 
-        .amorato-info-list span,
-        .amorato-info-list a {
+        .dramis-info-list span,
+        .dramis-info-list a {
           overflow-wrap: anywhere;
         }
 
-        .amorato-ltr {
-          direction: ltr;
-          unicode-bidi: bidi-override;
-          display: inline-block;
-        }
-
-        .amorato-link {
+        .dramis-link {
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -206,19 +206,19 @@ function Amorato() {
           transition: transform 220ms ease, box-shadow 220ms ease;
         }
 
-        .amorato-link:hover {
+        .dramis-link:hover {
           transform: translateY(-3px);
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
-        .amorato-actions {
+        .dramis-actions {
           display: flex;
           justify-content: space-between;
           gap: 14px;
           margin-top: 28px;
         }
 
-        .amorato-button {
+        .dramis-button {
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -229,156 +229,182 @@ function Amorato() {
           text-decoration: none;
           font-size: 0.96rem;
           font-weight: 800;
-          transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+          transition:
+            transform 220ms ease,
+            box-shadow 220ms ease,
+            background 220ms ease;
         }
 
-        .amorato-button:hover {
+        .dramis-button:hover {
           transform: translateY(-3px);
         }
 
-        .amorato-button:active {
-          transform: translateY(-1px);
-        }
-
-        .amorato-button-back {
+        .dramis-button-back {
           border-color: #c8e5f2;
           background: #fff;
-          color: var(--amorato-ink);
+          color: var(--dramis-ink);
           box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
         }
 
-        .amorato-button-next {
+        .dramis-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
-        .amorato-button-next:hover {
-          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
-        }
-
         @media (max-width: 760px) {
-          .amorato-page {
+          .dramis-page {
             padding-bottom: 32px;
           }
 
-          .amorato-hero {
+          .dramis-hero {
             min-height: 410px;
             border-radius: 25px;
           }
 
-          .amorato-hero-content {
+          .dramis-hero-content {
             align-items: flex-start;
             flex-direction: column;
           }
 
-          .amorato-award {
+          .dramis-award {
             white-space: normal;
           }
 
-          .amorato-gallery {
+          .dramis-gallery {
+            grid-template-columns: 1fr;
             gap: 12px;
             margin: 18px 0;
           }
 
-          .amorato-gallery-item {
-            height: 160px;
+          .dramis-gallery-item {
+            height: 210px;
             border-radius: 17px;
           }
 
-          .amorato-details {
+          .dramis-details {
             grid-template-columns: 1fr;
             border-radius: 22px;
           }
 
-          .amorato-info {
+          .dramis-info {
             padding: 20px 0 0;
             border-top: 1px solid rgba(58, 142, 183, 0.22);
             border-left: 0;
           }
 
-          .amorato-actions {
+          .dramis-actions {
             flex-direction: column-reverse;
           }
 
-          .amorato-button {
+          .dramis-button {
             width: 100%;
           }
         }
       `}</style>
 
-      <section className="amorato-hero">
-        <img src={amoratoMain} alt="Amorato" />
-        <div className="amorato-hero-content">
+      <section className="dramis-hero">
+        <img
+          src={dramisMain}
+          alt="Dramis Bakery Cafe Patisserie"
+        />
+
+        <div className="dramis-hero-content">
           <div>
-            <p className="amorato-kicker">🍦 Hanioti, Greece</p>
-            <h1 className="amorato-title">Amorato</h1>
+            <p className="dramis-kicker">
+              🥐 Hanioti, Greece
+            </p>
+
+            <h1 className="dramis-title">
+              Dramis Bakery — Cafe Patisserie
+            </h1>
           </div>
-          <p className="amorato-award">🥇 BEST ICE CREAM</p>
+
+          <p className="dramis-award">
+            🥇 BREAKFAST ONLY
+          </p>
         </div>
       </section>
 
-      <section className="amorato-gallery" aria-label="Amorato highlights">
-        <div className="amorato-gallery-item">
-          <img src={amoratoIcecream} alt="Ice Cream" />
-        </div>
-        <div className="amorato-gallery-item">
-          <img src={amoratoNight} alt="Amorato Night" />
-        </div>
+      <section
+        className="dramis-gallery"
+        aria-label="Dramis food"
+      >
+        {galleryImages.map((image, index) => (
+          <div
+            className="dramis-gallery-item"
+            key={`${image}-${index}`}
+          >
+            <img
+              src={image}
+              alt={`Dramis ${index + 1}`}
+            />
+          </div>
+        ))}
       </section>
 
-      <section className="amorato-details">
-        <div className="amorato-card">
-          <h2 className="amorato-section-heading">🍨 טעמים מומלצים</h2>
-          <ul className="amorato-list" dir="rtl">
-            <li>🍦 גלידת פיסטוק.</li>
-            <li>🍫 גלידת שוקולד.</li>
-            <li>🍓 גלידת תות.</li>
+      <section className="dramis-details">
+        <div>
+          <h2 className="dramis-section-heading">
+            🥐 ארוחת בוקר אותנטית יוונית
+          </h2>
+
+          <ul className="dramis-menu-list" dir="rtl">
+            <li>🥐 בואג׳אטסה טריה ועמוקה</li>
+            <li>☕ קפה יווני איכותי</li>
+            <li>🥗 מנות בוקר נוספות</li>
+            <li>🧃 מיצים טבעיים</li>
+            <li>🍽️ חוויה קלילה ליום 4</li>
           </ul>
         </div>
 
-        <div className="amorato-card amorato-info" dir="rtl">
-          <h2 className="amorato-section-heading">פרטים שימושיים</h2>
-          <ul className="amorato-info-list">
+        <div className="dramis-info" dir="rtl">
+          <h2 className="dramis-section-heading">
+            פרטים שימושיים
+          </h2>
+
+          <ul className="dramis-info-list">
             <li>
-              <span>📍 כתובת: Hanioti, Chalkidiki, Greece</span>
+              <span>
+                📍 מיקום: Hanioti, חלקידיקי, יוון
+              </span>
             </li>
+
             <li>
-              <span>🕒 שעות פעילות: <span className="amorato-ltr">11:00–01:00</span></span>
+              <span>
+                🥐 סוג מקום: מאפיה / בית קפה / פטיסרי
+              </span>
             </li>
+
             <li>
-              <span>📞 טלפון: <span className="amorato-ltr">+30 23744 01080</span></span>
-            </li>
-            <li>
-              <a
-                className="amorato-link"
-                href="waze://?ll=40.001060,23.574493&navigate=yes"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🚗 פתח ב־Waze
-              </a>
-            </li>
-            <li>
-              <span>💡 מומלץ לקינוח אחרי ארוחת הערב.</span>
+              <span>
+                🕗 זמן מומלץ: ארוחת בוקר
+              </span>
             </li>
           </ul>
         </div>
       </section>
 
-      <nav className="amorato-actions" aria-label="Amorato navigation">
-        <Link className="amorato-button amorato-button-back" to="/faros">
-          ⬅️ חזרה ל־Faros
-        </Link>
+      <nav
+        className="dramis-actions"
+        aria-label="Dramis navigation"
+      >
         <Link
-          className="amorato-button amorato-button-next"
-          to="/hanioti-promenade"
+          className="dramis-button dramis-button-back"
+          to="/day4"
         >
-          🚶 המשך לטיילת חניוטי
+          חזרה ליום 4
+        </Link>
+
+        <Link
+          className="dramis-button dramis-button-next"
+          to="/encore-beach-bar"
+        >
+          המשך ל-Encore Beach Bar
         </Link>
       </nav>
     </main>
   );
 }
 
-export default Amorato;
+export default Dramis;

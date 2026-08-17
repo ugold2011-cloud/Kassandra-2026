@@ -25,6 +25,8 @@ function LefkoSuites() {
           padding: clamp(16px, 3vw, 36px) clamp(16px, 4vw, 42px) 48px;
           color: var(--lefko-ink);
           font-family: inherit;
+          direction: rtl;
+          text-align: right;
         }
 
         .lefko-hero {
@@ -133,7 +135,7 @@ function LefkoSuites() {
         .lefko-content {
           display: flex;
           flex-direction: column;
-          gap: 18px;
+          gap: 22px;
         }
 
         .lefko-heading {
@@ -171,6 +173,11 @@ function LefkoSuites() {
           text-decoration: underline;
         }
 
+        .lefko-ltr {
+          direction: ltr;
+          unicode-bidi: embed;
+        }
+
         .lefko-parking {
           text-align: center;
           font-size: 0.9rem;
@@ -184,14 +191,14 @@ function LefkoSuites() {
           justify-content: center;
           width: 100%;
           padding: 0 22px;
-          min-height: 52px;
+          min-height: 48px;
           border-radius: 16px;
           border: 1px solid transparent;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           text-decoration: none;
           font-weight: 800;
-          font-size: 0.96rem;
+          font-size: 0.9rem;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
           transition: transform 220ms ease, box-shadow 220ms ease;
         }
@@ -210,7 +217,7 @@ function LefkoSuites() {
 
         .lefko-actions {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           gap: 14px;
           margin-top: 28px;
         }
@@ -219,12 +226,12 @@ function LefkoSuites() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
+          min-height: 48px;
           padding: 0 22px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 0.9rem;
           font-weight: 800;
           transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
         }
@@ -375,16 +382,25 @@ function LefkoSuites() {
 
         <a
           className="lefko-waze"
-          href="https://waze.com/ul?ll=39.999130,23.578625&navigate=yes"
+          href="waze://?ll=39.999171,23.578604&navigate=yes"
           target="_blank"
           rel="noreferrer"
         >
-          🚗 פתח ב־Waze
+          פתח ב-Waze — <bdi dir="ltr">Lefko Suites</bdi>
         </a>
 
         <p className="lefko-masoutis">
           🛒 Masoutis — חנות מזון קרובה
         </p>
+
+        <a
+          className="lefko-waze"
+          href="waze://?ll=39.997454,23.575559&navigate=yes"
+          target="_blank"
+          rel="noreferrer"
+        >
+          פתח ב-Waze — <bdi dir="ltr">Masoutis</bdi>
+        </a>
       </section>
 
       <nav
@@ -396,7 +412,6 @@ function LefkoSuites() {
             <Link
               className="lefko-button lefko-button-back"
               to="/"
-              style={{ marginLeft: "16px" }}
             >
               🏠 ראשי
             </Link>
@@ -412,7 +427,7 @@ function LefkoSuites() {
               className="lefko-button lefko-button-next"
               to="/day2"
             >
-              ➡️ המשך ליום 2
+              המשך ליום 2
             </Link>
           </>
         ) : (
@@ -421,7 +436,7 @@ function LefkoSuites() {
               className="lefko-button lefko-button-back"
               to="/day1"
             >
-              ⬅️ חזרה ליום 1
+              חזרה ליום 1
             </Link>
 
             <Link
@@ -435,11 +450,7 @@ function LefkoSuites() {
               className="lefko-button lefko-button-next"
               to="/faros"
             >
-              🐟 המשך ל-Faros
-              <br />
-              <span style={{ fontSize: "0.78rem", opacity: 0.9 }}>
-                מסעדת דגים
-              </span>
+              המשך ל-<bdi dir="ltr">Faros</bdi>
             </Link>
           </>
         )}

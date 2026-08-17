@@ -31,13 +31,17 @@ export default function Home() {
             יום 3
           </button>
 
-          <button>יום 4</button>
+          <button onClick={() => navigate("/day4")}>
+            יום 4
+          </button>
 
-          <button>יום 5</button>
+          <button onClick={() => navigate("/day5")}>יום 5</button>
 
-          <button>יום 6</button>
+          <button onClick={() => navigate("/day6")}>יום 6</button>
 
-          <button>יום 7</button>
+          <button onClick={() => navigate("/day7")}>יום 7</button>
+
+          <button onClick={() => navigate("/day8")}>יום 8</button>
         </div>
       </div>
     </div>
