@@ -175,8 +175,13 @@ function Faros() {
 
         .faros-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          flex-direction: row;
+          justify-content: center;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          gap: 12px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -184,29 +189,36 @@ function Faros() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          width: auto;
+          min-height: 52px;
+          padding: 0 10px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 15px;
           font-weight: 800;
           transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+          white-space: nowrap;
         }
 
         .faros-button:hover { transform: translateY(-3px); }
         .faros-button:active { transform: translateY(-1px); }
-        .faros-button-back { border-color: #c8e5f2; background: #fff; color: var(--faros-ink); box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08); }
-        .faros-button-next { background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff; box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28); }
+        .faros-button-back { border: 1px solid #dbe2ea; background: #ffffff; color: #1f2937; box-shadow: none; }
+        .faros-button-next { background: linear-gradient(135deg, #7c3aed, #4f46e5); border: 1px solid transparent; color: #ffffff; box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28); }
         .faros-button-next:hover { box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38); }
 
         .faros-waze {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 100%;
-          padding: 0 22px;
-          min-height: 48px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
           border-radius: 16px;
           border: 1px solid transparent;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
@@ -216,6 +228,7 @@ function Faros() {
           font-size: 0.9rem;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
           transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
         }
 
         .faros-waze:hover {
@@ -232,8 +245,8 @@ function Faros() {
           .faros-gallery-item { height: 160px; border-radius: 17px; }
           .faros-details { grid-template-columns: 1fr; border-radius: 22px; }
           .faros-info { padding: 20px 0 0; border-top: 1px solid rgba(58, 142, 183, 0.22); border-left: 0; }
-          .faros-actions { flex-direction: column-reverse; }
-          .faros-button { width: 100%; }
+          .faros-actions { flex-direction: row; }
+          .faros-button { flex: 1; }
         }
       `}</style>
 

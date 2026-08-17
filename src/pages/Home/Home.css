@@ -111,19 +111,6 @@ h1 {
   }
 }
 
-.daysPanel {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-left: 20px;
-  padding-right: 20px;
-  width: 110px;
-  align-items: center;
-  margin-top: 10px;
-}
- 
-
-
 .daysPanel button {
   width: 80px;
   padding: 12px;
@@ -145,6 +132,29 @@ h1 {
 
 .daysPanel button:hover {
   transform: scale(1.08);
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .daysPanel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .daysPanel button {
+    width: 100%;
+    min-height: 72px;
+    padding: 12px 8px;
+    font-size: 18px;
+  }
 }
 
 

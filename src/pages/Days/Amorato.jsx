@@ -195,9 +195,14 @@ function Amorato() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 44px;
-          padding: 0 16px;
-          border-radius: 999px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          border-radius: 16px;
+          margin-left: auto;
+          margin-right: auto;
+          white-space: nowrap;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           text-decoration: none;
@@ -213,8 +218,13 @@ function Amorato() {
 
         .amorato-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          flex-direction: row;
+          justify-content: center;
+          gap: 12px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -222,12 +232,15 @@ function Amorato() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
-          border: 1px solid transparent;
+          flex: 1;
+          min-width: 0;
+          width: auto;
+          min-height: 52px;
+          padding: 0 10px;
           border-radius: 16px;
+          font-size: 15px;
+          white-space: nowrap;
           text-decoration: none;
-          font-size: 0.96rem;
           font-weight: 800;
           transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
         }
@@ -241,16 +254,15 @@ function Amorato() {
         }
 
         .amorato-button-back {
-          border-color: #c8e5f2;
-          background: #fff;
-          color: var(--amorato-ink);
-          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          background: #ffffff;
+          border: 1px solid #dbe2ea;
+          color: #1f2937;
         }
 
         .amorato-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
-          color: #fff;
-          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          border: 1px solid transparent;
+          color: #ffffff;
         }
 
         .amorato-button-next:hover {
@@ -303,6 +315,16 @@ function Amorato() {
 
           .amorato-button {
             width: 100%;
+          }
+        }
+        @media (max-width: 640px) {
+          .amorato-actions {
+            flex-direction: row;
+          }
+
+          .amorato-button {
+            flex: 1;
+            width: auto;
           }
         }
       `}</style>

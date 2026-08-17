@@ -1274,3 +1274,74 @@ NEXT UI WORK MUST BEGIN WITH:
 SCAN / READ-ONLY → REPORT
 
 No broad button standard rollout has been approved yet.
+
+# EXTERNAL VITE SERVER — ACTIVE PROJECT RULE
+
+UPDATED: 18.08.2026 / Israel Time
+
+STATUS: ACTIVE AND MANDATORY
+
+PROVEN WORKING CONFIGURATION:
+
+Kassandra Vite development server runs ONLY in a separate external Windows CMD window.
+
+START METHOD:
+
+cd /d C:\Users\ugold\Documents\Kassandra-2026
+npm run dev -- --host
+
+The CMD window must remain open.
+It may be minimized.
+
+IMPORTANT:
+
+- DO NOT run the Kassandra dev server in the VS Code integrated Terminal during Kilo work.
+- Kilo may read and modify approved code files.
+- Kilo MUST NOT start, stop, restart, kill, or manage the Vite server.
+- Kilo MUST NOT interact with the external CMD server process.
+
+TESTED RESULT:
+
+Kilo file modification + Vite inside VS Code Terminal = SERVER STOPPED.
+
+Kilo file modification + Vite inside external Windows CMD = SERVER REMAINED ACTIVE.
+
+OFFICIAL PROJECT METHOD:
+
+KILO / VS CODE = CODE WORK
+EXTERNAL WINDOWS CMD = VITE SERVER
+
+This configuration is mandatory for future Kassandra development sessions.
+
+# END OF SESSION CHECKPOINT — 18.08.2026 / 01:15 / Israel Time
+
+STATUS: SAFE STOP POINT
+
+COMPLETED / PASS:
+- Home mobile layout: PASS
+- HaniotiPromenade Master Button Standard: PASS
+- Faros button standard: PASS
+- Amorato button standard: PASS
+- Faros → Amorato navigation verified
+- External Vite server method verified and adopted
+
+IMPORTANT SERVER RULE:
+- Vite runs ONLY in external Windows CMD.
+- Kilo must not start, stop, restart, or manage the server.
+- VS Code integrated Terminal is not used for the active Kassandra dev server.
+
+CURRENT MASTER BUTTON STANDARD:
+- Waze: centered, controlled width, purple gradient
+- Bottom navigation: two buttons side-by-side
+- Back: white
+- Next/Return: purple
+- Mobile layout verified on real device
+
+CURRENT PROJECT STATE:
+- Home page restored and verified after CSS conflict cleanup.
+- Home.css must not be modified as part of station button work.
+- HaniotiPromenade, Faros, Amorato are approved reference pages for button styling.
+
+NEXT WORK:
+Continue station-page button standardization using:
+READ ONLY → exact scoped execution → real-device test → PASS.

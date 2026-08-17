@@ -402,3 +402,50 @@ SCAN
 
 Any deviation:
 STOP + REPORT
+
+# EXTERNAL VITE SERVER RULE — MANDATORY
+
+Effective: 18.08.2026
+
+The Kassandra development server MUST run in a separate external Windows CMD window.
+
+PROVEN WORKING METHOD:
+
+1. Open Windows CMD outside VS Code.
+2. Run:
+   cd /d C:\Users\ugold\Documents\Kassandra-2026
+3. Run:
+   npm run dev -- --host
+4. Keep that CMD window open while working.
+5. The CMD window may be minimized but MUST NOT be closed.
+
+KILO RULES:
+
+- Kilo may read and modify approved project code files.
+- Kilo MUST NOT start the Vite development server.
+- Kilo MUST NOT stop the Vite development server.
+- Kilo MUST NOT restart the Vite development server.
+- Kilo MUST NOT manage, kill, or interact with the external CMD server process.
+- Kilo MUST NOT move the running development server into the VS Code integrated Terminal.
+- The VS Code integrated Terminal MUST NOT be used to host the Kassandra development server during Kilo work.
+- Code changes must be saved normally while the external Vite server remains running independently.
+
+PROVEN TEST RESULT:
+
+READ-ONLY Kilo operation with Vite in VS Code Terminal:
+SERVER REMAINED ACTIVE.
+
+Kilo file modification with Vite in VS Code Terminal:
+SERVER STOPPED.
+
+Kilo file modification with Vite running in external Windows CMD:
+SERVER REMAINED ACTIVE.
+
+THEREFORE:
+
+EXTERNAL WINDOWS CMD = OFFICIAL KASSANDRA DEV SERVER METHOD.
+
+This rule overrides previous instructions regarding running the Kassandra Vite server inside VS Code.
+
+Every future Kilo execution instruction should assume:
+EXTERNAL VITE SERVER IS RUNNING — DO NOT TOUCH OR MANAGE THE SERVER.

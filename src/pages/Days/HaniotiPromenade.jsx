@@ -104,7 +104,8 @@ function HaniotiPromenade() {
             alignItems: "center",
             justifyContent: "center",
             marginTop: "12px",
-            width: "100%",
+            width: "260px",
+            maxWidth: "calc(100% - 32px)",
             minHeight: "52px",
             padding: "0 20px",
             borderRadius: "16px",
@@ -126,50 +127,56 @@ function HaniotiPromenade() {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          maxWidth: "100%",
-          gap: "14px",
+          flexDirection: "row",
+          justifyContent: "center",
+          width: "calc(100% - 32px)",
+          maxWidth: "360px",
+          gap: "12px",
+          marginLeft: "auto",
+          marginRight: "auto",
           marginTop: "30px",
           marginBottom: "40px",
         }}
       >
-        <Link to="/amorato">
+        <Link to="/amorato" style={{ flex: "1", minWidth: "0" }}>
           <button
             style={{
               width: "100%",
-              minHeight: "54px",
-              padding: "0 20px",
+              minHeight: "52px",
+              padding: "0 10px",
               border: "1px solid #dbe2ea",
               borderRadius: "16px",
               background: "#ffffff",
               color: "#1f2937",
-              fontSize: "17px",
+              fontSize: "15px",
               fontWeight: "700",
               cursor: "pointer",
               boxShadow: "none",
               transition: "all 0.25s ease",
+              whiteSpace: "nowrap",
             }}
           >
             🍦 חזרה ל־Amorato
           </button>
         </Link>
 
-        <Link to="/day1">
+        <Link to="/day1" style={{ flex: "1", minWidth: "0" }}>
           <button
             style={{
               width: "100%",
-              minHeight: "54px",
-              padding: "0 20px",
+              minHeight: "52px",
+              padding: "0 10px",
               borderRadius: "16px",
               background:
-                "linear-gradient(135deg, #2563eb 0%, #1e40af 100%)",
-              color: "white",
-              fontSize: "17px",
+                "linear-gradient(135deg, #7c3aed, #4f46e5)",
+              color: "#ffffff",
+              fontSize: "15px",
               fontWeight: "700",
               cursor: "pointer",
               boxShadow: "0 10px 25px rgba(37, 99, 235, 0.35)",
               transition: "all 0.25s ease",
+              border: "none",
+              whiteSpace: "nowrap",
             }}
           >
             🏠 חזרה ליום 1
