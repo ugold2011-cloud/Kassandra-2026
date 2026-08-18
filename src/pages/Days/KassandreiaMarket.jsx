@@ -163,9 +163,13 @@ function KassandreiaMarket() {
 
         .market-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          justify-content: center;
+          gap: 12px;
           margin-top: 28px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .market-button {
@@ -202,6 +206,12 @@ function KassandreiaMarket() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .market-waze-button {
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
         @media (max-width: 760px) {
           .market-page {
             padding-bottom: 32px;
@@ -232,12 +242,9 @@ function KassandreiaMarket() {
             border-left: 0;
           }
 
-          .market-actions {
-            flex-direction: column-reverse;
-          }
-
-          .market-button {
-            width: 100%;
+          .market-actions .market-button {
+            flex: 1 1 0;
+            min-width: 0;
           }
         }
       `}</style>
@@ -322,13 +329,13 @@ function KassandreiaMarket() {
 
             <li>
               <span>
-                🚶 מרחק הליכה מקובל: כ־200–250 מטר מהחניה לשוק
+                🅿️ חניה מועדפת – שטח חניה ללא תשלום, כ-100 מטר מנקודת השוק.
               </span>
             </li>
 
             <li>
               <span>
-                ❗ אין כרגע חניון פרטי בתשלום שאומת ואושר לפרויקט
+                🅿️ חניה חלופית – שטח חניה ללא תשלום, כ-280 מטר מנקודת השוק.
               </span>
             </li>
 
@@ -340,6 +347,30 @@ function KassandreiaMarket() {
           </ul>
         </div>
       </section>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "12px",
+          marginBottom: "16px",
+        }}
+      >
+        <a
+          className="market-button market-waze-button"
+          href="waze://?ll=40.049519213937984,23.4133189576718&navigate=yes"
+        >
+          🚗 Waze – חניה מועדפת
+        </a>
+
+        <a
+          className="market-button market-waze-button"
+          href="waze://?ll=40.05185956940188,23.4149876576718&navigate=yes"
+        >
+          🚗 Waze – חניה חלופית
+        </a>
+      </div>
 
       <nav
         className="market-actions"
@@ -354,9 +385,9 @@ function KassandreiaMarket() {
 
         <Link
           className="market-button market-button-next"
-          to="/day2"
+          to="/metoxi"
         >
-          ➡️ המשך ליום 2
+          המשך<br />Metoxi
         </Link>
       </nav>
     </main>
