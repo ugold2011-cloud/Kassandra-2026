@@ -163,8 +163,12 @@ function GlarokavosBeach() {
 
         .glarokavos-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          justify-content: center;
+          gap: 12px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -190,16 +194,42 @@ function GlarokavosBeach() {
         }
 
         .glarokavos-button-back {
-          border-color: #c8e5f2;
+          border-color: #dbe2ea;
           background: #fff;
           color: var(--glarokavos-ink);
-          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
         }
 
         .glarokavos-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .glarokavos-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          min-height: 52px;
+          padding: 0 20px;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: white;
+          border: none;
+          border-radius: 16px;
+          font-size: 20px;
+          font-weight: 600;
+          cursor: pointer;
+          box-shadow: 0 10px 24px rgba(46, 197, 211, 0.35);
+          transition: all 0.2s ease;
+          text-decoration: none;
+          text-align: center;
+        }
+
+        .glarokavos-waze-button:hover {
+          transform: scale(1.04);
         }
 
         @media (max-width: 760px) {
@@ -230,14 +260,6 @@ function GlarokavosBeach() {
             padding: 20px 0 0;
             border-top: 1px solid rgba(58, 142, 183, 0.22);
             border-left: 0;
-          }
-
-          .glarokavos-actions {
-            flex-direction: column-reverse;
-          }
-
-          .glarokavos-button {
-            width: 100%;
           }
         }
       `}</style>
@@ -337,6 +359,23 @@ function GlarokavosBeach() {
         </div>
       </section>
 
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "28px",
+        }}
+      >
+        <a
+          className="glarokavos-waze-button"
+          href="waze://?ll=39.982746969180965,23.64361449999999&navigate=yes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🚗 Waze ל-Glarokavos BeachBar
+        </a>
+      </div>
+
       <nav
         className="glarokavos-actions"
         aria-label="Glarokavos Beach navigation"
@@ -350,9 +389,10 @@ function GlarokavosBeach() {
 
         <Link
           className="glarokavos-button glarokavos-button-next"
-          to="/day2"
+          to="/kassandreia-market"
         >
-          ➡️ המשך ליום 2
+          המשך<br />
+          Kassandreia Market
         </Link>
       </nav>
     </main>
