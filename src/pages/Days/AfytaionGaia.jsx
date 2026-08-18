@@ -176,9 +176,10 @@ function AfytaionGaia() {
 
         .afytaiongaia-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
-          margin-top: 28px;
+          justify-content: center;
+          max-width: 360px;
+          margin: 28px auto 0;
+          gap: 12px;
         }
 
         .afytaiongaia-button {
@@ -196,6 +197,33 @@ function AfytaionGaia() {
         }
 
         .afytaiongaia-button:hover {
+          transform: translateY(-3px);
+        }
+
+        .afytaiongaia-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .afytaiongaia-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .afytaiongaia-waze-button:hover {
           transform: translateY(-3px);
         }
 
@@ -243,11 +271,11 @@ function AfytaionGaia() {
           }
 
           .afytaiongaia-actions {
-            flex-direction: column-reverse;
+            flex-wrap: wrap;
           }
 
           .afytaiongaia-button {
-            width: 100%;
+            width: auto;
           }
 
           .afytaiongaia-gallery {
@@ -296,7 +324,7 @@ function AfytaionGaia() {
 
           <ul className="afytaiongaia-menu-list" dir="rtl">
             <li>🍷 טעימות יין מקומי</li>
-            <li>🫒 מוצרי Hafiz / Kassandra</li>
+            <li>🍷 יינות מהכרם האורגני של Afytaion Gaia</li>
           </ul>
         </div>
 
@@ -327,6 +355,15 @@ function AfytaionGaia() {
         </div>
       </section>
 
+      <div className="afytaiongaia-waze-wrapper">
+        <a
+          className="afytaiongaia-waze-button"
+          href="waze://?ll=40.10374559152338,23.421352557671803&navigate=yes"
+        >
+          🚗 Waze ל-Afytaion Gaia
+        </a>
+      </div>
+
       <nav
         className="afytaiongaia-actions"
         aria-label="Afytaion Gaia Winery navigation"
@@ -340,9 +377,11 @@ function AfytaionGaia() {
 
         <Link
           className="afytaiongaia-button afytaiongaia-button-next"
-          to="/day3"
+          to="/gaia-kallisti"
         >
-          ➡️ המשך ליום 3
+          ➡️ המשך
+          <br />
+          Gaia Kallisti
         </Link>
       </nav>
     </main>
