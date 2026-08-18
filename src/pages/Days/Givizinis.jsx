@@ -161,9 +161,13 @@ function Givizinis() {
 
         .givizinis-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          justify-content: center;
+          gap: 12px;
           margin-top: 28px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .givizinis-button {
@@ -227,12 +231,10 @@ function Givizinis() {
             border-left: 0;
           }
 
-          .givizinis-actions {
-            flex-direction: column-reverse;
-          }
-
-          .givizinis-button {
-            width: 100%;
+          .givizinis-actions .givizinis-button {
+            width: auto;
+            flex: 1 1 0;
+            min-width: 0;
           }
 
           .givizinis-gallery {
@@ -304,10 +306,6 @@ function Givizinis() {
             <li>🍰 עוגות ומאפים</li>
             <li>🇬🇷 קינוחים בסגנון יווני</li>
             <li>🍰 Cheesecake</li>
-            <li>🍨 גלידה / גלידה ביתית — כאשר זמינה</li>
-            <li>
-              🍫 Black Forest — אפשרות שזוהתה, יש לאמת מקומית
-            </li>
           </ul>
         </div>
 
@@ -329,20 +327,18 @@ function Givizinis() {
               </span>
             </li>
 
-            <li>
-              <span>
-                🅿️ חניה: חניה ציבורית / חניה ברחוב במרכז Kassandreia
-              </span>
-            </li>
-
-            <li className="givizinis-important">
-              <span>
-                ⚠️ לפני הנסיעה: לוודא שעת סגירה ביום שלישי בערב
-              </span>
-            </li>
           </ul>
         </div>
       </section>
+
+      <div style={{ textAlign: 'center', marginBottom: 14 }}>
+        <a
+          className="givizinis-button givizinis-button-next"
+          href="waze://?ll=40.0516055203542,23.4131420711641&navigate=yes"
+        >
+          🚗 Waze ל-Givizinis
+        </a>
+      </div>
 
       <nav
         className="givizinis-actions"
@@ -357,9 +353,12 @@ function Givizinis() {
 
         <Link
           className="givizinis-button givizinis-button-next"
-          to="/day2"
+          to="/day3"
         >
-          ➡️ סיום יום 2
+          <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1.2 }}>
+            <span>המשך</span>
+            <span>ליום 3</span>
+          </span>
         </Link>
       </nav>
     </main>
