@@ -78,10 +78,12 @@ function GaiaKallisti() {
 
         .gaidakallisti-title {
           margin: 0;
+          color: #ffffff;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
           letter-spacing: -0.055em;
           font-weight: 800;
+          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
         }
 
         .gaidakallisti-award {
@@ -183,9 +185,10 @@ function GaiaKallisti() {
 
         .gaidakallisti-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
-          margin-top: 28px;
+          justify-content: center;
+          max-width: 360px;
+          margin: 28px auto 0;
+          gap: 12px;
         }
 
         .gaidakallisti-button {
@@ -219,6 +222,33 @@ function GaiaKallisti() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .gaidakallisti-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .gaidakallisti-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .gaidakallisti-waze-button:hover {
+          transform: translateY(-3px);
+        }
+
         @media (max-width: 760px) {
           .gaidakallisti-page {
             padding-bottom: 32px;
@@ -250,11 +280,11 @@ function GaiaKallisti() {
           }
 
           .gaidakallisti-actions {
-            flex-direction: column-reverse;
+            flex-wrap: wrap;
           }
 
           .gaidakallisti-button {
-            width: 100%;
+            width: auto;
           }
 
           .gaidakallisti-gallery {
@@ -303,7 +333,7 @@ function GaiaKallisti() {
           </h2>
 
           <ul className="gaidakallisti-menu-list" dir="rtl">
-            <li>🍯 טעימות דבש יווני</li>
+            <li>🍯 דבש יווני במגוון סוגים</li>
             <li>🫒 שמן זית וזיתים</li>
             <li>🛍️ אפשרות לרכוש מוצרים במקום</li>
           </ul>
@@ -330,6 +360,15 @@ function GaiaKallisti() {
         </div>
       </section>
 
+      <div className="gaidakallisti-waze-wrapper">
+        <a
+          className="gaidakallisti-waze-button"
+          href="waze://?ll=40.04181401885115,23.3712053&navigate=yes"
+        >
+          🚗 Waze ל-Gaia Kallisti
+        </a>
+      </div>
+
       <nav
         className="gaidakallisti-actions"
         aria-label="Gaia Kallisti navigation"
@@ -343,9 +382,11 @@ function GaiaKallisti() {
 
         <Link
           className="gaidakallisti-button gaidakallisti-button-next"
-          to="/day3"
+          to="/archontiko"
         >
-          ➡️ המשך ליום 3
+          ➡️ המשך
+          <br />
+          Archontiko
         </Link>
       </nav>
     </main>
