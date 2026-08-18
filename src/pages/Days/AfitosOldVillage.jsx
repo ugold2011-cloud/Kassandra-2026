@@ -177,9 +177,10 @@ function AfitosOldVillage() {
 
         .afitosoldvillage-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
-          margin-top: 28px;
+          justify-content: center;
+          max-width: 360px;
+          margin: 28px auto 0;
+          gap: 12px;
         }
 
         .afitosoldvillage-button {
@@ -197,6 +198,33 @@ function AfitosOldVillage() {
         }
 
         .afitosoldvillage-button:hover {
+          transform: translateY(-3px);
+        }
+
+        .afitosoldvillage-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .afitosoldvillage-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .afitosoldvillage-waze-button:hover {
           transform: translateY(-3px);
         }
 
@@ -244,11 +272,11 @@ function AfitosOldVillage() {
           }
 
           .afitosoldvillage-actions {
-            flex-direction: column-reverse;
+            flex-wrap: wrap;
           }
 
           .afitosoldvillage-button {
-            width: 100%;
+            width: auto;
           }
 
           .afitosoldvillage-gallery {
@@ -332,6 +360,15 @@ function AfitosOldVillage() {
         </div>
       </section>
 
+      <div className="afitosoldvillage-waze-wrapper">
+        <a
+          className="afitosoldvillage-waze-button"
+          href="waze://?ll=40.09968465410918,23.432916738073143&navigate=yes"
+        >
+          🚗 Waze לחניה – Afitos Old Village
+        </a>
+      </div>
+
       <nav
         className="afitosoldvillage-actions"
         aria-label="Afitos Old Village navigation"
@@ -345,9 +382,11 @@ function AfitosOldVillage() {
 
         <Link
           className="afitosoldvillage-button afitosoldvillage-button-next"
-          to="/day3"
+          to="/afytaion-gaia"
         >
-          ➡️ המשך ליום 3
+          ➡️ המשך
+          <br />
+          Afytaion Gaia
         </Link>
       </nav>
     </main>
