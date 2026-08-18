@@ -195,15 +195,20 @@ function SipSpot() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 44px;
-          padding: 0 16px;
-          border-radius: 999px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          min-height: 52px;
+          padding: 0 20px;
+          border-radius: 16px;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           text-decoration: none;
           font-weight: 800;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
           transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
         }
 
         .sipspot-link:hover {
@@ -213,8 +218,13 @@ function SipSpot() {
 
         .sipspot-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          flex-direction: row;
+          justify-content: center;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          gap: 12px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -240,7 +250,7 @@ function SipSpot() {
         }
 
         .sipspot-button-back {
-          border-color: #c8e5f2;
+          border: 1px solid #dbe2ea;
           background: #fff;
           color: var(--sipspot-ink);
           box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
@@ -294,11 +304,11 @@ function SipSpot() {
           }
 
           .sipspot-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
           }
 
           .sipspot-button {
-            width: 100%;
+            flex: 1;
           }
         }
       `}</style>

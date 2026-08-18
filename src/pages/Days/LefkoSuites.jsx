@@ -189,9 +189,12 @@ function LefkoSuites() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 100%;
-          padding: 0 22px;
-          min-height: 48px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
           border-radius: 16px;
           border: 1px solid transparent;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
@@ -201,6 +204,7 @@ function LefkoSuites() {
           font-size: 0.9rem;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
           transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
         }
 
         .lefko-waze:hover {
@@ -217,8 +221,13 @@ function LefkoSuites() {
 
         .lefko-actions {
           display: flex;
+          flex-direction: row;
           justify-content: center;
-          gap: 14px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          gap: 12px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -226,14 +235,18 @@ function LefkoSuites() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 48px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          width: auto;
+          min-height: 52px;
+          padding: 0 10px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.9rem;
+          font-size: 15px;
           font-weight: 800;
           transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+          white-space: nowrap;
         }
 
         .lefko-button:hover {
@@ -245,10 +258,10 @@ function LefkoSuites() {
         }
 
         .lefko-button-back {
-          border-color: #c8e5f2;
-          background: #fff;
+          border: 1px solid #dbe2ea;
+          background: #ffffff;
           color: var(--lefko-ink);
-          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          box-shadow: none;
         }
 
         .lefko-button-next {
@@ -310,11 +323,11 @@ function LefkoSuites() {
           }
 
           .lefko-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
           }
 
           .lefko-button {
-            width: 100%;
+            flex: 1;
           }
 
           .lefko-info-row {
@@ -407,52 +420,27 @@ function LefkoSuites() {
         className="lefko-actions"
         aria-label="Lefko Suites navigation"
       >
+        <Link
+          className="lefko-button lefko-button-back"
+          to="/day1"
+        >
+          חזרה ליום 1
+        </Link>
+
         {fromDay2 ? (
-          <>
-            <Link
-              className="lefko-button lefko-button-back"
-              to="/"
-            >
-              🏠 ראשי
-            </Link>
-
-            <Link
-              className="lefko-button lefko-button-back"
-              to="/"
-            >
-              🏠 ראשי
-            </Link>
-
-            <Link
-              className="lefko-button lefko-button-next"
-              to="/day2"
-            >
-              המשך ליום 2
-            </Link>
-          </>
+          <Link
+            className="lefko-button lefko-button-next"
+            to="/day2"
+          >
+            המשך ליום 2
+          </Link>
         ) : (
-          <>
-            <Link
-              className="lefko-button lefko-button-back"
-              to="/day1"
-            >
-              חזרה ליום 1
-            </Link>
-
-            <Link
-              className="lefko-button lefko-button-back"
-              to="/"
-            >
-              🏠 ראשי
-            </Link>
-
-            <Link
-              className="lefko-button lefko-button-next"
-              to="/faros"
-            >
-              המשך ל-<bdi dir="ltr">Faros</bdi>
-            </Link>
-          </>
+          <Link
+            className="lefko-button lefko-button-next"
+            to="/faros"
+          >
+            המשך ל-<bdi dir="ltr">Faros</bdi>
+          </Link>
         )}
       </nav>
     </main>
