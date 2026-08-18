@@ -183,9 +183,17 @@ function TerraAzapiko() {
 
         .terraazapiko-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
-          margin-top: 28px;
+          justify-content: center;
+          gap: 12px;
+          flex-wrap: nowrap;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin: 28px auto 0;
+        }
+
+        .terraazapiko-actions .terraazapiko-button {
+          flex: 1 1 0;
+          min-width: 0;
         }
 
         .terraazapiko-button {
@@ -219,6 +227,19 @@ function TerraAzapiko() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .terraazapiko-waze-button {
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 20px;
+          border-radius: 16px;
+        }
+
         @media (max-width: 760px) {
           .terraazapiko-page {
             padding-bottom: 32px;
@@ -247,14 +268,6 @@ function TerraAzapiko() {
             padding: 20px 0 0;
             border-top: 1px solid rgba(58, 142, 183, 0.22);
             border-left: 0;
-          }
-
-          .terraazapiko-actions {
-            flex-direction: column-reverse;
-          }
-
-          .terraazapiko-button {
-            width: 100%;
           }
 
           .terraazapiko-gallery {
@@ -304,10 +317,9 @@ function TerraAzapiko() {
 
           <ul className="terraazapiko-menu-list" dir="rtl">
             <li>🫒 טעימות שמן זית מקומי</li>
-            <li>🧈 מוצרי Kassandra / חלקידיקי</li>
-            <li>🍯 דבש ומאכלים יווניים</li>
-            <li>🧃 אריזות קטנות / מתנה</li>
-            <li>🛒 רכישה אופציונלית — לפי רצון</li>
+
+            <li>🎁 בקבוקי שמן זית קטנים – מתאים גם כמתנה</li>
+            <li>🛒 רכישת שמן זית ומוצרי שמן זית במקום</li>
           </ul>
         </div>
 
@@ -335,14 +347,25 @@ function TerraAzapiko() {
               </span>
             </li>
 
-            <li>
-              <span>
-                🫒 סיור במפעל: בתיאום מראש
-              </span>
-            </li>
+
           </ul>
         </div>
       </section>
+
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: 28,
+          marginBottom: 16,
+        }}
+      >
+        <a
+          className="terraazapiko-button terraazapiko-waze-button"
+          href="waze://?ll=40.07444934032626,23.4488314&navigate=yes"
+        >
+          🚗 Waze ל-Terra Azapiko
+        </a>
+      </div>
 
       <nav
         className="terraazapiko-actions"
@@ -357,9 +380,12 @@ function TerraAzapiko() {
 
         <Link
           className="terraazapiko-button terraazapiko-button-next"
-          to="/day3"
+          to="/afitos-old-village"
         >
-          ➡️ המשך ליום 3
+          <div style={{ lineHeight: 1.2 }}>
+            <div>המשך</div>
+            <div style={{ fontSize: "0.85em" }}>Afitos Old Village</div>
+          </div>
         </Link>
       </nav>
     </main>
