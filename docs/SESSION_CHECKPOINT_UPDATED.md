@@ -878,3 +878,160 @@ END CHECKPOINT
 Day 6, Day 7 and Day 8 work completed for this session.
 Day 8 visual design approved.
 Next technical priority: offline/navigation verification.
+
+---
+
+# SESSION UPDATE — 19.08.2026 / 02:15 / Israel Time
+## END OF SESSION
+
+=== MOBILE / WAZE PASS PROGRESS ===
+
+DAY 2:
+- PefkochoriShopping PASS and committed.
+- GlarokavosBeach PASS and committed.
+- KassandreiaMarket PASS and committed.
+- Metoxi PASS and committed.
+- Givizinis PASS and committed.
+- Day 2 navigation now progresses through stations correctly.
+- Givizinis final Next goes to Day 3.
+- General rule: Waze buttons on station pages use verified coordinates and compact centered purple style.
+- Unverified parking/content text was removed where found.
+
+DAY 3:
+- Day3 general Day-level Waze button removed.
+- The Stolen Cup PASS and committed.
+- Terra Azapiko PASS and committed.
+- Afitos Old Village PASS and committed.
+- Afytaion Gaia PASS and committed.
+- Gaia Kallisti PASS and committed.
+- Archontiko PASS and committed.
+- Day 3 sequence:
+  The Stolen Cup
+  -> Terra Azapiko
+  -> Afitos Old Village
+  -> Afytaion Gaia
+  -> Gaia Kallisti
+  -> Archontiko
+  -> Day 4
+- Day 3 main navigation remains Day 2 / Home / Day 4.
+- Verified mobile RTL time rendering fix used on The Stolen Cup:
+  `<span dir="ltr">08:00–08:30</span>`
+
+DAY 4:
+- Day4 general Day-level Waze button removed and committed.
+- Dramis PASS and committed.
+- Encore Beach Bar PASS and committed.
+- Current active work stopped at Apagio.
+
+=== MASTER TITLE STANDARD ===
+
+New approved permanent standard:
+- Station name over the Main/Hero image must be WHITE.
+- Do NOT change font.
+- Do NOT change font size.
+- Do NOT change font weight.
+- Do NOT change position.
+- From Gaia Kallisti onward apply this during station work.
+- Earlier already-completed stations will be corrected later in a controlled backward pass.
+- NO broad automatic change.
+
+=== CONTENT VERIFICATION RULE ===
+
+Permanent strict rule:
+Every visible factual statement in Kassandra must be verified before use:
+- products
+- services
+- dishes
+- opening times
+- parking
+- addresses
+- recommendations
+- availability
+- operational claims
+
+If information cannot be sufficiently verified:
+DO NOT publish it.
+Remove it or leave it out.
+No guessed or vague claims such as "when available" unless verified.
+
+=== RESERVATIONS MASTER ===
+
+Created:
+`docs/RESERVATIONS/RESERVATIONS_MASTER.md`
+
+Reservations are treated as mandatory whenever advance booking/coordination is recommended.
+
+Tracking fields include:
+- place
+- visit date
+- target time
+- 4 people
+- email/contact
+- sent?
+- sent date
+- reply received?
+- reply date
+- final status
+- notes
+
+Current planned entries include:
+- Metoxi
+- Afytaion Gaia
+- Apagio entry currently requires reconsideration because Apagio is now under replacement review
+- Archontiko Agia Paraskevi
+- Myrthia Thermal Spa
+- Giannikos Tavern
+
+IMPORTANT:
+The Reservations Master must later be updated if Giorgos replaces Apagio.
+
+=== CURRENT APAGIO / GIORGOS ISSUE ===
+
+Apagio in Nea Skioni could not be reliably verified as currently active.
+Sources conflicted and the business could not be reliably located in Google Maps.
+
+Decision:
+- Do NOT continue Apagio as approved.
+- Preferred replacement direction: Giorgos Fish Restaurant, Nea Skioni.
+- Giorgos was researched as an active fish/seafood restaurant.
+- No application code replacement has been performed yet.
+- Existing Apagio page/images have NOT been deleted.
+- User proposed reusing existing generic fish-dish images if they do not visibly identify Apagio.
+- Apagio hero title is HTML/CSS overlay, not baked into image.
+- Exact hero image file location still needs to be located/visually inspected.
+- Work stopped BEFORE replacing Apagio with Giorgos.
+
+=== EXACT NEXT SESSION START POINT ===
+
+FIRST TASK NEXT SESSION:
+
+1. Locate and visually inspect the actual `Apagio-main.jpeg`.
+2. Confirm whether it contains any visible Apagio name/logo/sign.
+3. If generic enough, preserve suitable existing fish-food images temporarily.
+4. Verify exact Giorgos Fish Restaurant location and Waze coordinates.
+5. Replace ONLY the necessary Apagio user-facing data with verified Giorgos data.
+6. Keep Day 4 sequence:
+   Dramis -> Encore Beach Bar -> replacement dinner station.
+7. Mobile test.
+8. PASS.
+9. Git checkpoint.
+10. Then continue Day 5.
+
+=== SAFETY / WORK METHOD ===
+
+Continue mandatory workflow:
+READ ONLY / SCAN
+-> REPORT
+-> USER APPROVAL
+-> ONE LOCAL CHANGE
+-> REAL MOBILE TEST
+-> PASS
+-> GIT CHECKPOINT
+
+Kilo is technical executor only.
+Do not invent user-visible content.
+Keep Kilo tasks short.
+Do not perform broad automatic fixes.
+Do not touch/restart the external Vite server.
+
+END CHECKPOINT
