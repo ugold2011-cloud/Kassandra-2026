@@ -79,13 +79,14 @@ function EncoreBeachBar() {
           color: #d8f3ff;
         }
 
-        .encore-title {
-          margin: 0;
-          font-size: clamp(2.4rem, 6vw, 4.5rem);
-          line-height: 0.95;
-          letter-spacing: -0.055em;
-          font-weight: 800;
-        }
+         .encore-title {
+           margin: 0;
+           font-size: clamp(2.4rem, 6vw, 4.5rem);
+           line-height: 0.95;
+           letter-spacing: -0.055em;
+           font-weight: 800;
+           color: #ffffff;
+         }
 
         .encore-award {
           margin: 0;
@@ -205,17 +206,42 @@ function EncoreBeachBar() {
           transition: transform 220ms ease, box-shadow 220ms ease;
         }
 
-        .encore-link:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
-        }
+         .encore-link:hover {
+           transform: translateY(-3px);
+           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+         }
 
-        .encore-actions {
-          display: flex;
-          justify-content: space-between;
-          gap: 14px;
-          margin-top: 28px;
-        }
+         .encore-waze {
+           display: inline-flex;
+           align-items: center;
+           justify-content: center;
+           width: 260px;
+           max-width: calc(100% - 32px);
+           min-height: 52px;
+           padding: 0 16px;
+           border-radius: 999px;
+           background: linear-gradient(135deg, #7c3aed, #4f46e5);
+           color: #fff;
+           text-decoration: none;
+           font-weight: 800;
+           font-size: 0.96rem;
+           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+           transition: transform 220ms ease, box-shadow 220ms ease;
+         }
+
+         .encore-waze:hover {
+           transform: translateY(-3px);
+           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+         }
+
+         .encore-actions {
+           display: flex;
+           justify-content: center;
+           gap: 12px;
+           max-width: 360px;
+           margin: 28px auto 0;
+           overflow: hidden;
+         }
 
         .encore-button {
           display: inline-flex;
@@ -292,13 +318,7 @@ function EncoreBeachBar() {
             border-left: 0;
           }
 
-          .encore-actions {
-            flex-direction: column-reverse;
-          }
 
-          .encore-button {
-            width: 100%;
-          }
         }
       `}</style>
 
@@ -382,12 +402,21 @@ function EncoreBeachBar() {
             </li>
           </ul>
         </div>
-      </section>
+       </section>
 
-      <nav
-        className="encore-actions"
-        aria-label="Encore Beach Bar navigation"
-      >
+       <div style={{ textAlign: "center", marginTop: "28px" }}>
+         <a
+           className="encore-waze"
+           href="waze://?ll=39.97760719717463,23.3733326&navigate=yes"
+         >
+           🚗 Waze ל-Encore Beach Bar
+         </a>
+       </div>
+
+       <nav
+         className="encore-actions"
+         aria-label="Encore Beach Bar navigation"
+       >
         <Link
           className="encore-button encore-button-back"
           to="/dramis"
