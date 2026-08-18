@@ -156,10 +156,42 @@ function PefkochoriShopping() {
           font-size: 0.94rem;
         }
 
+        .shopping-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .shopping-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
         .shopping-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          flex-direction: row;
+          justify-content: center;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          gap: 12px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -167,17 +199,21 @@ function PefkochoriShopping() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          width: auto;
+          min-height: 52px;
+          padding: 0 10px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 15px;
           font-weight: 800;
           transition:
             transform 220ms ease,
             box-shadow 220ms ease,
             background 220ms ease;
+          white-space: nowrap;
         }
 
         .shopping-button:hover {
@@ -185,16 +221,18 @@ function PefkochoriShopping() {
         }
 
         .shopping-button-back {
-          border-color: #c8e5f2;
-          background: #fff;
-          color: var(--shopping-ink);
-          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          border: 1px solid #dbe2ea;
+          background: #ffffff;
+          color: #1f2937;
+          box-shadow: none;
         }
 
         .shopping-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
-          color: #fff;
+          border: 1px solid transparent;
+          color: #ffffff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          white-space: normal;
         }
 
         @media (max-width: 760px) {
@@ -228,11 +266,11 @@ function PefkochoriShopping() {
           }
 
           .shopping-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
           }
 
           .shopping-button {
-            width: 100%;
+            flex: 1;
           }
         }
       `}</style>
@@ -253,10 +291,6 @@ function PefkochoriShopping() {
               Shopping & Browsing
             </h1>
           </div>
-
-          <p className="shopping-award">
-            DAY 2 — STOP 2
-          </p>
         </div>
       </section>
 
@@ -305,7 +339,17 @@ function PefkochoriShopping() {
                 🍳 מתי: מיד לאחר ארוחת הבוקר
               </span>
             </li>
+
           </ul>
+
+          <a
+            className="shopping-waze"
+            href="waze://?ll=39.98810934763342,23.618748261907566&navigate=yes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🚗 Waze לחניה באזור הקניות
+          </a>
         </div>
       </section>
 
@@ -320,12 +364,14 @@ function PefkochoriShopping() {
           ⬅️ חזרה ליום 2
         </Link>
 
-        <Link
-          className="shopping-button shopping-button-next"
-          to="/day2"
-        >
-          ➡️ המשך ליום 2
-        </Link>
+          <Link
+            className="shopping-button shopping-button-next"
+            to="/glarokavos-beach"
+          >
+            המשך
+            <br />
+            Glarokavos Beach
+          </Link>
       </nav>
     </main>
   );
