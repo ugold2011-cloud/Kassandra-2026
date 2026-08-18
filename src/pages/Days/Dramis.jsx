@@ -81,6 +81,7 @@ function Dramis() {
         }
 
         .dramis-title {
+          color: #ffffff;
           margin: 0;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
@@ -252,6 +253,37 @@ function Dramis() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .dramis-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .dramis-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 52px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .dramis-waze-button:hover {
+          transform: translateY(-3px);
+        }
+
         @media (max-width: 760px) {
           .dramis-page {
             padding-bottom: 32px;
@@ -294,11 +326,17 @@ function Dramis() {
           }
 
           .dramis-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
+            justify-content: center;
+            max-width: 360px;
+            gap: 12px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
           }
 
           .dramis-button {
-            width: 100%;
+            width: auto;
           }
         }
       `}</style>
@@ -320,9 +358,7 @@ function Dramis() {
             </h1>
           </div>
 
-          <p className="dramis-award">
-            🥇 BREAKFAST ONLY
-          </p>
+
         </div>
       </section>
 
@@ -354,7 +390,7 @@ function Dramis() {
             <li>☕ קפה יווני איכותי</li>
             <li>🥗 מנות בוקר נוספות</li>
             <li>🧃 מיצים טבעיים</li>
-            <li>🍽️ חוויה קלילה ליום 4</li>
+
           </ul>
         </div>
 
@@ -376,14 +412,19 @@ function Dramis() {
               </span>
             </li>
 
-            <li>
-              <span>
-                🕗 זמן מומלץ: ארוחת בוקר
-              </span>
-            </li>
+
           </ul>
         </div>
       </section>
+
+      <div className="dramis-waze-wrapper">
+        <a
+          className="dramis-waze-button"
+          href="waze://?ll=39.99999493464846,23.572445028835894&navigate=yes"
+        >
+          🚗 Waze ל-Dramis
+        </a>
+      </div>
 
       <nav
         className="dramis-actions"

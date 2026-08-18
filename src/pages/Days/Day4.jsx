@@ -63,14 +63,6 @@ function Day4() {
           marginTop: "30px",
         }}
       >
-        <button
-          className="waze-button"
-          style={{
-            width: "260px",
-          }}
-        >
-          🚗 פתח ב־Waze
-        </button>
 
         {!showMusicModal && (
           <button
