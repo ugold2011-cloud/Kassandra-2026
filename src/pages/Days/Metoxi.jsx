@@ -168,8 +168,12 @@ function Metoxi() {
 
         .metoxi-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          justify-content: center;
+          gap: 12px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -234,15 +238,11 @@ function Metoxi() {
             border-left: 0;
           }
 
-          .metoxi-actions {
-            flex-direction: column-reverse;
-          }
+           .metoxi-actions .metoxi-button {
+             width: auto;
+           }
 
-          .metoxi-button {
-            width: 100%;
-          }
-
-          .metoxi-gallery {
+           .metoxi-gallery {
             grid-template-columns: 1fr;
             gap: 14px;
           }
@@ -250,6 +250,19 @@ function Metoxi() {
           .metoxi-gallery img {
             height: 220px;
           }
+        }
+
+        .metoxi-button-waze {
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 20px;
+          border-radius: 16px;
         }
 
         .metoxi-gallery {
@@ -302,12 +315,11 @@ function Metoxi() {
             🥩 ארוחת בשרים
           </h2>
 
-          <ul className="metoxi-menu-list" dir="rtl">
-            <li>🥩 סטייקים ונתחי בשר פרימיום</li>
-            <li>🐑 צלעות כבש</li>
-            <li>🔥 בשרים צלויים</li>
-            <li>🥩 Wagyu — כאשר זמין</li>
-          </ul>
+           <ul className="metoxi-menu-list" dir="rtl">
+             <li>🥩 סטייקים ונתחי בשר פרימיום</li>
+             <li>🐑 צלעות כבש</li>
+             <li>🔥 בשרים צלויים</li>
+           </ul>
         </div>
 
         <div className="metoxi-info" dir="rtl">
@@ -331,26 +343,29 @@ function Metoxi() {
               </span>
             </li>
 
-            <li>
-              <span>
-                📞 מומלץ להזמין מראש שולחן ל־4
-              </span>
-            </li>
-
-            <li>
-              <span>
-                🅿️ חניה מדווחת במסעדה / בסביבתה
-              </span>
-            </li>
-
-            <li className="metoxi-important">
-              <span>
-                ⚠️ לפני הנסיעה: לוודא שעות פתיחה ביום שלישי וזמינות נתחים מיוחדים / Wagyu
-              </span>
-            </li>
-          </ul>
+             <li>
+               <span>
+                 📞 מומלץ להזמין מראש שולחן ל־4
+               </span>
+             </li>
+           </ul>
         </div>
       </section>
+
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: 28,
+          marginBottom: 16,
+        }}
+      >
+        <a
+          className="metoxi-button metoxi-button-waze"
+          href="waze://?ll=40.065431945141874,23.392231757671798&navigate=yes"
+        >
+          🚗 Waze ל-Metoxi
+        </a>
+      </div>
 
       <nav
         className="metoxi-actions"
@@ -365,9 +380,9 @@ function Metoxi() {
 
         <Link
           className="metoxi-button metoxi-button-next"
-          to="/day2"
+          to="/givizinis"
         >
-          ➡️ המשך ליום 2
+          המשך<br />Givizinis
         </Link>
       </nav>
     </main>
