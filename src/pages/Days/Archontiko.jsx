@@ -77,6 +77,7 @@ function Archontiko() {
         }
 
         .archontiko-title {
+          color: #ffffff;
           margin: 0;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
@@ -219,6 +220,33 @@ function Archontiko() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .archontiko-waze {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .archontiko-waze a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+        }
+
+        .archontiko-waze a:hover {
+          transform: translateY(-3px);
+        }
+
         @media (max-width: 760px) {
           .archontiko-page {
             padding-bottom: 32px;
@@ -250,11 +278,17 @@ function Archontiko() {
           }
 
           .archontiko-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
+            justify-content: center;
+            max-width: 360px;
+            gap: 12px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
           }
 
           .archontiko-button {
-            width: 100%;
+            width: auto;
           }
 
           .archontiko-gallery {
@@ -323,17 +357,7 @@ function Archontiko() {
               </span>
             </li>
 
-            <li>
-              <span>
-                🕑 שעות: <span className="archontiko-time">14:00-22:30</span>
-              </span>
-            </li>
 
-            <li>
-              <span>
-                🅿️ חניה חופשית / חניה ברחוב
-              </span>
-            </li>
 
             <li>
               <span>
@@ -343,6 +367,14 @@ function Archontiko() {
           </ul>
         </div>
       </section>
+
+      <div className="archontiko-waze">
+        <a
+          href="waze://?ll=39.953862196032965,23.6064948288359&navigate=yes"
+        >
+          🚗 Waze ל-Archontiko
+        </a>
+      </div>
 
       <nav
         className="archontiko-actions"
@@ -357,9 +389,9 @@ function Archontiko() {
 
         <Link
           className="archontiko-button archontiko-button-next"
-          to="/day3"
+          to="/day4"
         >
-          ➡️ המשך ליום 3
+          ➡️ המשך ליום 4
         </Link>
       </nav>
     </main>
