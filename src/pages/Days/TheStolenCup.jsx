@@ -184,9 +184,13 @@ function TheStolenCup() {
 
         .thestolencup-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          justify-content: center;
+          gap: 12px;
           margin-top: 28px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .thestolencup-button {
@@ -250,12 +254,10 @@ function TheStolenCup() {
             border-left: 0;
           }
 
-          .thestolencup-actions {
-            flex-direction: column-reverse;
-          }
-
-          .thestolencup-button {
-            width: 100%;
+          .thestolencup-actions .thestolencup-button {
+            width: auto;
+            flex: 1 1 0;
+            min-width: 0;
           }
 
           .thestolencup-gallery {
@@ -333,18 +335,22 @@ function TheStolenCup() {
 
             <li>
               <span>
-                🕘 זמן מומלץ: 08:00–08:30
+                🕘 זמן מומלץ: <span dir="ltr">08:00–08:30</span>
               </span>
             </li>
 
-            <li>
-              <span>
-                🅿️ חניה באזור
-              </span>
-            </li>
           </ul>
         </div>
       </section>
+
+      <div style={{ textAlign: 'center', marginBottom: 14 }}>
+        <a
+          className="thestolencup-button thestolencup-button-next"
+          href="waze://?ll=40.07950599775993,23.444984800000004&navigate=yes"
+        >
+          🚗 Waze ל-The Stolen Cup
+        </a>
+      </div>
 
       <nav
         className="thestolencup-actions"
@@ -359,9 +365,12 @@ function TheStolenCup() {
 
         <Link
           className="thestolencup-button thestolencup-button-next"
-          to="/day3"
+          to="/terra-azapiko"
         >
-          ➡️ המשך ליום 3
+          <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1.2 }}>
+            <span>המשך</span>
+            <span>Terra Azapiko</span>
+          </span>
         </Link>
       </nav>
     </main>
