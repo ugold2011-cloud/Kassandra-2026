@@ -77,6 +77,7 @@ function DreamCoffee() {
 
         .dreamcoffee-title {
           margin: 0;
+          color: #fff;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
           letter-spacing: -0.055em;
@@ -129,8 +130,12 @@ function DreamCoffee() {
 
         .dreamcoffee-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          justify-content: center;
+          gap: 12px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -138,17 +143,21 @@ function DreamCoffee() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          width: auto;
+          min-height: 52px;
+          padding: 0 10px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 15px;
           font-weight: 800;
           transition:
             transform 220ms ease,
             box-shadow 220ms ease,
             background 220ms ease;
+          white-space: nowrap;
         }
 
         .dreamcoffee-button:hover {
@@ -168,6 +177,39 @@ function DreamCoffee() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .dreamcoffee-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .dreamcoffee-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .dreamcoffee-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
         @media (max-width: 760px) {
           .dreamcoffee-page {
             padding-bottom: 32px;
@@ -183,12 +225,9 @@ function DreamCoffee() {
             flex-direction: column;
           }
 
-          .dreamcoffee-actions {
-            flex-direction: column-reverse;
-          }
-
-          .dreamcoffee-button {
-            width: 100%;
+          .dreamcoffee-actions .dreamcoffee-button {
+            flex: 1 1 0;
+            min-width: 0;
           }
         }
       `}</style>
@@ -230,6 +269,15 @@ function DreamCoffee() {
         </div>
       </section>
 
+      <div className="dreamcoffee-waze-wrapper">
+        <a
+          className="dreamcoffee-waze"
+          href="waze://?ll=39.999094487126385,23.577449742328195&navigate=yes"
+        >
+          🚗 Waze ל-Dream Coffee
+        </a>
+      </div>
+
       <nav
         className="dreamcoffee-actions"
         aria-label="Dream Coffee navigation"
@@ -243,9 +291,9 @@ function DreamCoffee() {
 
         <Link
           className="dreamcoffee-button dreamcoffee-button-next"
-          to="/day5"
+          to="/archontiko-day5"
         >
-          ➡️ חזרה ליום 5
+          ➡️ Archontiko
         </Link>
       </nav>
     </main>

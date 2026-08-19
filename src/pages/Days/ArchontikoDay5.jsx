@@ -78,6 +78,7 @@ function ArchontikoDay5() {
 
         .archontiko-title {
           margin: 0;
+          color: #fff;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
           letter-spacing: -0.055em;
@@ -124,6 +125,9 @@ function ArchontikoDay5() {
         }
 
         .archontiko-details {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
           margin-top: 28px;
           padding: clamp(20px, 4vw, 34px);
           border: 1px solid rgba(112, 196, 236, 0.34);
@@ -134,6 +138,8 @@ function ArchontikoDay5() {
             rgba(238, 249, 255, 0.88)
           );
           box-shadow: 0 18px 45px rgba(14, 57, 80, 0.1);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
         }
 
         .archontiko-section-heading {
@@ -172,8 +178,12 @@ function ArchontikoDay5() {
 
         .archontiko-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          justify-content: center;
+          gap: 12px;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -181,14 +191,18 @@ function ArchontikoDay5() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          width: auto;
+          min-height: 52px;
+          padding: 0 10px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 15px;
           font-weight: 800;
-          transition: transform 220ms ease, box-shadow 220ms ease;
+          transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+          white-space: nowrap;
         }
 
         .archontiko-button:hover {
@@ -208,6 +222,39 @@ function ArchontikoDay5() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .archontiko-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .archontiko-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .archontiko-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
         @media (max-width: 760px) {
           .archontiko-page {
             padding-bottom: 32px;
@@ -224,15 +271,13 @@ function ArchontikoDay5() {
           }
 
           .archontiko-details {
+            grid-template-columns: 1fr;
             border-radius: 22px;
           }
 
-          .archontiko-actions {
-            flex-direction: column-reverse;
-          }
-
-          .archontiko-button {
-            width: 100%;
+          .archontiko-actions .archontiko-button {
+            flex: 1 1 0;
+            min-width: 0;
           }
 
           .archontiko-gallery {
@@ -267,9 +312,9 @@ function ArchontikoDay5() {
 
       <section className="archontiko-subhead" dir="rtl">
         <h2 className="archontiko-section-heading">
-          ארוחת שישי מיוחדת — מסעדת בשרים
+          ארוחת שישי מיוחדת – מסעדת בשרים
         </h2>
-        <p>בשר איכותי לחלוקה לארבעה.</p>
+        <p>בשר איכותי.</p>
       </section>
 
       <section className="archontiko-gallery" aria-label="Archontiko meat">
@@ -282,17 +327,30 @@ function ArchontikoDay5() {
           What to ask the waiter
         </h2>
 
+        <p dir="rtl">
+          🥩 ארוחת בשרים ל־4 אנשים
+        </p>
+
+        <p dir="rtl">
+          במקום לבחור מראש נתח מסוים, מומלץ לשאול את המלצר אילו נתחים הם הטובים והמומלצים ביותר באותו ערב, ומה מתאים לחלוקה בין 4 אנשים.
+        </p>
+
         <ul className="archontiko-menu-list">
-          <li>Which cut is best today and recommended by the chef?</li>
+          <li>Which cut of meat would you recommend today?</li>
           <li>Which cut is best for four people to share?</li>
           <li>Do you have Ribeye or Tomahawk that you especially recommend today?</li>
           <li>Which local wine would you recommend with the meat?</li>
         </ul>
-
-        <p className="archontiko-note">
-          Do not automatically order Wagyu. Ask the waiter which meat is genuinely the best choice that evening and follow the recommendation.
-        </p>
       </section>
+
+      <div className="archontiko-waze-wrapper">
+        <a
+          className="archontiko-waze"
+          href="waze://?ll=39.953829298762,23.606505557671806&navigate=yes"
+        >
+          🚗 Waze ל-Archontiko Agia Paraskevi
+        </a>
+      </div>
 
       <nav
         className="archontiko-actions"
@@ -307,9 +365,9 @@ function ArchontikoDay5() {
 
         <Link
           className="archontiko-button archontiko-button-next"
-          to="/"
+          to="/day6"
         >
-          🏠 ראשי
+          ➡️ המשך ליום 6
         </Link>
       </nav>
     </main>
