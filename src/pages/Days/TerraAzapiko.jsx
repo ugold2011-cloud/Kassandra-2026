@@ -78,6 +78,7 @@ function TerraAzapiko() {
 
         .terraazapiko-title {
           margin: 0;
+          color: #fff;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
           letter-spacing: -0.055em;

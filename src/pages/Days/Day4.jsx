@@ -139,6 +139,26 @@ function Day4() {
         >
           🏠 ראשי
         </Link>
+        <Link
+          to="/day5"
+          style={{
+            textDecoration: "none",
+            color: "#153247",
+            background: "#fff",
+            padding: "0 22px",
+            minHeight: "54px",
+            border: "1px solid #c8e5f2",
+            borderRadius: "16px",
+            boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+            fontWeight: 800,
+            fontSize: "0.96rem",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          יום 5 →
+        </Link>
       </nav>
     </div>
   );
