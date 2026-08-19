@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import apagioMain from "../../assets/images/Apagio/Apagio-main.jpeg";
-import apagioFood01 from "../../assets/images/Apagio/Apagio-food01.jpeg";
-import apagioFood02 from "../../assets/images/Apagio/Apagio-food02.jpg";
+import apagioMain from "../../assets/images/Giorgos/Giorgos-main.jpeg";
+import apagioFood01 from "../../assets/images/Giorgos/Giorgos-food01.jpeg";
+import apagioFood02 from "../../assets/images/Giorgos/Giorgos-food02.jpg";
 
 function Apagio() {
   const galleryImages = [apagioFood01, apagioFood02];
@@ -82,6 +82,7 @@ function Apagio() {
 
         .apagio-title {
           margin: 0;
+          color: #fff;
           font-size: clamp(2.4rem, 6vw, 4.5rem);
           line-height: 0.95;
           letter-spacing: -0.055em;
@@ -211,10 +212,48 @@ function Apagio() {
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
+        .apagio-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .apagio-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .apagio-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
         .apagio-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
+          flex-direction: row;
+          justify-content: center;
+          width: calc(100% - 32px);
+          max-width: 360px;
+          gap: 12px;
+          margin-left: auto;
+          margin-right: auto;
           margin-top: 28px;
         }
 
@@ -222,17 +261,18 @@ function Apagio() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          width: auto;
+          min-height: 52px;
+          padding: 0 10px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 15px;
           font-weight: 800;
-          transition:
-            transform 220ms ease,
-            box-shadow 220ms ease,
-            background 220ms ease;
+          transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+          white-space: nowrap;
         }
 
         .apagio-button:hover {
@@ -240,16 +280,21 @@ function Apagio() {
         }
 
         .apagio-button-back {
-          border-color: #c8e5f2;
-          background: #fff;
-          color: var(--apagio-ink);
-          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          background: #ffffff;
+          border: 1px solid #dbe2ea;
+          color: #1f2937;
+          box-shadow: none;
         }
 
         .apagio-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
-          color: #fff;
+          border: 1px solid transparent;
+          color: #ffffff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .apagio-button-next:hover {
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
         @media (max-width: 760px) {
@@ -292,21 +337,13 @@ function Apagio() {
             border-top: 1px solid rgba(58, 142, 183, 0.22);
             border-left: 0;
           }
-
-          .apagio-actions {
-            flex-direction: column-reverse;
-          }
-
-          .apagio-button {
-            width: 100%;
-          }
         }
       `}</style>
 
       <section className="apagio-hero">
         <img
           src={apagioMain}
-          alt="Apagio Restaurant"
+          alt="Giorgos Fish Restaurant"
         />
 
         <div className="apagio-hero-content">
@@ -316,7 +353,7 @@ function Apagio() {
             </p>
 
             <h1 className="apagio-title">
-              Apagio
+              Giorgos Fish Restaurant
             </h1>
           </div>
 
@@ -328,7 +365,7 @@ function Apagio() {
 
       <section
         className="apagio-gallery"
-        aria-label="Apagio food"
+         aria-label="Giorgos Fish Restaurant food"
       >
         {galleryImages.map((image, index) => (
           <div
@@ -337,7 +374,7 @@ function Apagio() {
           >
             <img
               src={image}
-              alt={`Apagio ${index + 1}`}
+              alt={`Giorgos Fish Restaurant ${index + 1}`}
             />
           </div>
         ))}
@@ -346,17 +383,9 @@ function Apagio() {
       <section className="apagio-details">
         <div>
           <h2 className="apagio-section-heading">
-            🍽️ ארוחת ערב יוונית-ים תיכונית
+            🍽️ מסעדת דגים ופירות ים
           </h2>
 
-            <ul className="apagio-menu-list" dir="rtl">
-              <li>🍤 מנות ים תיכוניות</li>
-              <li>🥩 בשרים איכותיים</li>
-              <li>🥗 גבינת יוונית טריה</li>
-              <li>🍷 יין מקומי</li>
-              <li>🌿 חוויה סופהשבועית מושלמת
-            </li>
-            </ul>
         </div>
 
         <div className="apagio-info" dir="rtl">
@@ -367,41 +396,56 @@ function Apagio() {
           <ul className="apagio-info-list">
             <li>
               <span>
-                📍 מיקום: Nea Skioni, חלקידיקי, יוון
+                📍 מיקום: Nea Skioni, Halkidiki, Greece
               </span>
             </li>
 
             <li>
               <span>
-                🍽️ סוג מקום: מסעדת ים תיכונית / יוונית
+                🍽️ סוג מקום: מסעדת דגים ופירות ים
               </span>
             </li>
 
             <li>
               <span>
-                🕖 זמן מומלץ: ערב — יום 4
+                📞 טלפון: <span dir="ltr">+30 697 572 5713</span>
+              </span>
+            </li>
+
+            <li>
+              <span>
+                🕖 שעה מומלצת: <span dir="ltr">20:00–20:30</span>
               </span>
             </li>
           </ul>
         </div>
       </section>
 
+      <div className="apagio-waze-wrapper">
+        <a
+          className="apagio-waze"
+          href="waze://?ll=39.9461327,23.530422&navigate=yes"
+        >
+          🚗 Waze ל-Giorgos Fish Restaurant
+        </a>
+      </div>
+
       <nav
         className="apagio-actions"
-        aria-label="Apagio navigation"
+        aria-label="Giorgos Fish Restaurant navigation"
       >
         <Link
           className="apagio-button apagio-button-back"
           to="/encore-beach-bar"
         >
-          חזרה ל-Encore Beach Bar
+          חזרה ל-Encore
         </Link>
 
         <Link
           className="apagio-button apagio-button-next"
-          to="/day4"
+          to="/day5"
         >
-          חזרה ליום 4
+          המשך ליום 5
         </Link>
       </nav>
     </main>
