@@ -76,11 +76,7 @@ function BensCoffee() {
         }
 
         .coffee-title {
-          margin: 0;
-          font-size: clamp(2.4rem, 6vw, 4.5rem);
-          line-height: 0.95;
-          letter-spacing: -0.055em;
-          font-weight: 800;
+          color: #fff;
         }
 
         .coffee-status {
@@ -169,43 +165,74 @@ function BensCoffee() {
 
         .coffee-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
-          margin-top: 28px;
+          flex-direction: row;
+          justify-content: center;
+          gap: 12px;
+          width: 100%;
+          max-width: 360px;
+          margin: 28px auto 0;
         }
 
         .coffee-button {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          padding: 10px;
           border: 1px solid transparent;
-          border-radius: 16px;
+          border-radius: 10px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 0.85rem;
           font-weight: 800;
-          transition:
-            transform 220ms ease,
-            box-shadow 220ms ease,
-            background 220ms ease;
-        }
-
-        .coffee-button:hover {
-          transform: translateY(-3px);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: center;
         }
 
         .coffee-button-back {
           border-color: #f5e6d3;
           background: #fff;
           color: var(--coffee-ink);
-          box-shadow: 0 8px 18px rgba(43, 26, 23, 0.08);
         }
 
         .coffee-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
+        }
+
+        .coffee-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .coffee-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .coffee-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
         @media (max-width: 760px) {
@@ -223,6 +250,10 @@ function BensCoffee() {
             flex-direction: column;
           }
 
+          .coffee-title {
+            color: #fff;
+          }
+
           .coffee-status {
             white-space: normal;
           }
@@ -238,13 +269,7 @@ function BensCoffee() {
             border-left: 0;
           }
 
-          .coffee-actions {
-            flex-direction: column-reverse;
-          }
 
-          .coffee-button {
-            width: 100%;
-          }
         }
       `}</style>
 
@@ -279,7 +304,7 @@ function BensCoffee() {
             </li>
 
             <li>
-              📞 +30 2373 026400
+              📞 <span dir="ltr">+30 2373 026400</span>
             </li>
           </ul>
         </div>
@@ -292,6 +317,15 @@ function BensCoffee() {
           </ul>
         </div>
       </section>
+
+      <div className="coffee-waze-wrapper">
+        <a
+          className="coffee-waze"
+          href="waze://?ll=40.23912096320508,23.284466257671802&navigate=yes"
+        >
+          🚗 Waze ל-Ben's Coffee
+        </a>
+      </div>
 
       <nav
         className="coffee-actions"
@@ -308,7 +342,7 @@ function BensCoffee() {
           className="coffee-button coffee-button-next"
           to="/vagio-agrofarms"
         >
-          ➡️ התחנה הבאה — Vagio Agrofarms
+          ➡️ Vagio
         </Link>
       </nav>
     </main>

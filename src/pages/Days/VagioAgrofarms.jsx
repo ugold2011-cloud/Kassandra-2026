@@ -81,6 +81,7 @@ function VagioAgrofarms() {
           line-height: 0.95;
           letter-spacing: -0.055em;
           font-weight: 800;
+          color: #fff;
         }
 
         .vagio-details {
@@ -194,6 +195,39 @@ function VagioAgrofarms() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .vagio-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .vagio-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .vagio-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
         @media (max-width: 760px) {
           .vagio-page {
             padding-bottom: 32px;
@@ -221,11 +255,22 @@ function VagioAgrofarms() {
           }
 
           .vagio-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
+            gap: 12px;
+            width: 100%;
+            max-width: 360px;
+            margin: 28px auto 0;
           }
 
           .vagio-button {
-            width: 100%;
+            flex: 1;
+            min-width: 0;
+            padding: 10px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
           }
         }
       `}</style>
@@ -275,6 +320,15 @@ function VagioAgrofarms() {
         </div>
       </section>
 
+      <div className="vagio-waze-wrapper">
+        <a
+          className="vagio-waze"
+          href="waze://?ll=40.260295716680375,23.329942599999995&navigate=yes"
+        >
+          🚗 Waze ל-Vagio Agrofarms
+        </a>
+      </div>
+
       <nav
         className="vagio-actions"
         aria-label="Vagio Agrofarms navigation"
@@ -290,7 +344,7 @@ function VagioAgrofarms() {
           className="vagio-button vagio-button-next"
           to="/petralona"
         >
-          ➡️ התחנה הבאה — Petralona Cave & Museum
+          ➡️ Petralona Museum
         </Link>
       </nav>
     </main>

@@ -82,6 +82,7 @@ function Petralona() {
           line-height: 0.95;
           letter-spacing: -0.055em;
           font-weight: 800;
+          color: #fff;
         }
 
         .petralona-details {
@@ -196,43 +197,74 @@ function Petralona() {
 
         .petralona-actions {
           display: flex;
-          justify-content: space-between;
-          gap: 14px;
-          margin-top: 28px;
+          flex-direction: row;
+          justify-content: center;
+          gap: 12px;
+          width: 100%;
+          max-width: 360px;
+          margin: 28px auto 0;
         }
 
         .petralona-button {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          flex: 1;
+          min-width: 0;
+          padding: 10px;
           border: 1px solid transparent;
-          border-radius: 16px;
+          border-radius: 10px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 0.85rem;
           font-weight: 800;
-          transition:
-            transform 220ms ease,
-            box-shadow 220ms ease,
-            background 220ms ease;
-        }
-
-        .petralona-button:hover {
-          transform: translateY(-3px);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: center;
         }
 
         .petralona-button-back {
           border-color: #c8e5f2;
           background: #fff;
           color: var(--petralona-ink);
-          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
         }
 
         .petralona-button-next {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
+        }
+
+        .petralona-waze-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 28px;
+        }
+
+        .petralona-waze {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          padding: 0 20px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          text-decoration: none;
+          font-weight: 800;
+          font-size: 0.9rem;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .petralona-waze:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
         @media (max-width: 760px) {
@@ -262,11 +294,22 @@ function Petralona() {
           }
 
           .petralona-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
+            gap: 12px;
+            width: 100%;
+            max-width: 360px;
+            margin: 28px auto 0;
           }
 
           .petralona-button {
-            width: 100%;
+            flex: 1;
+            min-width: 0;
+            padding: 10px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
           }
         }
       `}</style>
@@ -312,10 +355,6 @@ function Petralona() {
             <li>
               🏛️ המערה והמוזיאון ניתנים לביקור יחד
             </li>
-
-            <li>
-              🎟️ כרטיסים ניתן לרכוש במקום או אונליין
-            </li>
           </ul>
         </div>
 
@@ -328,12 +367,6 @@ function Petralona() {
             <li>
               <span>
                 📍 מיקום: Petralona
-              </span>
-            </li>
-
-            <li>
-              <span>
-                🕗 שעות פעילות: <span dir="ltr">08:00–20:00</span>
               </span>
             </li>
 
@@ -359,23 +392,24 @@ function Petralona() {
 
           <ul className="petralona-train-list">
             <li>
-              🚂 רכבת תיירותית מהחניה לכיוון המערה
-            </li>
-
-            <li>
               🚗 מגיעים עם הרכב ישירות לחניה התחתונה
             </li>
 
             <li>
               🚂 הרכבת פעילה בתאריך הביקור שלנו
             </li>
-
-            <li>
-              ℹ️ שעות יציאה ומחיר הרכבת עדיין ממתינים לאישור מהמפעיל
-            </li>
           </ul>
         </div>
       </section>
+
+      <div className="petralona-waze-wrapper">
+        <a
+          className="petralona-waze"
+          href="waze://?ll=40.37355695417928,23.167996784656392&navigate=yes"
+        >
+          🚗 Waze ל-Petralona Cave & Museum
+        </a>
+      </div>
 
       <nav
         className="petralona-actions"
@@ -385,14 +419,14 @@ function Petralona() {
           className="petralona-button petralona-button-back"
           to="/vagio-agrofarms"
         >
-          ⬅️ התחנה הקודמת — Vagio Agrofarms
+          ⬅️ Vagio
         </Link>
 
         <Link
           className="petralona-button petralona-button-next"
           to="/giannikos"
         >
-          ➡️ התחנה הבאה — Giannikos Tavern
+          ➡️ Giannikos
         </Link>
       </nav>
     </main>

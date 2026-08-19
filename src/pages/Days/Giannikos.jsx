@@ -81,6 +81,7 @@ function Giannikos() {
           line-height: 0.95;
           letter-spacing: -0.055em;
           font-weight: 800;
+          color: #fff;
         }
 
         .giannikos-details {
@@ -155,22 +156,49 @@ function Giannikos() {
 
         .giannikos-actions {
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
           gap: 14px;
           margin-top: 28px;
+        }
+
+        .giannikos-waze-row {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .giannikos-waze-row .giannikos-button {
+          flex: 1 1 0;
+          max-width: 640px;
+        }
+
+        .giannikos-nav-row {
+          display: flex;
+          justify-content: center;
+          gap: 14px;
+          width: 100%;
+        }
+
+        .giannikos-nav-row .giannikos-button {
+          flex: 1 1 0;
+          max-width: 320px;
         }
 
         .giannikos-button {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 54px;
-          padding: 0 22px;
+          min-height: 46px;
+          padding: 0 14px;
           border: 1px solid transparent;
           border-radius: 16px;
           text-decoration: none;
-          font-size: 0.96rem;
+          font-size: 0.88rem;
           font-weight: 800;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           transition:
             transform 220ms ease,
             box-shadow 220ms ease,
@@ -189,6 +217,12 @@ function Giannikos() {
         }
 
         .giannikos-button-next {
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .giannikos-button-waze {
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
@@ -218,14 +252,6 @@ function Giannikos() {
             padding: 20px 0 0;
             border-top: 1px solid rgba(215, 168, 110, 0.22);
             border-left: 0;
-          }
-
-          .giannikos-actions {
-            flex-direction: column-reverse;
-          }
-
-          .giannikos-button {
-            width: 100%;
           }
         }
       `}</style>
@@ -281,19 +307,30 @@ function Giannikos() {
         className="giannikos-actions"
         aria-label="Giannikos Tavern navigation"
       >
-        <Link
-          className="giannikos-button giannikos-button-back"
-          to="/petralona"
-        >
-          ⬅️ התחנה הקודמת — Petralona Cave & Museum
-        </Link>
+        <div className="giannikos-waze-row">
+          <a
+            className="giannikos-button giannikos-button-waze"
+            href="waze://?ll=39.94193117963143,23.662730586507706&navigate=yes"
+          >
+            Waze 🚗
+          </a>
+        </div>
 
-        <Link
-          className="giannikos-button giannikos-button-next"
-          to="/day6"
-        >
-          ➡️ חזרה ליום 6
-        </Link>
+        <div className="giannikos-nav-row">
+          <Link
+            className="giannikos-button giannikos-button-back"
+            to="/petralona"
+          >
+            ⬅️ Petralona
+          </Link>
+
+          <Link
+            className="giannikos-button giannikos-button-next"
+            to="/day6"
+          >
+            ➡️ יום 7
+          </Link>
+        </div>
       </nav>
     </main>
   );
