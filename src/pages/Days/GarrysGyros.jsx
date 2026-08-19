@@ -81,6 +81,7 @@ function GarrysGyros() {
           line-height: 0.95;
           letter-spacing: -0.055em;
           font-weight: 800;
+          color: #fff;
         }
 
         .garrys-details {
@@ -194,6 +195,30 @@ function GarrysGyros() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .garrys-waze-wrapper {
+          margin-top: 28px;
+        }
+
+        .garrys-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .garrys-waze-button:hover {
+          transform: translateY(-3px);
+        }
+
         @media (max-width: 760px) {
           .garrys-page {
             padding-bottom: 32px;
@@ -221,11 +246,11 @@ function GarrysGyros() {
           }
 
           .garrys-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
           }
 
           .garrys-button {
-            width: 100%;
+            flex: 1;
           }
         }
       `}</style>
@@ -271,6 +296,15 @@ function GarrysGyros() {
         </div>
       </section>
 
+      <div className="garrys-waze-wrapper">
+        <a
+          className="garrys-waze-button"
+          href="waze://?ll=40.00082203892744,23.57373078465639&navigate=yes"
+        >
+          🚗 Waze ל-Garry's The King of Gyros
+        </a>
+      </div>
+
       <nav
         className="garrys-actions"
         aria-label="Garry's The King of Gyros navigation"
@@ -279,14 +313,14 @@ function GarrysGyros() {
           className="garrys-button garrys-button-back"
           to="/lemonis-bakery"
         >
-          ⬅️ חזרה — Lemonis Bakery
+          ⬅️ Lemonis
         </Link>
 
         <Link
           className="garrys-button garrys-button-next"
           to="/day7"
         >
-          ➡️ חזרה ליום 7
+          ➡️ יום 7
         </Link>
       </nav>
     </main>

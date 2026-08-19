@@ -81,6 +81,7 @@ function LemonisBakery() {
           line-height: 0.95;
           letter-spacing: -0.055em;
           font-weight: 800;
+          color: #fff;
         }
 
         .lemonis-details {
@@ -155,7 +156,7 @@ function LemonisBakery() {
 
         .lemonis-actions {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           gap: 14px;
           margin-top: 28px;
         }
@@ -171,6 +172,7 @@ function LemonisBakery() {
           text-decoration: none;
           font-size: 0.96rem;
           font-weight: 800;
+          flex: 1;
           transition:
             transform 220ms ease,
             box-shadow 220ms ease,
@@ -194,6 +196,30 @@ function LemonisBakery() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .lemonis-waze-wrapper {
+          margin-top: 28px;
+        }
+
+        .lemonis-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          background: linear-gradient(135deg, #7c3aed, #4f46e5);
+          color: #fff;
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+        }
+
+        .lemonis-waze-button:hover {
+          transform: translateY(-3px);
+        }
+
         @media (max-width: 760px) {
           .lemonis-page {
             padding-bottom: 32px;
@@ -210,6 +236,10 @@ function LemonisBakery() {
           }
 
           .lemonis-details {
+            width: calc(100% - 24px);
+            max-width: none;
+            margin-left: auto;
+            margin-right: auto;
             grid-template-columns: 1fr;
             border-radius: 22px;
           }
@@ -221,11 +251,11 @@ function LemonisBakery() {
           }
 
           .lemonis-actions {
-            flex-direction: column-reverse;
+            flex-direction: row;
           }
 
           .lemonis-button {
-            width: 100%;
+            flex: 1;
           }
         }
       `}</style>
@@ -271,6 +301,15 @@ function LemonisBakery() {
         </div>
       </section>
 
+      <div className="lemonis-waze-wrapper">
+        <a
+          className="lemonis-waze-button"
+          href="waze://?ll=39.9991551492046,23.571835771164103&navigate=yes"
+        >
+          🚗 Waze ל-Lemonis Bakery
+        </a>
+      </div>
+
       <nav
         className="lemonis-actions"
         aria-label="Lemonis Bakery navigation"
@@ -279,14 +318,14 @@ function LemonisBakery() {
           className="lemonis-button lemonis-button-back"
           to="/day7"
         >
-          ⬅️ חזרה ליום 7
+          ⬅️ יום 7
         </Link>
 
         <Link
           className="lemonis-button lemonis-button-next"
           to="/garrys-gyros"
         >
-          ➡️ התחנה הבאה — Garry's The King of Gyros
+          ➡️ Garry's
         </Link>
       </nav>
     </main>
