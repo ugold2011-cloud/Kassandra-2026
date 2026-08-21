@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Day.css";
-import MusicModal from "../../components/MusicModal";
 import flagBulgaria from "../../assets/images/day8/flag-bulgaria.png";
 import flagGreece from "../../assets/images/day8/flag-greece.png";
 import day8RoadBg from "../../assets/images/day8/day8-road-bg.png";
 
 function Day8() {
-  const [showMusicModal, setShowMusicModal] = useState(false);
 
   return (
     <div className="day-page">
@@ -36,15 +34,17 @@ function Day8() {
 
         <p
           style={{
-            fontSize: "44px",
+            fontSize: "36px",
             fontWeight: 800,
             color: "#153b4a",
             margin: "0 0 16px",
             textAlign: "center",
             direction: "rtl",
+            lineHeight: 1.3,
           }}
         >
-          חזרה לבורובץ, בולגריה
+          חזרה לבורובץ,
+          בולגריה
         </p>
 
         <div
@@ -90,38 +90,10 @@ function Day8() {
             marginTop: "30px",
           }}
         >
-          {!showMusicModal && (
-            <button
-              onClick={() => setShowMusicModal(true)}
-              style={{
-                width: "260px",
-                height: "58px",
-                border: "none",
-                borderRadius: "18px",
-                background:
-                  "linear-gradient(135deg, #7c3aed, #4f46e5)",
-                color: "white",
-                fontSize: "16px",
-                fontWeight: "bold",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "10px",
-                boxShadow: "0 8px 20px rgba(79,70,229,0.35)",
-              }}
-            >
-              <span style={{ fontSize: "22px" }}>🎵</span>
-              <span>Choose Your Soundtrack</span>
-            </button>
-          )}
+
         </div>
 
-        {showMusicModal && (
-          <MusicModal
-            onClose={() => setShowMusicModal(false)}
-          />
-        )}
+
 
       </div>
 
@@ -179,19 +151,33 @@ function Day8() {
                 marginBottom: "4px",
               }}
             >
-              ⛽ Shell — Thessaloniki–Serres
+              ⛽ Shell — Serres/Thessaloniki road
             </div>
             <a
               className="waze-button"
-              href="https://waze.com/ul?q=Shell%20Pappas%20Georgios,%20Thessaloniki-Serres,%20Greece&navigate=yes"
+              href="waze://?ll=41.063827,23.351603&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{
+                background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+                color: "#fff",
+                border: "1px solid transparent",
+                borderRadius: "16px",
+                padding: "0 20px",
                 width: "260px",
-                textDecoration: "none",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
+                textDecoration: "none",
+                fontWeight: 800,
+                fontSize: "0.9rem",
+                boxShadow: "0 12px 24px rgba(79, 70, 229, 0.28)",
+                marginLeft: "auto",
+                marginRight: "auto",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
               }}
             >
               🚗 Waze
@@ -219,15 +205,29 @@ function Day8() {
             </div>
             <a
               className="waze-button"
-              href="https://waze.com/ul?q=OMV%20Sandanski%20E79%20Main%20Road%2015%20Bulgaria&navigate=yes"
+              href="waze://?ll=41.5468744,23.2704584&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{
+                background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+                color: "#fff",
+                border: "1px solid transparent",
+                borderRadius: "16px",
+                padding: "0 20px",
                 width: "260px",
-                textDecoration: "none",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
+                textDecoration: "none",
+                fontWeight: 800,
+                fontSize: "0.9rem",
+                boxShadow: "0 12px 24px rgba(79, 70, 229, 0.28)",
+                marginLeft: "auto",
+                marginRight: "auto",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
               }}
             >
               🚗 Waze
@@ -251,19 +251,33 @@ function Day8() {
                 marginBottom: "4px",
               }}
             >
-              ⛽ OMV Dupnitsa — אופציונלי
+              ⛽ OMV Dupnitsa
             </div>
             <a
               className="waze-button"
-              href="https://waze.com/ul?q=OMV%20Dupnitsa%20E79%20Sofia-Kulata%20km%20326%20Bulgaria&navigate=yes"
+              href="waze://?ll=42.28485,23.12321&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{
+                background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+                color: "#fff",
+                border: "1px solid transparent",
+                borderRadius: "16px",
+                padding: "0 20px",
                 width: "260px",
-                textDecoration: "none",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
+                textDecoration: "none",
+                fontWeight: 800,
+                fontSize: "0.9rem",
+                boxShadow: "0 12px 24px rgba(79, 70, 229, 0.28)",
+                marginLeft: "auto",
+                marginRight: "auto",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
               }}
             >
               🚗 Waze
@@ -286,19 +300,33 @@ function Day8() {
                 color: "#153b4a",
               }}
             >
-              🇧🇬 Borovets
+              🇧🇬 Studio in Borovets Gardens Complex — יעד סופי
             </div>
             <a
               className="waze-button"
-              href="https://waze.com/ul?q=Borovets,%20Bulgaria&navigate=yes"
+              href="waze://?ll=42.271036,23.604136&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{
+                background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+                color: "#fff",
+                border: "1px solid transparent",
+                borderRadius: "16px",
+                padding: "0 20px",
                 width: "260px",
-                textDecoration: "none",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
+                textDecoration: "none",
+                fontWeight: 800,
+                fontSize: "0.9rem",
+                boxShadow: "0 12px 24px rgba(79, 70, 229, 0.28)",
+                marginLeft: "auto",
+                marginRight: "auto",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
               }}
             >
               🚗 Waze לבורובץ
