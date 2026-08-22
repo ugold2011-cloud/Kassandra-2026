@@ -369,7 +369,7 @@ function GlarokavosBeach() {
       >
         <a
           className="glarokavos-waze-button"
-          href="waze://?ll=39.982746969180965,23.64361449999999&navigate=yes"
+          href="https://waze.com/ul?ll=39.982746969180965,23.64361449999999&navigate=yes"
           target="_blank"
           rel="noopener noreferrer"
         >
