@@ -345,7 +345,7 @@ function PefkochoriShopping() {
 
           <a
             className="shopping-waze"
-            href="waze://?ll=39.98810934763342,23.618748261907566&navigate=yes"
+            href="https://waze.com/ul?ll=39.98810934763342,23.618748261907566&navigate=yes"
             target="_blank"
             rel="noopener noreferrer"
           >
