@@ -4,6 +4,7 @@ import "./Day.css";
 import heroImage from "../../assets/images/kallithea-beach-2.jpg";
 
 function Day5() {
+  const navigate = useNavigate();
 
   return (
     <div className="day-page">
