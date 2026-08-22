@@ -275,18 +275,6 @@ function LefkoSuites() {
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
-        .lefko-music {
-          background: #fff;
-          color: #4f46e5;
-          border-color: #c8e5f2;
-          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
-          gap: 10px;
-        }
-
-        .lefko-music:hover {
-          background: #f5f7ff;
-        }
-
         @media (max-width: 900px) {
           .lefko-gallery {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -396,7 +384,7 @@ function LefkoSuites() {
 
         <a
           className="lefko-waze"
-          href="waze://?ll=39.999171,23.578604&navigate=yes"
+          href="https://waze.com/ul?ll=39.999171,23.578604&navigate=yes"
           target="_blank"
           rel="noreferrer"
         >
@@ -409,7 +397,7 @@ function LefkoSuites() {
 
         <a
           className="lefko-waze"
-          href="waze://?ll=39.997454,23.575559&navigate=yes"
+          href="https://waze.com/ul?ll=39.997454,23.575559&navigate=yes"
           target="_blank"
           rel="noreferrer"
         >

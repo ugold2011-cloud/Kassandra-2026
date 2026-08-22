@@ -304,7 +304,7 @@ function LemonisBakery() {
       <div className="lemonis-waze-wrapper">
         <a
           className="lemonis-waze-button"
-          href="waze://?ll=39.9991551492046,23.571835771164103&navigate=yes"
+          href="https://waze.com/ul?ll=39.9991551492046,23.571835771164103&navigate=yes"
         >
           🚗 Waze ל-Lemonis Bakery
         </a>

@@ -347,7 +347,7 @@ function TheStolenCup() {
       <div style={{ textAlign: 'center', marginBottom: 14 }}>
         <a
           className="thestolencup-button thestolencup-button-next"
-          href="waze://?ll=40.07950599775993,23.444984800000004&navigate=yes"
+          href="https://waze.com/ul?ll=40.07950599775993,23.444984800000004&navigate=yes"
         >
           🚗 Waze ל-The Stolen Cup
         </a>

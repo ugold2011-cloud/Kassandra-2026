@@ -370,7 +370,7 @@ function Archontiko() {
 
       <div className="archontiko-waze">
         <a
-          href="waze://?ll=39.953862196032965,23.6064948288359&navigate=yes"
+          href="https://waze.com/ul?ll=39.953862196032965,23.6064948288359&navigate=yes"
         >
           🚗 Waze ל-Archontiko
         </a>

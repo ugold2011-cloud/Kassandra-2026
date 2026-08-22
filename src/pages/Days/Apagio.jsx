@@ -424,7 +424,7 @@ function Apagio() {
       <div className="apagio-waze-wrapper">
         <a
           className="apagio-waze"
-          href="waze://?ll=39.9461327,23.530422&navigate=yes"
+          href="https://waze.com/ul?ll=39.9461327,23.530422&navigate=yes"
         >
           🚗 Waze ל-Giorgos Fish Restaurant
         </a>

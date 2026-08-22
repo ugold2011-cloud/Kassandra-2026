@@ -364,7 +364,7 @@ function AfitosOldVillage() {
       <div className="afitosoldvillage-waze-wrapper">
         <a
           className="afitosoldvillage-waze-button"
-          href="waze://?ll=40.09968465410918,23.432916738073143&navigate=yes"
+          href="https://waze.com/ul?ll=40.09968465410918,23.432916738073143&navigate=yes"
         >
           🚗 Waze לחניה – Afitos Old Village
         </a>

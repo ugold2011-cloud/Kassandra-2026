@@ -323,7 +323,7 @@ function VagioAgrofarms() {
       <div className="vagio-waze-wrapper">
         <a
           className="vagio-waze"
-          href="waze://?ll=40.260295716680375,23.329942599999995&navigate=yes"
+          href="https://waze.com/ul?ll=40.260295716680375,23.329942599999995&navigate=yes"
         >
           🚗 Waze ל-Vagio Agrofarms
         </a>

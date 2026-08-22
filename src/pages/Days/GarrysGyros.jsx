@@ -299,7 +299,7 @@ function GarrysGyros() {
       <div className="garrys-waze-wrapper">
         <a
           className="garrys-waze-button"
-          href="waze://?ll=40.00082203892744,23.57373078465639&navigate=yes"
+          href="https://waze.com/ul?ll=40.00082203892744,23.57373078465639&navigate=yes"
         >
           🚗 Waze ל-Garry's The King of Gyros
         </a>

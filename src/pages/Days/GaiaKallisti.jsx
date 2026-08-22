@@ -363,7 +363,7 @@ function GaiaKallisti() {
       <div className="gaidakallisti-waze-wrapper">
         <a
           className="gaidakallisti-waze-button"
-          href="waze://?ll=40.04181401885115,23.3712053&navigate=yes"
+          href="https://waze.com/ul?ll=40.04181401885115,23.3712053&navigate=yes"
         >
           🚗 Waze ל-Gaia Kallisti
         </a>

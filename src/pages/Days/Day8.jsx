@@ -155,7 +155,7 @@ function Day8() {
             </div>
             <a
               className="waze-button"
-              href="waze://?ll=41.063827,23.351603&navigate=yes"
+              href="https://waze.com/ul?ll=41.063827,23.351603&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -205,7 +205,7 @@ function Day8() {
             </div>
             <a
               className="waze-button"
-              href="waze://?ll=41.5468744,23.2704584&navigate=yes"
+              href="https://waze.com/ul?ll=41.5468744,23.2704584&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -255,7 +255,7 @@ function Day8() {
             </div>
             <a
               className="waze-button"
-              href="waze://?ll=42.28485,23.12321&navigate=yes"
+              href="https://waze.com/ul?ll=42.28485,23.12321&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -304,7 +304,7 @@ function Day8() {
             </div>
             <a
               className="waze-button"
-              href="waze://?ll=42.271036,23.604136&navigate=yes"
+              href="https://waze.com/ul?ll=42.271036,23.604136&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
               style={{

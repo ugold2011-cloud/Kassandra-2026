@@ -346,7 +346,7 @@ function ArchontikoDay5() {
       <div className="archontiko-waze-wrapper">
         <a
           className="archontiko-waze"
-          href="waze://?ll=39.953829298762,23.606505557671806&navigate=yes"
+          href="https://waze.com/ul?ll=39.953829298762,23.606505557671806&navigate=yes"
         >
           🚗 Waze ל-Archontiko Agia Paraskevi
         </a>

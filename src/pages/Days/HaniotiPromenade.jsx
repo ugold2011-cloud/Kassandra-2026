@@ -96,7 +96,7 @@ function HaniotiPromenade() {
         <p>🌊 מרחק הליכה קצר מהים.</p>
         <p>📍 Hanioti, Chalkidiki, Greece</p>
         <a
-          href="waze://?ll=40.001556,23.575541&navigate=yes"
+          href="https://waze.com/ul?ll=40.001556,23.575541&navigate=yes"
           target="_blank"
           rel="noopener noreferrer"
           style={{

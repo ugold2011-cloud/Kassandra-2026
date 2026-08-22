@@ -407,7 +407,7 @@ function EncoreBeachBar() {
        <div style={{ textAlign: "center", marginTop: "28px" }}>
          <a
            className="encore-waze"
-           href="waze://?ll=39.97760719717463,23.3733326&navigate=yes"
+           href="https://waze.com/ul?ll=39.97760719717463,23.3733326&navigate=yes"
          >
            🚗 Waze ל-Encore Beach Bar
          </a>

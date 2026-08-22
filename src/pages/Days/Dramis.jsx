@@ -420,7 +420,7 @@ function Dramis() {
       <div className="dramis-waze-wrapper">
         <a
           className="dramis-waze-button"
-          href="waze://?ll=39.99999493464846,23.572445028835894&navigate=yes"
+          href="https://waze.com/ul?ll=39.99999493464846,23.572445028835894&navigate=yes"
         >
           🚗 Waze ל-Dramis
         </a>

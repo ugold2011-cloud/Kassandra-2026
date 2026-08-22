@@ -405,7 +405,7 @@ function Petralona() {
       <div className="petralona-waze-wrapper">
         <a
           className="petralona-waze"
-          href="waze://?ll=40.37355695417928,23.167996784656392&navigate=yes"
+          href="https://waze.com/ul?ll=40.37355695417928,23.167996784656392&navigate=yes"
         >
           🚗 Waze ל-Petralona Cave & Museum
         </a>

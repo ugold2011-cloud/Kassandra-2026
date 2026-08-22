@@ -272,7 +272,7 @@ function DreamCoffee() {
       <div className="dreamcoffee-waze-wrapper">
         <a
           className="dreamcoffee-waze"
-          href="waze://?ll=39.999094487126385,23.577449742328195&navigate=yes"
+          href="https://waze.com/ul?ll=39.999094487126385,23.577449742328195&navigate=yes"
         >
           🚗 Waze ל-Dream Coffee
         </a>

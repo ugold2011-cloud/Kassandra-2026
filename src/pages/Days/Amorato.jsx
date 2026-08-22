@@ -375,7 +375,7 @@ function Amorato() {
             <li>
               <a
                 className="amorato-link"
-                href="waze://?ll=40.001060,23.574493&navigate=yes"
+                href="https://waze.com/ul?ll=40.001060,23.574493&navigate=yes"
                 target="_blank"
                 rel="noopener noreferrer"
               >

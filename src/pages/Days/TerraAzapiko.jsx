@@ -362,7 +362,7 @@ function TerraAzapiko() {
       >
         <a
           className="terraazapiko-button terraazapiko-waze-button"
-          href="waze://?ll=40.07444934032626,23.4488314&navigate=yes"
+          href="https://waze.com/ul?ll=40.07444934032626,23.4488314&navigate=yes"
         >
           🚗 Waze ל-Terra Azapiko
         </a>

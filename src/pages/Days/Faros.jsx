@@ -289,7 +289,7 @@ function Faros() {
             <li>
               <a
                 className="faros-waze"
-                href="waze://?ll=39.999876,23.574140&navigate=yes"
+                href="https://waze.com/ul?ll=39.999876,23.574140&navigate=yes"
                 target="_blank"
                 rel="noopener noreferrer"
               >

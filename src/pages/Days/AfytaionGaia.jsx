@@ -359,7 +359,7 @@ function AfytaionGaia() {
       <div className="afytaiongaia-waze-wrapper">
         <a
           className="afytaiongaia-waze-button"
-          href="waze://?ll=40.10374559152338,23.421352557671803&navigate=yes"
+          href="https://waze.com/ul?ll=40.10374559152338,23.421352557671803&navigate=yes"
         >
           🚗 Waze ל-Afytaion Gaia
         </a>

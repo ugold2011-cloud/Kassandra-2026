@@ -310,7 +310,7 @@ function Giannikos() {
         <div className="giannikos-waze-row">
           <a
             className="giannikos-button giannikos-button-waze"
-            href="waze://?ll=39.94193117963143,23.662730586507706&navigate=yes"
+            href="https://waze.com/ul?ll=39.94193117963143,23.662730586507706&navigate=yes"
           >
             Waze 🚗
           </a>

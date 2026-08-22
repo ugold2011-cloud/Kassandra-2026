@@ -321,7 +321,7 @@ function BensCoffee() {
       <div className="coffee-waze-wrapper">
         <a
           className="coffee-waze"
-          href="waze://?ll=40.23912096320508,23.284466257671802&navigate=yes"
+          href="https://waze.com/ul?ll=40.23912096320508,23.284466257671802&navigate=yes"
         >
           🚗 Waze ל-Ben's Coffee
         </a>
