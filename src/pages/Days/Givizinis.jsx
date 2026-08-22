@@ -335,7 +335,7 @@ function Givizinis() {
       <div style={{ textAlign: 'center', marginBottom: 14 }}>
         <a
           className="givizinis-button givizinis-button-next"
-          href="waze://?ll=40.0516055203542,23.4131420711641&navigate=yes"
+          href="https://waze.com/ul?ll=40.0516055203542,23.4131420711641&navigate=yes"
         >
           🚗 Waze ל-Givizinis
         </a>

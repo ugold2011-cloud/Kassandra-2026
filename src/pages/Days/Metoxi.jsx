@@ -362,7 +362,7 @@ function Metoxi() {
       >
         <a
           className="metoxi-button metoxi-button-waze"
-          href="waze://?ll=40.065431945141874,23.392231757671798&navigate=yes"
+          href="https://waze.com/ul?ll=40.065431945141874,23.392231757671798&navigate=yes"
         >
           🚗 Waze ל-Metoxi
         </a>

@@ -360,14 +360,14 @@ function KassandreiaMarket() {
       >
         <a
           className="market-button market-waze-button"
-          href="waze://?ll=40.049519213937984,23.4133189576718&navigate=yes"
+          href="https://waze.com/ul?ll=40.049519213937984,23.4133189576718&navigate=yes"
         >
           🚗 Waze – חניה מועדפת
         </a>
 
         <a
           className="market-button market-waze-button"
-          href="waze://?ll=40.05185956940188,23.4149876576718&navigate=yes"
+          href="https://waze.com/ul?ll=40.05185956940188,23.4149876576718&navigate=yes"
         >
           🚗 Waze – חניה חלופית
         </a>
