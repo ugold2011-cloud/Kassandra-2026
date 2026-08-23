@@ -217,6 +217,19 @@ function SipSpot() {
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
+        .sipspot-link-secondary {
+          margin-top: 12px;
+          background: #fff;
+          color: var(--sipspot-ink);
+          border: 1px solid #dbe2ea;
+          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+        }
+
+        .sipspot-link-secondary:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
+        }
+
         .sipspot-actions {
           display: flex;
           flex-direction: row;
@@ -393,6 +406,15 @@ function SipSpot() {
                 href="https://waze.com/ul/hsx0g3rdpz"
               >
                 🚗 פתח ב־Waze
+              </a>
+            </li>
+
+            <li>
+              <a
+                className="sipspot-link sipspot-link-secondary"
+                href="https://www.google.com/maps/dir/?api=1&destination=The%20Sip%20Spot%20Coffee%20And%20More&destination_place_id=ChIJ3cIh_1olphQRNfe1Z39BW9g&travelmode=driving"
+              >
+                📍 פתח ב־Google Maps
               </a>
             </li>
           </ul>
