@@ -219,6 +219,7 @@ function SipSpot() {
 
         .sipspot-link-secondary {
           margin-top: 12px;
+          font-weight: 700;
           background: #fff;
           color: var(--sipspot-ink);
           border: 1px solid #dbe2ea;
