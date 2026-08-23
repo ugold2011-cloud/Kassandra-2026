@@ -390,9 +390,7 @@ function SipSpot() {
             <li>
               <a
                 className="sipspot-link"
-                href="https://waze.com/ul?ll=39.988826,23.612629&navigate=yes"
-                target="_blank"
-                rel="noreferrer"
+                href="https://waze.com/ul/hsx0g3rdpz"
               >
                 🚗 פתח ב־Waze
               </a>
