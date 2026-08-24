@@ -434,13 +434,13 @@ function Amorato() {
 
       <nav className="amorato-actions" aria-label="Amorato navigation">
         <Link className="amorato-button amorato-button-back" to="/faros">
-          ⬅️ חזרה ל־Faros
+          ⬅️ חזרה
         </Link>
         <Link
           className="amorato-button amorato-button-next"
           to="/hanioti-promenade"
         >
-          🚶 המשך לטיילת חניוטי
+          🚶 המשך לטיילת
         </Link>
       </nav>
     </main>

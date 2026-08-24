@@ -129,3 +129,42 @@ NO LONG LABEL MAY DAMAGE MOBILE LAYOUT.
 No compromise.
 No approximation.
 No page-specific interpretation.
+
+## B. BOTTOM BACK / NEXT BUTTONS
+
+The approved Day 1 bottom-navigation button dimensions and styling are MASTER.
+
+Rules:
+
+1. Preserve the approved button dimensions.
+2. Preserve approved font size and styling.
+3. Never enlarge a button because a destination name is long.
+4. Never shrink the font merely to force a long destination name into the button.
+5. If a destination label is too long, shorten the DISPLAY LABEL to the shortest clear wording.
+6. The route/navigation destination remains unchanged.
+
+Approved example:
+Instead of:
+"חזרה ל-Faros"
+use:
+"חזרה"
+
+Instead of:
+"המשך לטיילת חניוטי"
+use:
+"המשך לטיילת"
+
+The purpose is:
+SHORT CLEAR LABEL + FIXED MASTER BUTTON SIZE.
+
+## C. DAY 1 MASTER ANCHOR
+
+Day 1 remains the visual and functional MASTER ANCHOR for Day 2–Day 8.
+
+Future days must follow:
+- approved Waze / Google Maps placement;
+- bold Google Maps text;
+- approved button dimensions;
+- short bottom-navigation labels when necessary;
+- no overflow;
+- no arbitrary resizing.

@@ -4,10 +4,10 @@
 
 **## DOCUMENT CONTROL — ALWAYS CHECK FIRST**
 
-**\*\*LAST UPDATED:\*\*** 22.08.2026 / 02:57 / Israel Time  
-**\*\*PROJECT STATE CAPTURED THROUGH:\*\*** 2026-08-22 02:57  
-**\*\*CURRENT SESSION DATE:\*\*** 2026-08-22  
-**\*\*UPDATE TYPE:\*\*** PWA implementation, GitHub Pages deployment, physical offline verification, music removal verification.
+**\*\*LAST UPDATED:\*\*** 24.08.2026 / 09:01 / Israel Time  
+**\*\*PROJECT STATE CAPTURED THROUGH:\*\*** 2026-08-24 09:01  
+**\*\*CURRENT SESSION DATE:\*\*** 2026-08-24  
+**\*\*UPDATE TYPE:\*\*** Final session checkpoint update, Day 1 master anchor establishment, Google Maps navigation master law, Day 1 final correction commit.
 
 \> **\*\*AUTHORITY RULE:\*\*** When multiple copies exist, identify the authoritative working copy by the internal \`LAST UPDATED\` timestamp, not by filename, download date, chat history, or memory.
 
@@ -1964,3 +1964,188 @@ Continue from this checkpoint.
 Do not restart completed work.
 Do not repeat already established PASS tests without a concrete reason.
 Use the shortest safe path to the next unresolved objective.
+
+---
+
+# 24.08.2026 — FINAL SESSION CHECKPOINT
+
+## CURRENT SESSION STATUS
+- Work stopped intentionally after completing and manually verifying Day 1.
+- DAY 1 = FINAL PASS.
+- Day 1 is now the MASTER ANCHOR / MASTER REFERENCE for the remaining days.
+- Future Day 2–Day 8 review must follow the approved Day 1 structure and behavior unless a specific page requires an explicitly approved exception.
+- Do NOT reopen Day 1 without a concrete reason or an explicitly approved change.
+
+## GOOGLE MAPS NAVIGATION — MASTER LAW
+- Google Maps navigation buttons were rolled out across the applicable Kassandra station pages.
+- Google Maps buttons are navigation buttons, not informational website links.
+- The approved navigation layout established in Day 1 is:
+  Waze button
+  immediately followed by
+  Google Maps button.
+- Google Maps must NOT be placed after unrelated recommendation text or other content.
+- Existing destination/navigation coordinates and verified destination data must not be casually replaced.
+- Future days must be manually checked against Day 1.
+
+## DAY 1 — MASTER ANCHOR
+Day 1 was manually reviewed on the physical mobile device through the local Vite server.
+
+Final Day 1 result:
+PASS.
+
+The following behavior/layout is now the reference standard:
+
+### Navigation blocks
+Where both navigation services exist:
+1. Waze button
+2. Google Maps button directly underneath it
+
+No unrelated recommendation/content line should separate the Waze and Google Maps buttons.
+
+### Lefko Suites
+- Waze button present.
+- Google Maps button present directly below Waze.
+- Masoutis section:
+  - Waze button present.
+  - Google Maps button present directly below Waze.
+- Bottom navigation final visual order:
+  LEFT: "חזרה ליום 1"
+  RIGHT: "המשך ל-Faros"
+- Routes/functionality were not changed when the visual order was corrected.
+
+### Faros
+- Google Maps button was corrected so it is positioned directly below the Waze button.
+- It must not appear below the "מומלץ להגיע" content.
+- Final mobile verification: PASS.
+
+### Amorato
+- Google Maps button was corrected so it is positioned directly below the Waze button.
+- It must not appear below the "מומלץ לקינוח" content.
+- Final mobile verification: PASS.
+
+### Hanioti Promenade
+- Waze + Google Maps navigation block is correctly arranged.
+- Google Maps is directly below Waze.
+- The Hebrew main title "טיילת חניוטי" was changed to black ONLY on this page because the previous white title blended into the light background.
+- No global title-color rule was changed.
+- This is a page-specific approved exception.
+- Final mobile verification: PASS.
+
+## DAY 1 MASTER STANDARD FOR FUTURE DAYS
+When reviewing Day 2 onward, compare each station page against Day 1 for:
+
+- Waze / Google Maps order and placement.
+- Google Maps directly below the relevant Waze button.
+- Clear visual grouping of navigation controls.
+- Bottom Back / Next navigation button visual order and behavior.
+- Existing approved button dimensions/style.
+- Existing verified navigation destinations.
+- Mobile readability.
+- No unrelated text inserted between paired Waze / Google Maps navigation buttons.
+- No unnecessary redesign.
+- No broad automatic correction before manual verification.
+
+Day 1 is the visual/functional anchor.
+Do not assume all remaining days are correct merely because a broad rollout was previously performed.
+Each remaining day must be reviewed manually against Day 1.
+
+## GOOGLE MAPS ROLLOUT / PREVIOUS COMMIT
+A broad Google Maps navigation rollout and PWA-related update was previously committed and pushed.
+
+Commit:
+bc998a9
+
+Commit message:
+Google Maps navigation rollout and PWA updates
+
+This rollout affected many station pages and therefore requires the remaining days to be manually checked against the now-approved Day 1 Master Anchor.
+
+## DAY 1 FINAL CORRECTION COMMIT
+After manual mobile verification, the final Day 1 corrections were committed and pushed successfully.
+
+Commit:
+0138e52
+
+Commit message:
+Finalize Day 1 master anchor
+
+Files in this final correction commit:
+- src/pages/Days/LefkoSuites.jsx
+- src/pages/Days/HaniotiPromenade.jsx
+
+Push:
+SUCCESS
+main -> main
+
+## MANUAL MOBILE VERIFICATION
+- Local Vite server was used on the physical mobile device.
+- Day 1 was reviewed manually after refresh.
+- Final user result:
+DAY 1 PASS.
+
+## LOCAL DEVELOPMENT SERVER
+Project:
+C:\Users\ugold\Documents\Kassandra-2026
+
+Standard mobile-test server command:
+cd /d C:\Users\ugold\Documents\Kassandra-2026
+npm run dev -- --host
+
+Known local mobile URL used during this work:
+http://10.0.0.36:5173/Kassandra-2026/
+
+The IP/port may change on a future session, so verify the Vite output when restarting.
+
+## IMPORTANT WORKING TREE NOTE
+There were unrelated/untracked artifacts visible in git status during this session.
+They were intentionally NOT included in the Day 1 final commit.
+Do NOT delete, clean, stage, commit, or modify unrelated/untracked files without explicit review.
+
+## NEXT SESSION — EXACT STARTING POINT
+DO NOT redo Day 1.
+
+Start with:
+DAY 2 manual review against DAY 1 MASTER ANCHOR.
+
+Process:
+1. Start the local Vite server.
+2. Open Kassandra on the physical mobile device.
+3. Open Day 2.
+4. Review Day 2 station-by-station.
+5. Compare navigation/button structure against approved Day 1.
+6. Record exceptions first.
+7. Make only targeted corrections.
+8. Manually verify corrections on mobile.
+9. Only after PASS, commit/push.
+10. Continue progressively through later days.
+
+## SAFETY / EFFICIENCY RULE
+- Day 1 already has PASS.
+- Do not retest it without a concrete reason.
+- Avoid redundant scans/builds/tests.
+- Use the shortest safe verification path.
+- Do not perform broad automatic modifications simply to make pages uniform.
+- Any future broad change must follow the existing Kassandra safety/change-control rules.
+
+## PHYSICAL BACKUP
+- A new physical backup is REQUIRED immediately after this checkpoint update.
+- Backup destination: KINGSTON physical drive.
+- Do not mark physical backup as completed until the user confirms it actually completed successfully.
+
+---
+
+# CHECKPOINT — 24.08.2026 / 09:11 / Israel Time
+## DAY 1 MASTER BUTTON STANDARD — CLARIFICATION
+
+Record that BEFORE the physical backup, the Day 1 Master Standard was further clarified:
+
+- Bottom navigation button dimensions are fixed/master.
+- Long destination labels must be shortened rather than resizing buttons or shrinking text.
+- Amorato approved labels:
+  - BACK = "חזרה"
+  - NEXT = "המשך לטיילת"
+- Google Maps visible text must be bold/emphasized while preserving approved button dimensions.
+- Day 1 remains the MASTER ANCHOR for all remaining days.
+- Day 2 is still the exact starting point for the next working session after backup.
+
+Preserve all previous checkpoint history.
