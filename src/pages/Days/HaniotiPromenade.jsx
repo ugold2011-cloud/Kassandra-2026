@@ -100,7 +100,7 @@ function HaniotiPromenade() {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            display: "flex",
+            display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
             marginTop: "12px",
@@ -113,10 +113,41 @@ function HaniotiPromenade() {
             color: "#fff",
             textDecoration: "none",
             fontWeight: 800,
+            fontSize: "0.9rem",
             boxShadow: "0 8px 18px rgba(79, 70, 229, 0.28)",
+            whiteSpace: "nowrap",
+            transition: "transform 220ms ease, box-shadow 220ms ease",
           }}
         >
           🚗 פתח ב־Waze
+        </a>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=40.001556,23.575541"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "12px",
+            width: "260px",
+            maxWidth: "calc(100% - 32px)",
+            minHeight: "52px",
+            padding: "0 20px",
+            borderRadius: "16px",
+            border: "1px solid #dbe2ea",
+            background: "#fff",
+            color: "#153247",
+            textDecoration: "none",
+            fontWeight: 700,
+            fontSize: "0.96rem",
+            boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+            whiteSpace: "nowrap",
+            transition: "transform 220ms ease, box-shadow 220ms ease",
+          }}
+        >
+          🗺️ Google Maps
         </a>
 
         <hr style={{ margin: "20px 0" }} />

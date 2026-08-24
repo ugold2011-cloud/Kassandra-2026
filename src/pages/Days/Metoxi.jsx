@@ -253,20 +253,47 @@ function Metoxi() {
           }
         }
 
-        .metoxi-button-waze {
-          background: linear-gradient(135deg, #7c3aed, #4f46e5);
-          color: #fff;
-          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
-          width: 260px;
-          max-width: calc(100% - 32px);
-          min-height: 52px;
-          margin-left: auto;
-          margin-right: auto;
-          padding: 0 20px;
-          border-radius: 16px;
-        }
+         .metoxi-button-waze {
+           background: linear-gradient(135deg, #7c3aed, #4f46e5);
+           color: #fff;
+           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+           width: 260px;
+           max-width: calc(100% - 32px);
+           min-height: 52px;
+           margin-left: auto;
+           margin-right: auto;
+           padding: 0 20px;
+           border-radius: 16px;
+         }
 
-        .metoxi-gallery {
+         .metoxi-google-maps-button {
+           display: inline-flex;
+           align-items: center;
+           justify-content: center;
+           min-height: 52px;
+           width: 260px;
+           max-width: calc(100% - 32px);
+           margin-left: auto;
+           margin-right: auto;
+           padding: 0 20px;
+           border: 1px solid #dbe2ea;
+           border-radius: 16px;
+           text-decoration: none;
+           font-size: 0.96rem;
+           font-weight: 700;
+           background: #fff;
+           color: var(--metoxi-ink);
+           box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+           transition: transform 220ms ease, box-shadow 220ms ease;
+           white-space: nowrap;
+         }
+
+         .metoxi-google-maps-button:hover {
+           transform: translateY(-3px);
+           box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
+         }
+
+         .metoxi-gallery {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 16px;
@@ -365,6 +392,13 @@ function Metoxi() {
           href="https://waze.com/ul?ll=40.065431945141874,23.392231757671798&navigate=yes"
         >
           🚗 Waze ל-Metoxi
+        </a>
+
+        <a
+          className="metoxi-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=40.065431945141874,23.392231757671798"
+        >
+          🗺️ Google Maps ל-Metoxi
         </a>
       </div>
 

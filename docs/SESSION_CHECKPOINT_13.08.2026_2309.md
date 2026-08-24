@@ -4,10 +4,10 @@
 
 **## DOCUMENT CONTROL — ALWAYS CHECK FIRST**
 
-**\*\*LAST UPDATED:\*\*** 16.08.2026 / 00:45 / Israel Time  
-**\*\*PROJECT STATE CAPTURED THROUGH:\*\*** 2026-08-16 00:45  
-**\*\*CURRENT SESSION DATE:\*\*** 2026-08-16  
-**\*\*UPDATE TYPE:\*\*** Day 5 Dream Coffee implementation, Day 6 station completion, Day 7 station implementation, Day 8 approval.
+**\*\*LAST UPDATED:\*\*** 22.08.2026 / 02:57 / Israel Time  
+**\*\*PROJECT STATE CAPTURED THROUGH:\*\*** 2026-08-22 02:57  
+**\*\*CURRENT SESSION DATE:\*\*** 2026-08-22  
+**\*\*UPDATE TYPE:\*\*** PWA implementation, GitHub Pages deployment, physical offline verification, music removal verification.
 
 \> **\*\*AUTHORITY RULE:\*\*** When multiple copies exist, identify the authoritative working copy by the internal \`LAST UPDATED\` timestamp, not by filename, download date, chat history, or memory.
 
@@ -1345,3 +1345,622 @@ CURRENT PROJECT STATE:
 NEXT WORK:
 Continue station-page button standardization using:
 READ ONLY → exact scoped execution → real-device test → PASS.
+
+---
+
+# SESSION UPDATE — 19.08.2026 / Israel Time
+
+## COMPLETED GIT COMMITS
+- Day 4 PASS — Git commit: `41ce1c5`
+- Day 5 PASS — Git commit: `601b1fa`
+- Day 6 PASS — Git commit: `4086761`
+- Day 7 PASS — Git commit: `075d465`
+
+## TITLE / NAVIGATION WORK
+- Days 1–4 hero title white standard applied.
+- Day 2 main-page Waze button removed.
+- Day 4 → Day 5 navigation fixed.
+- Days 1–7 main-day navigation manually verified: PASS.
+- Final title/navigation checkpoint commit: `c77640e`.
+
+## IMPORTANT FILES NOT TOUCHED
+- Old Apagio image files (`src/assets/images/Apagio/Apagio-food01.jpeg`, `src/assets/images/Apagio/Apagio-food02.jpg`, `src/assets/images/Apagio/Apagio-main.jpeg`) remain outside the approved commits and must not be touched.
+
+## CURRENT STOPPING POINT
+Days 1–7 mobile/navigation work completed for this pass.
+
+## NEXT STEP
+Checkpoint verification, then physical backup.
+
+---
+
+# MUSIC PLAYLIST WORK PLAN — LOCKED
+
+1. Do NOT change the existing playlist design, CSS, buttons or layout.
+2. Existing playlists:
+   - Greek Road Trip
+   - Russian Road Trip
+   - Israeli Hits
+3. Phase 1:
+   Add exactly 5 approved songs to each playlist.
+   Total test set: 15 songs.
+4. Test all three playlists on the physical phone.
+5. Only after PASS:
+   expand the playlists.
+6. Complete one playlist at a time.
+7. Kilo must NOT choose songs or make design changes.
+   Only songs explicitly approved by ChatGPT/user may be added.
+
+CURRENT NEXT STEP:
+Select and approve the first 5 songs for Greek Road Trip.
+
+Do not modify any application/code file.
+Append only.
+Save and STOP.
+
+---
+
+# CURRENT SESSION UPDATE — 19.08.2026 / 14:12 / Israel Time
+
+## DAYS 1–7 NAVIGATION
+- Days 1–7 main navigation manually tested: PASS.
+- Missing Day 4 → Day 5 navigation button was added and tested: PASS.
+
+## TITLES
+- Station hero titles for Days 1–4 were changed to white and approved.
+
+## DAY 2
+- Large Waze button was removed from Day 2 main page.
+
+## DAY 7
+- Day 7 Lemonis Bakery: PASS.
+- Day 7 Garry's The King of Gyros: PASS.
+- Day 7 checkpoint commit: `075d465`.
+
+## TITLE / NAVIGATION CHECKPOINT
+- Days 1–4 title/navigation checkpoint commit: `c77640e`.
+
+## MUSIC
+- Greek Road Trip YouTube playlist was created and connected to MusicModal.
+- Greek Road Trip opens the correct YouTube playlist from Kassandra: PASS.
+- Current music limitation discovered:
+  opening YouTube takes the user away from Kassandra, making the Driver First flow to the station/Waze inconvenient.
+- Embedded-player experiment was considered and cancelled.
+- Temporary public/music-test.html was deleted.
+- FINAL DECISION ON MUSIC ARCHITECTURE: PENDING.
+- Do not modify the music architecture until the user decides how to proceed.
+- Russian Road Trip and Israeli Hits are NOT yet completed/connected.
+
+## DAY 8
+- Day 8 Hebrew heading overlap was fixed and manually tested: PASS.
+
+## DAY 8 — WAZE / NAVIGATION
+- DAY 8 WAZE WORK: NOT COMPLETED.
+- The Waze/navigation points for the Day 8 route from Greece back to Borovets still need to be updated and verified.
+- This work is explicitly deferred to a later session.
+- Do NOT modify Day 8 Waze/navigation now.
+
+## NEXT ACTION
+- Physical backup is the next action after checkpoint verification.
+
+# CURRENT SESSION UPDATE — 19.08.2026 / 23:32 / Israel Time
+
+## DAY 8 — WAZE / NAVIGATION
+- DAY 8 WAZE WORK: COMPLETED — PASS.
+- Final Day 8 route order:
+  1. Shell — Serres/Thessaloniki road
+  2. OMV Sandanski
+  3. OMV Dupnitsa
+  4. Studio in Borovets Gardens Complex
+- Final verified Waze deep links:
+  - Shell: `waze://?ll=41.063827,23.351603&navigate=yes`
+  - OMV Sandanski: `waze://?ll=41.5468744,23.2704584&navigate=yes`
+  - OMV Dupnitsa: `waze://?ll=42.28485,23.12321&navigate=yes`
+  - Studio in Borovets Gardens Complex: `waze://?ll=42.271036,23.604136&navigate=yes`
+- All four Day 8 Waze buttons open the Waze application directly on the physical phone: PASS.
+- Day 8 Waze button visual styling was aligned locally with the approved Faros Master Button Standard.
+- Physical-phone visual verification: PASS.
+- `Day.css` was not modified for Day 8 Waze styling.
+
+## DAY 2 — SIP SPOT WAZE
+- Sip Spot Waze link was corrected from web URL format to direct Waze app deep link.
+- Final link:
+  `waze://?ll=39.988826,23.612629&navigate=yes`
+- Physical-phone verification: PASS.
+- Waze now opens directly without an intermediate web page.
+
+## MUSIC / PLAYLIST FEATURE — FINAL DECISION
+- FINAL USER DECISION: the playlist/music feature has been removed from Kassandra-2026.
+- Reason: the desired Driver First music/navigation experience could not be achieved in the required form.
+- Music buttons were removed from Day 1 through Day 8.
+- Day 1 through Day 8 were manually tested on the physical phone after removal: PASS.
+- `src/components/MusicModal.jsx` was deleted.
+- `.day-music-button` CSS was removed from `src/pages/Days/Day.css`.
+- Dead `.lefko-music` CSS was removed from `src/pages/Days/LefkoSuites.jsx`.
+- Final READ-ONLY source scan confirmed:
+  MUSIC ACTIVE CODE REMAINING: NO.
+- No active playlist URLs, MusicModal references, music buttons, or playlist code remain under `src/`.
+- Playlist integration is CANCELLED and must no longer be treated as a pending project phase.
+
+## IMPORTANT REGRESSION FIX
+- During Day 1 music removal, `const navigate = useNavigate();` was accidentally removed.
+- This caused all Day 1 station buttons to stop responding.
+- The exact missing line was restored.
+- Day 1 station navigation was then manually re-tested on the physical phone: PASS.
+- No music code was restored.
+
+## CURRENT PROJECT STATE
+- Days 1–8 active music/playlist functionality: REMOVED — PASS.
+- Day 8 Waze/navigation: COMPLETED — PASS.
+- Sip Spot direct Waze behavior: PASS.
+- No further music/playlist implementation is required.
+
+## NEXT ACTION
+- Verify this checkpoint update.
+- Then create and verify a new full physical backup of the Kassandra-2026 project on KINGSTON.
+- Do not overwrite previous backups.
+
+## OFFLINE / PWA SESSION STATUS — 20.08.2026
+
+### MASTER STANDARD
+
+Offline/PWA Master Standard exists at:
+
+`docs/KASSANDRA_OFFLINE_PWA_MASTER_STANDARD.md`
+
+The following architecture decisions are now recorded in the Master Standard:
+
+- Kassandra must be capable of reliable offline operation.
+- PWA architecture will be implemented in controlled stages.
+- Workbox/Vite PWA precache maximum file-size limit:
+  `maximumFileSizeToCacheInBytes: 4 * 1024 * 1024`
+- PWA update strategy:
+  `registerType: 'prompt'`
+- `registerType: 'autoUpdate'` is NOT approved.
+- Offline Ready state must be based on the Service Worker lifecycle.
+- External Google Fonts dependency is not permitted for normal application rendering.
+- No locally bundled Heebo font files are approved at this stage.
+- System-font fallback is the approved initial offline font solution.
+
+### VERIFIED LARGE-ASSET AUDIT
+
+Three local image files were verified above 2 MiB:
+
+1. `src/assets/images/day8/day8-road.png`
+   - 2,882,564 bytes
+
+2. `src/assets/images/day8/day8-road-bg.png`
+   - 2,538,944 bytes
+
+3. `src/assets/maps/reference/kassandra-master-map-v1.png.png`
+   - 2,521,948 bytes
+
+No verified image exceeded 4 MiB.
+
+### OFFLINE FONT IMPLEMENTATION — COMPLETED
+
+File modified:
+
+`src/pages/Days/Day.css`
+
+Removed:
+
+`@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap");`
+
+Font-family changed from:
+
+`"Heebo", sans-serif`
+
+to:
+
+`Arial, "Helvetica Neue", sans-serif`
+
+No Google Fonts runtime dependency remains in `Day.css`.
+
+### PHYSICAL SAMSUNG TEST
+
+Physical Samsung visual verification completed.
+
+RESULT: PASS
+
+Verified:
+- Application loaded successfully through the external Vite server.
+- Hebrew readable.
+- English readable.
+- Layout visually acceptable.
+- No reported text overflow or unexpected layout breakage caused by the font change.
+
+### EXTERNAL VITE SERVER
+
+For physical mobile testing, Vite was successfully started from an external Windows CMD using the established project procedure.
+
+Network access was available at:
+
+`http://10.0.0.3:5173/Kassandra-2026/`
+
+The external CMD server must remain separate from VS Code/Kilo during mobile testing.
+
+### STOP POINT
+
+NO PWA implementation was performed in this session.
+
+NOT YET IMPLEMENTED:
+- vite-plugin-pwa installation
+- Service Worker
+- manifest
+- PWA icons
+- offline precache implementation
+- Offline Ready UI
+- update prompt UI
+- physical airplane-mode/offline test
+
+These items are explicitly deferred to the NEXT SESSION.
+
+NEXT SESSION MUST:
+1. Read `docs/KASSANDRA_OFFLINE_PWA_MASTER_STANDARD.md`.
+2. Read this checkpoint.
+3. Continue with controlled PWA implementation in small approved stages.
+4. Do NOT make broad automatic changes.
+5. Follow SCAN/READ-ONLY → REPORT → APPROVAL → ONE CONTROLLED CHANGE → TEST.
+
+END OF SESSION:
+After this checkpoint update, perform physical KINGSTON backup and STOP.
+
+# SESSION CHECKPOINT UPDATE — 22.08.2026
+
+## PWA IMPLEMENTATION — COMPLETED / VERIFIED
+
+- Installed vite-plugin-pwa@1.3.0.
+- VitePWA configured in vite.config.js.
+- Manifest configured:
+  name: Kassandra-2026
+  short_name: Kassandra
+  start_url: /Kassandra-2026/
+  scope: /Kassandra-2026/
+  display: standalone
+  theme_color: #6D3A8A
+  background_color: #FFFFFF
+
+- PWA icons added:
+  public/pwa-192x192.png
+  public/pwa-512x512.png
+  public/pwa-maskable-512x512.png
+  public/apple-touch-icon.png
+
+- Apple touch icon connected in index.html.
+
+- Workbox configured to precache:
+  js, css, html, ico, png, svg, jpg, jpeg, webp, avif.
+
+- Verified build:
+  PASS.
+  78 precache entries.
+  Approximately 19.95 MiB.
+  Application images included in precache.
+
+- Service Worker registration implemented using virtual:pwa-register.
+
+- PWA status/update UI implemented:
+  src/components/PwaStatusBanner.jsx
+  Offline Ready message implemented.
+  Update Available message implemented.
+  Manual "עדכן עכשיו" update action implemented.
+  No automatic update.
+
+## GITHUB PAGES
+
+- GitHub repository:
+  ugold2011-cloud/Kassandra-2026
+- Branch: main.
+- GitHub Pages source changed to GitHub Actions.
+- Workflow created:
+  .github/workflows/deploy-pages.yml
+- GitHub Pages deployment verified SUCCESS.
+- Public HTTPS deployment verified working.
+
+## PHYSICAL / OFFLINE VERIFICATION
+
+- Application loaded successfully from GitHub Pages.
+- Offline Ready notification verified.
+- Offline operation verified with internet disabled.
+- Home page loaded offline.
+- Day page loaded offline.
+- Station page and local images loaded offline.
+- PWA update notification and manual update flow verified.
+
+## MUSIC REMOVAL
+
+- Music controls removed from Day1 through Day8.
+- New deployment completed after music-removal commit.
+- Verified in deployed application:
+  NO music button remains on any Day1-Day8 page.
+- MUSIC FEATURE: CLOSED.
+
+## IMPORTANT KNOWN ISSUE
+
+- Direct browser refresh on a nested React route such as:
+  /Kassandra-2026/day6
+  can return GitHub Pages 404.
+- Root URL /Kassandra-2026/ works correctly.
+- This routing/refresh issue is NOT yet resolved.
+- Do not treat it as completed.
+
+## NEXT SESSION — PRIORITY
+
+1. Continue PWA physical installation/testing on Samsung from the HTTPS GitHub Pages version.
+2. Verify true standalone installation behavior.
+3. Verify installed PWA offline launch from the home-screen icon.
+4. Address the GitHub Pages nested-route refresh 404 safely.
+5. Later perform physical iPhone/Safari installation test when an iPhone is available.
+6. Day 8 Waze/navigation update remains deferred and NOT completed.
+
+## PROCESS CONTROL
+
+- New mandatory efficiency-control document:
+  docs/KASSANDRA_SESSION_EFFICIENCY_CONTROL_LAW.md
+- At the beginning of every new Kassandra session, this document must be read together with the current checkpoint.
+- Hourly efficiency review is mandatory during active work.
+- Do not repeat a verified PASS without a concrete reason.
+
+---
+
+# 22.08.2026 — FINAL SESSION UPDATE
+
+## PWA / SAMSUNG
+- Kassandra PWA installed successfully on physical Samsung.
+- Standalone launch verified: PASS.
+- Launch from installed home-screen icon verified: PASS.
+- Offline launch with internet disabled verified: PASS.
+- Home, Day page, station page and local images verified offline: PASS.
+
+## GITHUB PAGES / ROUTING
+- GitHub Pages nested-route refresh 404 was fixed.
+- deploy-pages.yml now copies:
+  dist/index.html -> dist/404.html
+- Direct opening of:
+  /Kassandra-2026/day6
+  verified successfully on Samsung/Chrome.
+- Nested-route fix: PASS.
+- Commit:
+  fed7075 — Fix GitHub Pages nested route refresh
+
+## DAY 5 NAVIGATION FIX
+- Day 5 main-page meat restaurant button was found non-functional.
+- Root cause: missing:
+  const navigate = useNavigate();
+- Day5.jsx corrected.
+- Physical Samsung verification: PASS.
+- Commit:
+  f70d85c — Fix Day 5 meat restaurant navigation
+
+## WAZE MIGRATION
+- Physical Samsung testing proved waze:// links unreliable from deployed PWA/Chrome.
+- Approved Waze standard changed to:
+  https://waze.com/ul?ll=LAT,LON&navigate=yes
+- Pefkochori Shopping converted and physically verified: PASS.
+  Commit: 3e70e38
+- Glarokavos Beach converted and physically verified: PASS.
+  Commit: e3e0d13
+- Remaining Day 2 Waze links converted:
+  Kassandreia Market, Metoxi, Givizinis.
+  Commit: ff323e8
+- Global migration completed for all remaining active waze:// links.
+- Final source verification:
+  waze:// remaining under src/: 0
+  https://waze.com/ul links under src/: 33
+- Global migration commit:
+  0205ee8 — Migrate all remaining Waze links to HTTPS
+- Physical Samsung sample verification after deployment:
+  Faros: PASS
+  Dream Coffee: PASS
+  Garry's Gyros: PASS
+  Day 8: PASS
+- GLOBAL WAZE MIGRATION: PASS.
+
+## FINAL SAMSUNG APPLICATION CHECK
+- Project Owner manually navigated through all Days 1–8 on physical Samsung.
+- All tested Day pages and station navigation opened correctly.
+- RESULT: PASS.
+- Do not repeat this verification unless a later change can affect it.
+
+## MUSIC
+- Music/playlist functionality remains permanently removed.
+- No further music work required.
+
+## REMAINING / FUTURE
+- Physical iPhone/Safari/PWA verification remains pending until an iPhone is available.
+- Do not reopen already verified Samsung/PWA/Waze/navigation PASS results without a concrete reason.
+
+## NEXT ACTION
+- Verify this checkpoint update.
+- Then create and verify a new full physical backup of Kassandra-2026 on KINGSTON.
+- Do not overwrite previous backups.
+
+---
+
+# 22.08.2026 — FINAL END-OF-SESSION UPDATE
+
+## 1. SAMSUNG / PWA / APPLICATION
+- Kassandra PWA is installed on the physical Samsung.
+- Standalone launch: PASS.
+- Offline PWA launch and local application content: PASS.
+- User manually navigated through Days 1–8 on Samsung.
+- Day pages and station navigation opened correctly.
+- FINAL DAYS 1–8 NAVIGATION CHECK: PASS.
+- Do not repeat these checks unless later code changes can affect them.
+
+## 2. DAY 5 NAVIGATION FIX
+- Day 5 meat restaurant button was previously broken.
+- Root cause: missing `const navigate = useNavigate();` in Day5.jsx.
+- Fix committed and pushed.
+- Commit: f70d85c
+- Physical Samsung test after deployment: PASS.
+- Day 5 meat restaurant navigation is CLOSED / PASS.
+
+## 3. GITHUB PAGES NESTED ROUTING
+- Nested-route refresh/direct-open 404 issue was fixed through deploy-pages.yml.
+- `dist/index.html` is copied to `dist/404.html` after build.
+- Physical/direct route verification passed.
+- This issue is CLOSED / PASS unless deployment architecture changes.
+
+## 4. WAZE HTTPS MIGRATION
+- All active source Waze links were migrated from:
+  `waze://?ll=`
+  to:
+  `https://waze.com/ul?ll=`
+- Final source scan after migration:
+  `waze://` remaining under src/: 0
+  `https://waze.com/ul` links under src/: 33
+
+Relevant commits:
+- 3e70e38 — Pefkochori Shopping Waze HTTPS
+- e3e0d13 — Glarokavos Beach Waze HTTPS
+- ff323e8 — remaining Day 2 Waze links
+- 0205ee8 — remaining global Waze migration
+
+Physical Samsung sample tests after deployment:
+- Faros: PASS
+- Dream Coffee: PASS
+- Garry's Gyros: PASS
+- Day 8: PASS
+
+IMPORTANT NEW CONTRADICTORY RESULT:
+- Later physical Samsung test:
+  Day 1 -> Lefko Suites -> Waze
+  opened Waze but Waze displayed:
+  `Unknown error`
+- Therefore do NOT treat every Waze destination as globally closed PASS.
+- The source migration itself is complete, but a destination/link compatibility issue remains open.
+- No further Waze code change was made after discovering this issue.
+
+Current hypothesis to investigate NEXT SESSION:
+- Verify whether Waze requires URL-encoded coordinate separator:
+  `%2C`
+  instead of literal comma `,`
+  in `ll=LAT,LON`.
+- This is ONLY a hypothesis / proposed test.
+- It has NOT yet been implemented or physically verified.
+- First test must be ONE controlled destination only, preferably Lefko Suites.
+- Do NOT globally modify all 33 links before one physical PASS.
+
+## 5. OFFLINE NAVIGATION BACKUP — HERE WEGO
+- HERE WeGo: Maps & Navigation installed successfully on Samsung.
+- Location permission approved only while using the app.
+- Traffic-data sharing was declined.
+- No HERE account/registration was created.
+- Registration is not required for the current navigation-backup objective.
+- Greece offline map downloaded successfully.
+- Bulgaria offline map downloaded successfully.
+- Device has sufficient storage.
+- Wi-Fi-only map download setting was kept enabled.
+- HERE WeGo can be switched to its internal Offline mode.
+
+IMPORTANT TEST STATUS:
+- Full Offline Navigation Backup is NOT yet approved PASS.
+- User reports HERE works in its internal Offline mode.
+- When Samsung Airplane Mode was enabled, HERE did not operate as expected.
+- This behavior remains unresolved.
+- No final offline-navigation acceptance test has been completed.
+- Do NOT claim HERE Offline Navigation is PASS yet.
+
+NEXT SESSION for HERE:
+- Determine the correct real-world no-internet acceptance test.
+- Verify navigation with:
+  Wi-Fi OFF
+  mobile data OFF
+  Airplane Mode OFF initially
+  HERE internal Offline mode ON
+- Test an actual Greece/Bulgaria route using downloaded maps.
+- Then determine whether Airplane Mode behavior requires further investigation.
+- Do not reinstall HERE or redownload Greece/Bulgaria unless evidence requires it.
+
+## 6. OFFLINE NAVIGATION / KASSANDRA INTEGRATION
+- Current design direction:
+  Waze remains PRIMARY online navigation.
+  HERE WeGo is intended as OFFLINE BACKUP.
+- No HERE integration has been added to Kassandra.
+- No second navigation buttons have been added.
+- Decision whether Kassandra should directly open HERE WeGo remains OPEN.
+- Before adding any HERE buttons, first prove reliable offline navigation on Samsung and later iPhone.
+- Existing verified station coordinates should be reused; do not manually invent destinations.
+
+## 7. PWA ICON
+- Current Kassandra icon is installed and functional on Samsung.
+- Physical visual review showed the icon appears more crowded/small than neighboring Android icons:
+  small text,
+  small compass,
+  excessive fine detail at launcher-icon size.
+- Approved visual concept remains unchanged:
+  Mediterranean sea view,
+  gold frame,
+  gold compass,
+  text `Kassandra -2026-`,
+  no four small bottom icons.
+- NO icon files were modified during this final session stage.
+- Icon improvement was explicitly deferred because the user stopped work for the day.
+
+NEXT SESSION — ICON:
+- Start with READ-ONLY identification of the current source icon and:
+  pwa-192x192.png
+  pwa-512x512.png
+  pwa-maskable-512x512.png
+  Apple touch icon if separate.
+- Determine safe-area / cropping issue.
+- Preserve the approved design.
+- Improve launcher readability/alignment only.
+- Do not redesign the icon without explicit approval.
+- After change, physical Samsung launcher test is required.
+- Physical iPhone icon test remains pending.
+
+## 8. IPHONE
+- Physical iPhone PWA testing remains pending.
+- Required later:
+  installation from Safari / Add to Home Screen,
+  standalone opening,
+  local pages/images,
+  internal navigation,
+  offline behavior,
+  icon appearance.
+- Do not claim final cross-platform PASS before physical iPhone testing.
+
+## 9. MUSIC
+- Music/playlist functionality remains permanently removed.
+- Do not reopen music work.
+
+## 10. PHYSICAL BACKUP
+- A physical Kassandra backup to KINGSTON was completed during this session.
+- Project Owner explicitly requires ANOTHER physical backup after this final checkpoint update.
+- Final session closing sequence:
+  1. Update this checkpoint.
+  2. Verify checkpoint update.
+  3. Perform another physical backup to KINGSTON.
+- Do not overwrite older backups.
+
+## 11. EXACT NEXT-SESSION START POINT
+
+Start next session in this order:
+
+A. PWA ICON
+- Resume the deferred icon correction.
+- READ-ONLY audit first.
+- No redesign; only launcher-size/safe-area optimization.
+
+B. WAZE OPEN ISSUE
+- Controlled single-destination investigation of Lefko Suites `Unknown error`.
+- Test URL encoding hypothesis on ONE destination only.
+- Physical Samsung PASS before any global expansion.
+
+C. HERE OFFLINE NAVIGATION
+- Complete the no-internet navigation acceptance test using already downloaded Greece + Bulgaria maps.
+- Do not repeat map downloads.
+
+D. IPHONE
+- Physical test when an iPhone becomes available.
+
+Do not reopen completed Samsung/PWA/Days 1–8/navigation PASS work unless a later change can affect it.
+
+## MASTER CONTINUITY RULE
+Continue from this checkpoint.
+Do not restart completed work.
+Do not repeat already established PASS tests without a concrete reason.
+Use the shortest safe path to the next unresolved objective.

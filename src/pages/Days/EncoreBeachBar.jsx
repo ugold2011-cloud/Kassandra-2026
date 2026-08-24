@@ -234,6 +234,39 @@ function EncoreBeachBar() {
            box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
          }
 
+         .encore-google-maps-button {
+           display: inline-flex;
+           align-items: center;
+           justify-content: center;
+           min-height: 52px;
+           width: 260px;
+           max-width: calc(100% - 32px);
+           padding: 0 20px;
+           border: 1px solid #dbe2ea;
+           border-radius: 16px;
+           text-decoration: none;
+           font-size: 0.96rem;
+           font-weight: 700;
+           background: #fff;
+           color: var(--encore-ink);
+           box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+           transition: transform 220ms ease, box-shadow 220ms ease;
+           white-space: nowrap;
+         }
+
+         .encore-google-maps-button:hover {
+           transform: translateY(-3px);
+           box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
+         }
+
+         .encore-waze-wrapper {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 12px;
+           margin-top: 28px;
+         }
+
          .encore-actions {
            display: flex;
            justify-content: center;
@@ -404,12 +437,19 @@ function EncoreBeachBar() {
         </div>
        </section>
 
-       <div style={{ textAlign: "center", marginTop: "28px" }}>
+       <div className="encore-waze-wrapper">
          <a
            className="encore-waze"
            href="https://waze.com/ul?ll=39.97760719717463,23.3733326&navigate=yes"
          >
            🚗 Waze ל-Encore Beach Bar
+         </a>
+
+         <a
+           className="encore-google-maps-button"
+           href="https://www.google.com/maps/dir/?api=1&destination=39.97760719717463,23.3733326"
+         >
+           🗺️ Google Maps ל-Encore Beach Bar
          </a>
        </div>
 

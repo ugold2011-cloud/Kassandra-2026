@@ -224,7 +224,9 @@ function ArchontikoDay5() {
 
         .archontiko-waze-wrapper {
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
           margin-top: 28px;
         }
 
@@ -253,6 +255,33 @@ function ArchontikoDay5() {
         .archontiko-waze:hover {
           transform: translateY(-3px);
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
+        .archontiko-google-maps-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 52px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 20px;
+          border: 1px solid #dbe2ea;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 700;
+          background: #fff;
+          color: var(--archontiko-ink);
+          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .archontiko-google-maps-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
         }
 
         @media (max-width: 760px) {
@@ -349,6 +378,13 @@ function ArchontikoDay5() {
           href="https://waze.com/ul?ll=39.953829298762,23.606505557671806&navigate=yes"
         >
           🚗 Waze ל-Archontiko Agia Paraskevi
+        </a>
+
+        <a
+          className="archontiko-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=39.953829298762,23.606505557671806"
+        >
+          🗺️ Google Maps ל-Archontiko Agia Paraskevi
         </a>
       </div>
 

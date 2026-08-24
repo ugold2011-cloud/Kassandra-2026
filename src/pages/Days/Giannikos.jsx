@@ -164,13 +164,40 @@ function Giannikos() {
 
         .giannikos-waze-row {
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
           width: 100%;
         }
 
         .giannikos-waze-row .giannikos-button {
-          flex: 1 1 0;
+          flex: 0 0 auto;
           max-width: 640px;
+        }
+
+        .giannikos-google-maps-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 52px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          padding: 0 20px;
+          border: 1px solid #dbe2ea;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 700;
+          background: #fff;
+          color: var(--giannikos-ink);
+          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .giannikos-google-maps-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
         }
 
         .giannikos-nav-row {
@@ -313,6 +340,13 @@ function Giannikos() {
             href="https://waze.com/ul?ll=39.94193117963143,23.662730586507706&navigate=yes"
           >
             Waze 🚗
+          </a>
+
+          <a
+            className="giannikos-google-maps-button"
+            href="https://www.google.com/maps/dir/?api=1&destination=39.94193117963143,23.662730586507706"
+          >
+            🗺️ Google Maps
           </a>
         </div>
 

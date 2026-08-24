@@ -237,6 +237,41 @@ function Faros() {
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
         }
 
+        .faros-google-maps-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 52px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 20px;
+          border: 1px solid #dbe2ea;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 700;
+          background: #fff;
+          color: var(--faros-ink);
+          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .faros-google-maps-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
+        }
+
+        .faros-waze-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          margin-top: 28px;
+        }
+
         @media (max-width: 640px) {
           .faros-page { padding-bottom: 32px; }
           .faros-hero { min-height: 410px; border-radius: 25px; }
@@ -300,6 +335,15 @@ function Faros() {
           </ul>
         </div>
       </section>
+
+      <div className="faros-waze-wrapper">
+        <a
+          className="faros-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=39.999876,23.574140"
+        >
+          🗺️ Google Maps ל-Faros Fish Restaurant
+        </a>
+      </div>
 
       <nav className="faros-actions" aria-label="Day 1 navigation">
         <Link className="faros-button faros-button-back" to="/day1">⬅️ חזרה ליום 1</Link>

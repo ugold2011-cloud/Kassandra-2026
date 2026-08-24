@@ -67,6 +67,19 @@ This remains the **ONE dedicated Kilo rules file**.
 
 ---
 
+# GOOGLE MAPS BUTTON MASTER LAW
+
+GOOGLE MAPS BUTTON MASTER LAW:
+- Mandatory project-wide standard.
+- Master implementation: `src/pages/Days/Dramis.jsx`
+- Dramis passed physical mobile verification.
+- Every Google Maps navigation button must comply exactly with:
+  `docs/KASSANDRA — GOOGLE MAPS BUTTON MASTER LAW.md`
+- No approximation or page-specific variation is permitted.
+- Existing Waze links, coordinates, and verified navigation destinations are protected and must not be changed while applying this standard.
+
+---
+
 # KILO CODE — CURRENT OPERATING POLICY
 
 `docs/KILO_AGENT_RULES.md` was updated on 2026-08-12.
@@ -1035,3 +1048,122 @@ Do not perform broad automatic fixes.
 Do not touch/restart the external Vite server.
 
 END CHECKPOINT
+
+---
+
+# 23.08.2026 — GOOGLE MAPS NAVIGATION / FINAL SESSION UPDATE
+
+## GOOGLE MAPS NAVIGATION AUDIT
+- Current source scan found exactly 33 active navigation points.
+- Expected: 33.
+- Result: MATCH / PASS.
+- All current navigation destinations were independently reviewed.
+- Sip Spot retained its already physically verified Google destination.
+- Sip Spot Google Place ID remains:
+  ChIJ3cIh_1olphQRNfe1Z39BW9g
+- Final navigation-coordinates audit result:
+  TOTAL: 33
+  PASS: 33
+  FAIL: 0
+  NEEDS_MANUAL_VERIFICATION: 0
+- Existing Waze coordinates were preserved.
+- Afitos Old Village existing coordinate was explicitly kept unchanged after confirming it is a good parking/arrival point.
+- No navigation coordinate requires change at session end.
+
+## MANUAL GOOGLE MAPS CONFIRMATIONS
+Record the manual Google Maps checks completed today:
+- Dramis
+- Lefko Suites
+- Masoutis Hanioti
+- Amorato
+- Dream Coffee
+- Ben's Coffee
+- Petralona Cave & Museum
+- Pefkochori Shopping accepted as an area-navigation point rather than a specific business
+
+## GOOGLE MAPS MASTER BUTTON LAW
+- Permanent law file:
+  docs/KASSANDRA — GOOGLE MAPS BUTTON MASTER LAW.md
+- Approved Master implementation:
+  src/pages/Days/Dramis.jsx
+- Dramis passed physical mobile verification.
+- Google Maps visual standard:
+  - separate row BELOW Waze
+  - white background
+  - #dbe2ea border
+  - dark centered text
+  - approved Master dimensions / radius / spacing / mobile behavior
+- Waze is protected and independent.
+- No page-specific Google Maps visual variations are allowed.
+
+## GOOGLE MAPS GLOBAL ROLLOUT
+- Google Maps navigation was added/standardized project-wide.
+- 26 station files were modified in the global rollout.
+- Dramis Master was NOT modified by the rollout.
+- Sip Spot verified destination was preserved.
+- Waze URLs changed: NO.
+- Coordinates changed: NO.
+- Verified destinations changed: NO.
+- npm run build: PASS.
+- npm run lint still reports 10 pre-existing unrelated errors; no new lint errors were introduced by the Google Maps rollout.
+
+## VISUAL COMPLIANCE AUDIT
+- Initial incorrect label-based audit was rejected and must NOT be treated as valid.
+- Correct visual-only audit checked 28 relevant station pages/files.
+- Initial visual result:
+  PASS: 27
+  FAIL: 1
+- Only failure:
+  src/pages/Days/Petralona.jsx
+- Cause:
+  Waze and Google Maps rendered side-by-side because wrapper lacked vertical column layout.
+- Petralona was corrected ONLY in Petralona.jsx.
+- URLs unchanged.
+- Coordinates unchanged.
+- Buttons changed to vertical stack:
+  Waze above
+  Google Maps below.
+- Physical mobile verification after correction: PASS.
+
+## LONG DESTINATION NAME RULE
+- Permanent mandatory rule added to the Google Maps Master Law.
+- Long navigation destination labels must use a short identifying name, preferably one identifying word.
+- URLs / coordinates / destination identity must never change because of label shortening.
+- Approved example:
+  Petralona Cave & Museum → Petralona.
+- Petralona physical mobile result after shortening: PASS.
+
+## PHYSICAL MOBILE SAMPLE RESULTS
+Record:
+- Dramis Google Maps navigation + visual Master: PASS.
+- Faros sample: PASS.
+- Terra Azapiko sample: PASS.
+- Petralona navigation: PASS.
+- Petralona final visual layout and shortened labels: PASS.
+
+## DEVELOPMENT TEST METHOD
+- During active development, mobile changes are tested through Chrome using the local Vite server, not by relying on the installed PWA cache.
+- Command:
+  cd /d C:\Users\ugold\Documents\Kassandra-2026
+  npm run dev -- --host
+- Local mobile URL used:
+  http://10.0.0.36:5173/Kassandra-2026/
+- The installed PWA may continue displaying an older cached/deployed build until deployment/update.
+
+## CURRENT STATUS
+- GOOGLE MAPS NAVIGATION AUDIT: CLOSED / PASS.
+- GOOGLE MAPS MASTER STANDARD: CLOSED / PASS.
+- GOOGLE MAPS GLOBAL ROLLOUT: CLOSED / PASS.
+- PETRALONA VISUAL EXCEPTION: CLOSED / PASS.
+- DO NOT reopen the 33 navigation destinations without contradictory evidence or a later change that can affect them.
+
+## NEXT SESSION — START HERE
+Do NOT repeat today's Google Maps destination audit.
+
+Next steps:
+1. Establish current git/status and checkpoint state.
+2. Continue remaining Kassandra application work outside the now-closed Google Maps navigation stage.
+3. When ready for installed-PWA testing, build/deploy the approved changes so the installed Samsung PWA receives the new Google Maps implementation.
+4. Perform only targeted post-deployment mobile checks; do not repeat all 33 destination validations.
+5. Physical iPhone/Safari/PWA verification remains pending when an iPhone is available.
+6. Preserve all existing Waze and Google Maps navigation PASS results.

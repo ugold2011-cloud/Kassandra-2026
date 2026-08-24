@@ -183,6 +183,34 @@ function Day8() {
               🚗 Waze
             </a>
 
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=41.063827,23.351603"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "12px",
+                width: "260px",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
+                padding: "0 20px",
+                borderRadius: "16px",
+                border: "1px solid #dbe2ea",
+                background: "#fff",
+                color: "#153247",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "0.96rem",
+                boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
+              }}
+            >
+              🗺️ Google Maps
+            </a>
+
             <div
               style={{
                 fontSize: "28px",
@@ -231,6 +259,34 @@ function Day8() {
               }}
             >
               🚗 Waze
+            </a>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=41.5468744,23.2704584"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "12px",
+                width: "260px",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
+                padding: "0 20px",
+                borderRadius: "16px",
+                border: "1px solid #dbe2ea",
+                background: "#fff",
+                color: "#153247",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "0.96rem",
+                boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
+              }}
+            >
+              🗺️ Google Maps
             </a>
 
             <div
@@ -283,6 +339,34 @@ function Day8() {
               🚗 Waze
             </a>
 
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=42.28485,23.12321"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "12px",
+                width: "260px",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
+                padding: "0 20px",
+                borderRadius: "16px",
+                border: "1px solid #dbe2ea",
+                background: "#fff",
+                color: "#153247",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "0.96rem",
+                boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
+              }}
+            >
+              🗺️ Google Maps
+            </a>
+
             <div
               style={{
                 fontSize: "28px",
@@ -330,6 +414,34 @@ function Day8() {
               }}
             >
               🚗 Waze לבורובץ
+            </a>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=42.271036,23.604136"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "12px",
+                width: "260px",
+                maxWidth: "calc(100% - 32px)",
+                minHeight: "52px",
+                padding: "0 20px",
+                borderRadius: "16px",
+                border: "1px solid #dbe2ea",
+                background: "#fff",
+                color: "#153247",
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: "0.96rem",
+                boxShadow: "0 8px 18px rgba(14, 57, 80, 0.08)",
+                whiteSpace: "nowrap",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
+              }}
+            >
+              🗺️ Google Maps לבורובץ
             </a>
           </div>
         </div>

@@ -225,6 +225,33 @@ function TheStolenCup() {
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
         }
 
+        .thestolencup-google-maps-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 52px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 20px;
+          border: 1px solid #dbe2ea;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 700;
+          background: #fff;
+          color: var(--thestolencup-ink);
+          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .thestolencup-google-maps-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
+        }
+
         @media (max-width: 760px) {
           .thestolencup-page {
             padding-bottom: 32px;
@@ -350,6 +377,13 @@ function TheStolenCup() {
           href="https://waze.com/ul?ll=40.07950599775993,23.444984800000004&navigate=yes"
         >
           🚗 Waze ל-The Stolen Cup
+        </a>
+
+        <a
+          className="thestolencup-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=40.07950599775993,23.444984800000004"
+        >
+          🗺️ Google Maps ל-The Stolen Cup
         </a>
       </div>
 

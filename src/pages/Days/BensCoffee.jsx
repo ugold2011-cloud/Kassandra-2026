@@ -204,7 +204,9 @@ function BensCoffee() {
 
         .coffee-waze-wrapper {
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
           margin-top: 28px;
         }
 
@@ -233,6 +235,33 @@ function BensCoffee() {
         .coffee-waze:hover {
           transform: translateY(-3px);
           box-shadow: 0 16px 30px rgba(79, 70, 229, 0.38);
+        }
+
+        .coffee-google-maps-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 52px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 20px;
+          border: 1px solid #dbe2ea;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 700;
+          background: #fff;
+          color: var(--coffee-ink);
+          box-shadow: 0 8px 18px rgba(14, 57, 80, 0.08);
+          transition: transform 220ms ease, box-shadow 220ms ease;
+          white-space: nowrap;
+        }
+
+        .coffee-google-maps-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
         }
 
         @media (max-width: 760px) {
@@ -324,6 +353,13 @@ function BensCoffee() {
           href="https://waze.com/ul?ll=40.23912096320508,23.284466257671802&navigate=yes"
         >
           🚗 Waze ל-Ben's Coffee
+        </a>
+
+        <a
+          className="coffee-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=40.23912096320508,23.284466257671802"
+        >
+          🗺️ Google Maps ל-Ben's Coffee
         </a>
       </div>
 
