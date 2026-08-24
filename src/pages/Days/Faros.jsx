@@ -321,22 +321,21 @@ function Faros() {
             <li><span>📍 כתובת: Unnamed Rd, Chaniotis 63085, Greece</span></li>
             <li><span>📞 טלפון: <span className="faros-ltr">+30 2374 051276</span></span></li>
             <li><span>🕕 שעות פתיחה: <span className="faros-ltr">13:00–23:30</span></span></li>
-            <li>
-              <a
-                className="faros-waze"
-                href="https://waze.com/ul?ll=39.999876,23.574140&navigate=yes"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🚗 פתח ב־Waze
-              </a>
-            </li>
             <li><span>💡 מומלץ להגיע בין <span className="faros-ltr">19:00–20:00</span></span></li>
           </ul>
         </div>
       </section>
 
       <div className="faros-waze-wrapper">
+        <a
+          className="faros-waze"
+          href="https://waze.com/ul?ll=39.999876,23.574140&navigate=yes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🚗 פתח ב־Waze
+        </a>
+
         <a
           className="faros-google-maps-button"
           href="https://www.google.com/maps/dir/?api=1&destination=39.999876,23.574140"

@@ -408,16 +408,6 @@ function Amorato() {
               <span>📞 טלפון: <span className="amorato-ltr">+30 23744 01080</span></span>
             </li>
             <li>
-              <a
-                className="amorato-link"
-                href="https://waze.com/ul?ll=40.001060,23.574493&navigate=yes"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🚗 פתח ב־Waze
-              </a>
-            </li>
-            <li>
               <span>💡 מומלץ לקינוח אחרי ארוחת הערב.</span>
             </li>
           </ul>
@@ -425,6 +415,15 @@ function Amorato() {
       </section>
 
       <div className="amorato-waze-wrapper">
+        <a
+          className="amorato-link"
+          href="https://waze.com/ul?ll=40.001060,23.574493&navigate=yes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🚗 פתח ב־Waze
+        </a>
+
         <a
           className="amorato-google-maps-button"
           href="https://www.google.com/maps/dir/?api=1&destination=40.001060,23.574493"

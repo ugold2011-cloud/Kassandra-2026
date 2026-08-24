@@ -437,6 +437,13 @@ function LefkoSuites() {
         >
           פתח ב-Waze — <bdi dir="ltr">Masoutis</bdi>
         </a>
+
+        <a
+          className="lefko-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=39.997454,23.575559"
+        >
+          🗺️ Google Maps — <bdi dir="ltr">Masoutis</bdi>
+        </a>
       </section>
 
       <nav
