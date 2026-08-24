@@ -450,13 +450,6 @@ function LefkoSuites() {
         className="lefko-actions"
         aria-label="Lefko Suites navigation"
       >
-        <Link
-          className="lefko-button lefko-button-back"
-          to="/day1"
-        >
-          חזרה ליום 1
-        </Link>
-
         {fromDay2 ? (
           <Link
             className="lefko-button lefko-button-next"
@@ -472,6 +465,13 @@ function LefkoSuites() {
             המשך ל-<bdi dir="ltr">Faros</bdi>
           </Link>
         )}
+
+        <Link
+          className="lefko-button lefko-button-back"
+          to="/day1"
+        >
+          חזרה ליום 1
+        </Link>
       </nav>
     </main>
   );

@@ -31,7 +31,7 @@ function HaniotiPromenade() {
         }}
       />
 
-      <h1 className="place-title">טיילת חניוטי</h1>
+      <h1 className="place-title" style={{ color: "#000" }}>טיילת חניוטי</h1>
 
       <p className="place-subtitle">🌅 Hanioti Promenade</p>
 
