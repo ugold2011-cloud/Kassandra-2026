@@ -36,6 +36,23 @@ function InstallAndroid() {
         </p>
       </header>
 
+      <a
+        href="https://ugold2011-cloud.github.io/Kassandra-2026/"
+        style={{
+          display: 'inline-block',
+          margin: '16px 0',
+          padding: '12px 24px',
+          backgroundColor: '#6D3A8A',
+          color: '#fff',
+          textDecoration: 'none',
+          borderRadius: '16px',
+          fontWeight: 800,
+          fontSize: '1rem',
+        }}
+      >
+        🚀 פתח את Kassandra להתקנה
+      </a>
+
       <section className="install-steps" aria-label="Ofanen habaa le-Kassandra">
         {steps.map((step, index) => (
           <article className="install-step" key={index}>
