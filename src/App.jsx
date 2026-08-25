@@ -35,6 +35,7 @@ import Apagio from "./pages/Days/Apagio";
 import GarrysGyros from "./pages/Days/GarrysGyros";
 import DreamCoffee from "./pages/Days/DreamCoffee";
 import Petralona from "./pages/Days/Petralona";
+import InstallAndroid from "./pages/InstallAndroid";
 
 function App() {
   return (
@@ -105,6 +106,7 @@ function App() {
       <Route path="/apagio" element={<Apagio />} />
       <Route path="/dream-coffee" element={<DreamCoffee />} />
       <Route path="/petralona" element={<Petralona />} />
+      <Route path="/install-android" element={<InstallAndroid />} />
     </Routes>
   );
 }
