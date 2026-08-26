@@ -6,6 +6,7 @@ import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
   plugins: [react(), VitePWA({
     registerType: "prompt",
+    release: "KASSANDRA-2026-RC1",
     manifest: {
       name: "Kassandra-2026",
       short_name: "Kassandra",
