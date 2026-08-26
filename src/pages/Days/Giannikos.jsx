@@ -182,6 +182,8 @@ function Giannikos() {
           min-height: 52px;
           width: 260px;
           max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
           padding: 0 20px;
           border: 1px solid #dbe2ea;
           border-radius: 16px;
@@ -250,6 +252,12 @@ function Giannikos() {
         }
 
         .giannikos-button-waze {
+          width: 260px;
+          max-width: calc(100% - 32px);
+          min-height: 52px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 20px;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
@@ -339,14 +347,14 @@ function Giannikos() {
             className="giannikos-button giannikos-button-waze"
             href="https://waze.com/ul?ll=39.94193117963143,23.662730586507706&navigate=yes"
           >
-            Waze 🚗
+            🚗 Waze
           </a>
 
           <a
             className="giannikos-google-maps-button"
             href="https://www.google.com/maps/dir/?api=1&destination=39.94193117963143,23.662730586507706"
           >
-            🗺️ Google Maps
+            📍 Google Maps
           </a>
         </div>
 
@@ -360,7 +368,7 @@ function Giannikos() {
 
           <Link
             className="giannikos-button giannikos-button-next"
-            to="/day6"
+            to="/day7"
           >
             ➡️ יום 7
           </Link>
