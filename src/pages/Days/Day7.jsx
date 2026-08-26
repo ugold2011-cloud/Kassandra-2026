@@ -59,7 +59,7 @@ function Day7() {
 
       <nav style={{ display: "flex", justifyContent: "space-between", gap: "14px", marginTop: "28px" }}>
         <Link
-          to="/day8"
+          to="/day6"
           style={{
             textDecoration: "none",
             color: "#fff",
@@ -100,7 +100,7 @@ function Day7() {
         </Link>
 
         <Link
-          to="/day6"
+          to="/day8"
           style={{
             textDecoration: "none",
             color: "#fff",
