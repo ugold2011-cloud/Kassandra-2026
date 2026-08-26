@@ -406,7 +406,7 @@ function SipSpot() {
                 className="sipspot-link"
                 href="https://waze.com/ul/hsx0g3rdpz"
               >
-                🚗 פתח ב־Waze
+                🚗 Waze
               </a>
             </li>
 
@@ -415,7 +415,7 @@ function SipSpot() {
                 className="sipspot-link sipspot-link-secondary"
                 href="https://www.google.com/maps/dir/?api=1&destination=The%20Sip%20Spot%20Coffee%20And%20More&destination_place_id=ChIJ3cIh_1olphQRNfe1Z39BW9g&travelmode=driving"
               >
-                📍 פתח ב־Google Maps
+                📍 Google Maps
               </a>
             </li>
           </ul>
@@ -435,9 +435,9 @@ function SipSpot() {
 
         <Link
           className="sipspot-button sipspot-button-next"
-          to="/day2"
+          to="/pefkochori-shopping"
         >
-          ➡️ המשך לשופינג פפקוחורי
+          ➡️           המשך לשופינג
         </Link>
       </nav>
     </main>
