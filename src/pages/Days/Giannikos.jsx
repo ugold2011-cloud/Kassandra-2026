@@ -172,7 +172,6 @@ function Giannikos() {
 
         .giannikos-waze-row .giannikos-button {
           flex: 0 0 auto;
-          max-width: 640px;
         }
 
         .giannikos-google-maps-button {
