@@ -75,7 +75,7 @@ function Day7() {
             justifyContent: "center",
           }}
         >
-          ← יום 8
+          ← יום 6
         </Link>
 
         <Link
@@ -117,7 +117,7 @@ function Day7() {
             justifyContent: "center",
           }}
         >
-          יום 6 →
+          יום 8 →
         </Link>
       </nav>
     </div>
