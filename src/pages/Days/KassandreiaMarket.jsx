@@ -208,6 +208,21 @@ function KassandreiaMarket() {
         }
 
         .market-waze-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 52px;
+          width: 260px;
+          max-width: calc(100% - 32px);
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 22px;
+          border: 1px solid transparent;
+          border-radius: 16px;
+          text-decoration: none;
+          font-size: 0.96rem;
+          font-weight: 800;
+          transition: transform 220ms ease, box-shadow 220ms ease;
           background: linear-gradient(135deg, #7c3aed, #4f46e5);
           color: #fff;
           box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
@@ -238,6 +253,21 @@ function KassandreiaMarket() {
         .market-google-maps-button:hover {
           transform: translateY(-3px);
           box-shadow: 0 12px 24px rgba(14, 57, 80, 0.16);
+        }
+
+        .market-waze-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          margin-top: 28px;
+        }
+
+        .market-parking-label {
+          margin: 0;
+          font-size: 1rem;
+          font-weight: 800;
+          color: var(--market-deep);
         }
 
         @media (max-width: 760px) {
@@ -376,27 +406,37 @@ function KassandreiaMarket() {
         </div>
       </section>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "12px",
-          marginBottom: "16px",
-        }}
-      >
+      <div className="market-waze-wrapper">
+        <p className="market-parking-label">חניה מועדפת</p>
         <a
           className="market-button market-waze-button"
           href="https://waze.com/ul?ll=40.049519213937984,23.4133189576718&navigate=yes"
         >
-          🚗 Waze – חניה מועדפת
+          🚗 Waze
         </a>
 
+        <a
+          className="market-button market-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=40.049519213937984,23.4133189576718"
+        >
+          📍 Google Maps
+        </a>
+      </div>
+
+      <div className="market-waze-wrapper">
+        <p className="market-parking-label">חניה חלופית</p>
         <a
           className="market-button market-waze-button"
           href="https://waze.com/ul?ll=40.05185956940188,23.4149876576718&navigate=yes"
         >
-          🚗 Waze – חניה חלופית
+          🚗 Waze
+        </a>
+
+        <a
+          className="market-button market-google-maps-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=40.05185956940188,23.4149876576718"
+        >
+          📍 Google Maps
         </a>
       </div>
 
