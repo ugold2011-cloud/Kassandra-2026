@@ -4,23 +4,37 @@ import "./InstallAndroid.css";
 function InstallAndroid() {
   const steps = [
     {
-      text: 'פתח ב-Google Chrome את הקישור ל-Kassandra שקיבלת ב-WhatsApp.',
+      text: 'לחץ על הכפתור למעלה: 🚀 "פתח את Kassandra להתקנה".',
       visual: "step1",
     },
     {
-      text: "לחץ על ⋮ בתחתית המסך.",
+      text: "דף הבית של Kassandra ייפתח עם המפה ו-8 כפתורי ימים — זה המסך הנכון! ✅",
       visual: "step2",
+      note: "⚠️ זה הצפוי! ההתקנה עדיין לא הסתיימה. המשך משם לשלבים הבאים באמצעות תפריט הכרום.",
     },
     {
-      text: 'בחר: "התקן כיישום אינטרנט"',
+      text: 'לחץ על ⋮ (שלוש נקודות) בפינה הימנית העליונה של כרום.',
       visual: "step3",
     },
     {
-      text: 'לחץ: "התקן"',
+      text: 'בחר: "התקנה ויצירת קיצור דרך"',
+      visual: "step3",
+    },
+    {
+      text: 'בפאנל שנפתח בתחתית המסך — בחר ב-"התקנה" (עם אייקון Kassandra).',
+      visual: "step9",
+      note: "❌ אל תבחר ב-'יצירת קיצור דרך'.",
+    },
+    {
+      text: 'בתיבת האימות "התקנת האפליקציה" — לחץ "התקן" עבור Kassandra-2026.',
       visual: "step4",
     },
     {
-      text: "פתח את Kassandra מהאייקון שנוסף לטלפון. ✅",
+      text: 'המתן עד שיופיע הודעת כרום: "האפליקציה הותקנה".',
+      visual: "step7",
+    },
+    {
+      text: "לחץ על אייקון Kassandra במסך הבית — האפליקציה תפתח לבד, בלי כתובת כרום. ✅",
       visual: "step5",
     },
   ];
@@ -32,7 +46,7 @@ function InstallAndroid() {
           התקנת Kassandra — Samsung / Android
         </h1>
         <p className="install-android-subtitle">
-          הפעל את Kassandra כאייקון ייעודי בטלפון בכמה צעדים simples.
+          הפעל את Kassandra כאייקון ייעודי בטלפון בכמה צעדים פשוטים.
         </p>
       </header>
 
@@ -59,6 +73,9 @@ function InstallAndroid() {
             <div className="install-step-header">
               <span className="install-step-number">{index + 1}</span>
               <p className="install-step-text">{step.text}</p>
+              {step.note && (
+                <p className="install-step-note">{step.note}</p>
+              )}
             </div>
             <div className="install-step-visual">
               {step.visual === "step1" && (
@@ -87,7 +104,21 @@ function InstallAndroid() {
                     <div className="browser-bar">
                       <div className="browser-url" />
                     </div>
-                    <div className="browser-content" />
+                    <div className="browser-content">
+                      <div className="map-preview">
+                        <div className="map-label">🗺️ מפת Kassandra</div>
+                        <div className="day-buttons">
+                          <span className="day-btn">יום 1</span>
+                          <span className="day-btn">יום 2</span>
+                          <span className="day-btn">יום 3</span>
+                          <span className="day-btn">יום 4</span>
+                          <span className="day-btn">יום 5</span>
+                          <span className="day-btn">יום 6</span>
+                          <span className="day-btn">יום 7</span>
+                          <span className="day-btn">יום 8</span>
+                        </div>
+                      </div>
+                    </div>
                     <div className="browser-bottom">
                       <div className="menu-highlight">
                         <span className="menu-dots">⋮</span>
@@ -106,7 +137,7 @@ function InstallAndroid() {
                       <div className="menu-item">דף חדש</div>
                       <div className="menu-item">היסטוריה</div>
                       <div className="menu-item highlighted">
-                        התקן כיישום אינטרנט
+                        התקנה ויצירת קיצור דרך
                       </div>
                     </div>
                   </div>
@@ -115,7 +146,7 @@ function InstallAndroid() {
               {step.visual === "step4" && (
                 <div className="visual visual-step4">
                   <div className="dialog-mockup">
-                    <div className="dialog-title">התקן אפליקציה?</div>
+                    <div className="dialog-title">התקנת האפליקציה</div>
                     <div className="dialog-body">
                       <div className="dialog-icon">📱</div>
                       <div className="dialog-name">Kassandra-2026</div>
@@ -138,6 +169,39 @@ function InstallAndroid() {
                       <div className="home-app-icon highlighted">
                         <span className="home-icon-symbol">🧭</span>
                         <span className="home-icon-label">Kassandra</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {step.visual === "step7" && (
+                <div className="visual">
+                  <div
+                    style={{
+                      textAlign: 'center',
+                      color: '#6D3A8A',
+                      fontSize: '0.9rem',
+                      fontWeight: 700,
+                    }}
+                  >
+                    המתן...<br />האפליקציה הותקנה
+                  </div>
+                </div>
+              )}
+              {step.visual === "step9" && (
+                <div className="visual visual-step9">
+                  <div className="browser-mockup small">
+                    <div className="browser-bar">
+                      <div className="browser-url" />
+                    </div>
+                    <div className="bottom-panel">
+                      <div className="bottom-panel-item highlighted">
+                        <span className="panel-icon">📱</span>
+                        <span>התקנה</span>
+                      </div>
+                      <div className="bottom-panel-item">
+                        <span className="panel-icon">🔗</span>
+                        <span>יצירת קיצור דרך</span>
                       </div>
                     </div>
                   </div>
