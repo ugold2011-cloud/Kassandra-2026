@@ -4,23 +4,23 @@ import { Link } from "react-router-dom";
 function InstallIphone() {
   const steps = [
     {
-      text: "פתחו את הקישור של Kassandra ב־Safari.",
+      text: 'לחצו על הכפתור למעלה: 🚀 "פתח את Kassandra להתקנה".',
       visual: "step1",
     },
     {
-      text: "לחצו על כפתור השיתוף ב־Safari.",
+      text: 'על המסך שייפתח תראו את המפה וכפתורי 8 הימים. זה המסך הנכון! ההתקנה עדיין לא הסתיימה.',
       visual: "step2",
     },
     {
-      text: 'בתפריט שנפתח, גללו ובחרו: "הוסף למסך הבית"',
+      text: 'באותו מסך של Kassandra ב־Safari, לחצו על כפתור השיתוף ובחרו: "הוסף למסך הבית"',
       visual: "step3",
     },
     {
-      text: 'ודאו שהאפשרות: "פתח כיישום אינטרנט" מופעלת.',
+      text: 'ודאו שהאפשרות: "פתח כיישום אינטרנט" מופעלת ולחצו: "הוסף"',
       visual: "step4",
     },
     {
-      text: 'לחצו: "הוסף"',
+      text: 'לאחר ההוספה, פתחו את Kassandra רק מאייקון מסך הבית חדש. האפליקציה תיפתח ללא סרגל הכתובת של Safari.',
       visual: "step5",
     },
   ];
@@ -30,9 +30,26 @@ function InstallIphone() {
       <header className="install-iphone-header">
         <h1 className="install-iphone-title">התקנת Kassandra באייפון</h1>
         <p className="install-iphone-subtitle">
-          ההתקנה מתבצעת דרך Safari ואורכת פחות מדקה.
+          ההתקנה מתבצעת דרך Safari ואורכת פחות מדקה. אל תוסיפו את דף ההוראות למסך הבית.
         </p>
       </header>
+
+      <a
+        href="https://ugold2011-cloud.github.io/Kassandra-2026/"
+        style={{
+          display: 'inline-block',
+          margin: '0 0 24px',
+          padding: '14px 24px',
+          backgroundColor: '#6D3A8A',
+          color: '#fff',
+          textDecoration: 'none',
+          borderRadius: '16px',
+          fontWeight: 800,
+          fontSize: '1rem',
+        }}
+      >
+        🚀 פתח את Kassandra להתקנה
+      </a>
 
       <section className="install-steps" aria-label="Ofanen habaa le-Kassandra">
         {steps.map((step, index) => (
@@ -58,28 +75,28 @@ function InstallIphone() {
                       <div className="link-bubble">
                         <span className="link-text">קישור ל-Kassandra</span>
                       </div>
+                      <div className="install-open-btn">פתח את Kassandra להתקנה</div>
                     </div>
                   </div>
                 </div>
               )}
               {step.visual === "step2" && (
                 <div className="visual visual-step2">
-                  <div className="safari-mockup">
-                    <div className="safari-bar">
-                      <div className="safari-url" />
-                      <div className="safari-actions">
-                        <div className="share-highlight">
-                          <span className="share-icon">⎋</span>
-                        </div>
+                  <div className="phone-frame">
+                    <div className="phone-notch" />
+                    <div className="phone-screen kassandra-home">
+                      <div className="home-map-mockup" />
+                      <div className="home-day-buttons">
+                        <span className="day-btn">יום 1</span>
+                        <span className="day-btn">יום 2</span>
+                        <span className="day-btn">יום 3</span>
+                        <span className="day-btn">יום 4</span>
+                        <span className="day-btn">יום 5</span>
+                        <span className="day-btn">יום 6</span>
+                        <span className="day-btn">יום 7</span>
+                        <span className="day-btn">יום 8</span>
                       </div>
-                    </div>
-                    <div className="safari-content" />
-                    <div className="safari-toolbar">
-                      <div className="toolbar-item" />
-                      <div className="toolbar-item" />
-                      <div className="toolbar-item share-toolbar-item">
-                        <span className="share-icon">⎋</span>
-                      </div>
+                      <div className="correct-screen-badge">זה המסך הנכון! ההתקנה עדיין לא הסתיימה.</div>
                     </div>
                   </div>
                 </div>
@@ -153,7 +170,7 @@ function InstallIphone() {
 
       <div className="install-result">
         <p>
-          לאחר ההוספה, האייקון של Kassandra יופיע במסך הבית ויפתח כמו אפליקציה.
+          לאחר ההוספה, האייקון של Kassandra יופיע במסך הבית. פתחו את Kassandra רק מאייקון מסך הבית החדש – היא תיפתח כאפליקציה ללא סרגל הכתובת של Safari.
         </p>
       </div>
 
